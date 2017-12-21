@@ -1,6 +1,6 @@
 ﻿namespace MIS
 {
-    partial class Form1
+    partial class FormZoeken
     {
         /// <summary>
         /// Required designer variable.

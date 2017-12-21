@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MIS
 {
-    public partial class Form1 : Form
+    public partial class FormZoeken : Form
     {
-        public Form1()
+        public FormZoeken()
         {
             InitializeComponent();
         }

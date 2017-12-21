@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,18 @@ using System.Threading.Tasks;
 namespace MIS {
     public class SqlTools {
         public static SQLiteConnection Connection;
+        private const string FilePath = "PetBreakfast.sqlite";
 
         /// <summary>
         /// Laad een sqlite database vanaf een bestand, verbind daarmee, en sla die verbinding op in <see cref="Connection"/>
         /// </summary>
         /// <param name="file"></param>
-        public static void LoadDatabase(string file) {
-            
+        public static void LoadDatabase() {
+            if (!File.Exists(FilePath)) {
+                SQLiteConnection.CreateFile(FilePath);
+            }
+            Connection = new SQLiteConnection("Data Source=" + FilePath + ";Version=3;");
+            Connection.Open();
         }
 
         /// <summary>

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
+﻿using System.Data.SQLite;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MIS {
     public class SqlTools {
@@ -16,11 +11,15 @@ namespace MIS {
         /// </summary>
         /// <param name="file"></param>
         public static void LoadDatabase() {
-            if (!File.Exists(FilePath)) {
+            bool isNew = !File.Exists(FilePath);
+            if (isNew) {
                 SQLiteConnection.CreateFile(FilePath);
             }
             Connection = new SQLiteConnection("Data Source=" + FilePath + ";Version=3;");
             Connection.Open();
+            if (isNew) {
+                ExecNonQuery("CREATE TABLE test (text sample)");
+            }
         }
 
         /// <summary>
@@ -28,8 +27,9 @@ namespace MIS {
         /// </summary>
         /// <param name="query">De query</param>
         /// <returns>Of de query succesvol was</returns>
-        public static bool ExecNonQuery(string query) {
-            return false;
+        public static void ExecNonQuery(string query) {
+            var cmd = new SQLiteCommand(query, Connection);
+            cmd.ExecuteNonQuery();
         }
 
         /// <summary>
@@ -38,7 +38,8 @@ namespace MIS {
         /// <param name="query"></param>
         /// <returns>De resultaten van de query</returns>
         public static SQLiteDataReader ExecQuery(string query) {
-            return null;
+            var cmd = new SQLiteCommand(query, Connection);
+            return cmd.ExecuteReader();
         }
     }
 }

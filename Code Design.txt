@@ -1,0 +1,22 @@
+static class SQLTools:
+  static SQLiteConnection Connection;
+  
+  static void LoadDatabase(string filename)
+  static bool ExecNonQuery(string query)
+  static SQLiteDataReader ExecQuery(string query)
+
+static class Manager[Naam?]:
+  static [profiel?] GetProfiel(int id)
+  static [resultaten?] ZoekOpdracht([parameters?])
+  
+class Profiel:
+  string naam;
+  string plaats;
+  
+
+class FormZoeken
+  void KlikZoek()
+class FormResultaten
+  void KlikProfiel(int id)
+class FormProfiel
+class FormAdmin

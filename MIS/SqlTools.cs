@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SQLite;
+using System.IO;
 
 namespace MIS {
     public class SqlTools {
         public static SQLiteConnection Connection;
+        private const string FilePath = "PetBreakfast.sqlite";
 
         /// <summary>
         /// Laad een sqlite database vanaf een bestand, verbind daarmee, en sla die verbinding op in <see cref="Connection"/>
         /// </summary>
         /// <param name="file"></param>
-        public static void LoadDatabase(string file) {
-            
+        public static void LoadDatabase() {
+            bool isNew = !File.Exists(FilePath);
+            if (isNew) {
+                SQLiteConnection.CreateFile(FilePath);
+            }
+            Connection = new SQLiteConnection("Data Source=" + FilePath + ";Version=3;");
+            Connection.Open();
+            if (isNew) {
+                ExecNonQuery("CREATE TABLE test (text sample)");
+            }
         }
 
         /// <summary>
@@ -22,8 +27,9 @@ namespace MIS {
         /// </summary>
         /// <param name="query">De query</param>
         /// <returns>Of de query succesvol was</returns>
-        public static bool ExecNonQuery(string query) {
-            return false;
+        public static void ExecNonQuery(string query) {
+            var cmd = new SQLiteCommand(query, Connection);
+            cmd.ExecuteNonQuery();
         }
 
         /// <summary>
@@ -32,7 +38,8 @@ namespace MIS {
         /// <param name="query"></param>
         /// <returns>De resultaten van de query</returns>
         public static SQLiteDataReader ExecQuery(string query) {
-            return null;
+            var cmd = new SQLiteCommand(query, Connection);
+            return cmd.ExecuteReader();
         }
     }
 }

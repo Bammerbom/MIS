@@ -14,6 +14,7 @@ namespace MIS
         [STAThread]
         static void Main()
         {
+            SqlTools.LoadDatabase();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormZoeken());

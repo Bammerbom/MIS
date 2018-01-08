@@ -16,5 +16,10 @@ namespace MIS
         {
             InitializeComponent();
         }
+
+        private void FormZoeken_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,40 +23,6 @@ namespace MIS {
                                       "diertypes text)", SqlTools.Connection);
                 cmd.ExecuteNonQuery();
             }
-
-            #region Test code
-            //Maak een nieuwe gebruiker
-            var gebruiker = new Gebruiker
-            {
-                voornaam = "Jonathan",
-                achternaam = "Brouwer",
-                verified = true,
-                admin = true,
-                vraagprijs = 9001.99,
-                diertypes = "Hond, kat en je moeder"
-            };
-            int userid = GebruikerToevoegen(gebruiker);
-
-            //Vraag gebruiker op
-            var gebruiker2 = GebruikerOpvragen(userid);
-            Console.WriteLine(gebruiker2.voornaam + " " + gebruiker2.achternaam);
-
-            //Wijzig gebruiker
-            gebruiker2.voornaam = "Nahtanoj";
-            GebruikerWijzigen(userid, gebruiker2);
-
-            //Vraag gebruiker opnieuw op
-            var gebruiker3 = GebruikerOpvragen(userid);
-            Console.WriteLine(gebruiker3.voornaam + " " + gebruiker3.achternaam);
-
-            //Verwijder de gebruiker weer, want wij zijn efficient
-            GebruikerVerwijderen(userid);
-
-            foreach(Gebruiker gebruiker4 in AlleGebruikers())
-            {
-                Console.WriteLine(gebruiker4.voornaam);
-            }
-            #endregion
         }
 
         /// <summary>

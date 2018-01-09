@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SQLite;
@@ -50,6 +51,11 @@ namespace MIS {
 
             //Verwijder de gebruiker weer, want wij zijn efficient
             GebruikerVerwijderen(userid);
+
+            foreach(Gebruiker gebruiker4 in AlleGebruikers())
+            {
+                Console.WriteLine(gebruiker4.voornaam);
+            }
             #endregion
         }
 
@@ -133,6 +139,35 @@ namespace MIS {
             var cmd = new SQLiteCommand("DELETE FROM gebruikers WHERE userid = @userid", SqlTools.Connection);
             cmd.Parameters.Add("@userid", DbType.String).Value = userid;
             return cmd.ExecuteNonQuery() > 0;
+        }
+
+        /// <summary>
+        /// Verkrijg een array van alle gebruikers
+        /// </summary>
+        /// <returns>Een array van alle gebruikers</returns>
+        public static Gebruiker[] AlleGebruikers()
+        {
+            //Create select command
+            var cmd = new SQLiteCommand("SELECT * FROM gebruikers", SqlTools.Connection);
+            var reader = cmd.ExecuteReader();
+
+            //Verander resultaten data in lijst van gebruikers
+            var gebruikers = new List<Gebruiker>();
+            while (reader.Read())
+            {
+                gebruikers.Add(new Gebruiker
+                {
+                    voornaam = (string)reader["voornaam"],
+                    achternaam = (string)reader["achternaam"],
+                    verified = (bool)reader["verified"],
+                    admin = (bool)reader["admin"],
+                    vraagprijs = Convert.ToDouble(reader["vraagprijs"]),
+                    diertypes = (string)reader["diertypes"]
+                });
+            }
+
+            //Return
+            return gebruikers.ToArray();
         }
     }
 

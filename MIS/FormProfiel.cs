@@ -32,14 +32,27 @@ namespace MIS
             {
                 MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
             }
-        }
-
-        private void OverMijTextbox_TextChanged(object sender, EventArgs e)
-        {
             if (OverMijTextbox.Text == "")
             {
                 MessageBox.Show("Vertel nog wat over jezelf");
             }
+        }
+
+        private void PremiumCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PremiumCheckbox.Checked)
+            {
+                PremiumCheckbox.Text = "Ja, ik wil graag gebruik maken van de voordelen van een premium gebruiker";
+            }
+            else
+            {
+                PremiumCheckbox.Text = "Nee, ik wil geen gebruik maken van de voordelen van een premium gebruiker";
+            }
+        }
+
+        private void date1label_Click(object sender, EventArgs e)
+        {
+            Datumpick1.Value.ToString();
         }
     }
 }

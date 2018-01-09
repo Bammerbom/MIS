@@ -52,6 +52,7 @@
             this.ProfielAanmakenButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.PremiumCheckbox = new System.Windows.Forms.CheckBox();
+            this.date1label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // VoornaamLabel
@@ -141,7 +142,6 @@
             this.OverMijTextbox.Name = "OverMijTextbox";
             this.OverMijTextbox.Size = new System.Drawing.Size(394, 123);
             this.OverMijTextbox.TabIndex = 16;
-            this.OverMijTextbox.TextChanged += new System.EventHandler(this.OverMijTextbox_TextChanged);
             // 
             // HondKatCheckbox
             // 
@@ -256,24 +256,37 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(560, 225);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(294, 13);
+            this.label3.Size = new System.Drawing.Size(238, 13);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Ja, ik wil mij aanmelden om een premium gebruiker te worden";
+            this.label3.Text = "Wil je gebruik maken van onze premium service?";
             // 
             // PremiumCheckbox
             // 
             this.PremiumCheckbox.AutoSize = true;
             this.PremiumCheckbox.Location = new System.Drawing.Point(560, 250);
             this.PremiumCheckbox.Name = "PremiumCheckbox";
-            this.PremiumCheckbox.Size = new System.Drawing.Size(15, 14);
+            this.PremiumCheckbox.Size = new System.Drawing.Size(392, 17);
             this.PremiumCheckbox.TabIndex = 29;
+            this.PremiumCheckbox.Text = "Nee, ik wil geen gebruik maken van de voordelen van een premium gebruiker";
             this.PremiumCheckbox.UseVisualStyleBackColor = true;
+            this.PremiumCheckbox.CheckedChanged += new System.EventHandler(this.PremiumCheckbox_CheckedChanged);
+            // 
+            // date1label
+            // 
+            this.date1label.AutoSize = true;
+            this.date1label.Location = new System.Drawing.Point(40, 554);
+            this.date1label.Name = "date1label";
+            this.date1label.Size = new System.Drawing.Size(35, 13);
+            this.date1label.TabIndex = 30;
+            this.date1label.Text = "label4";
+            this.date1label.Click += new System.EventHandler(this.date1label_Click);
             // 
             // FormProfiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.date1label);
             this.Controls.Add(this.PremiumCheckbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ProfielAanmakenButton);
@@ -331,5 +344,6 @@
         private System.Windows.Forms.Button ProfielAanmakenButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox PremiumCheckbox;
+        private System.Windows.Forms.Label date1label;
     }
 }

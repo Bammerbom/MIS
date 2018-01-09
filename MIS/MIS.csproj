@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

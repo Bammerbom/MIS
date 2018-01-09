@@ -16,5 +16,31 @@ namespace MIS
         {
             InitializeComponent();
         }
+        private void ProfielAanmakenButton_Click(object sender, EventArgs e)
+        {
+            if (VoornaamTextbox.Text == "")
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
+
+            else if (AchternaamTextbox.Text == "")
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
+
+            else if (WoonplaatsTextbox.Text == "")
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
+        }
+
+        private void OverMijTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (OverMijTextbox.Text == "")
+            {
+                MessageBox.Show("Vertel nog wat over jezelf");
+            }
+        }
     }
 }
+ 

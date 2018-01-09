@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="FormBekijkenprofiel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormProfiel.resx">
+      <DependentUpon>FormProfiel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBekijkenprofiel.resx">
       <DependentUpon>FormBekijkenprofiel.cs</DependentUpon>
     </EmbeddedResource>

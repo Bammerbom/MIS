@@ -12,14 +12,54 @@ namespace MIS
 {
     public partial class FormZoeken : Form
     {
+        bool Valid;
         public FormZoeken()
         {
             InitializeComponent();
         }
 
-        private void FormZoeken_Load(object sender, EventArgs e)
+        private void ZoekButton_Click(object sender, EventArgs e)
+        {
+            Valid = CheckValid(Valid);
+            MessageBox.Show(Convert.ToString(Valid));
+        }
+
+        private bool CheckValid(bool X)
+        {
+            if (ZoektextBox != null)
+            {
+                int CheckedCount = 0;
+                List<CheckBox> CBList = new List<CheckBox>()
+                    { HondKatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielAmfibieCheckBox, InsectCheckBox, AndersCheckBox};
+
+                foreach (var y in CBList)
+                {
+                    if (y.Checked)
+                    {
+                        CheckedCount++;
+                    }
+                }
+
+                if (CheckedCount == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void Buildquery()
         {
 
         }
+
+        
     }
 }

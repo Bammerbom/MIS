@@ -85,6 +85,7 @@ namespace MIS {
             var reader = cmd.ExecuteReader();
             reader.Read();
 
+            //Sla data op in een gebruiker struct
             return new Gebruiker
             {
                 voornaam = (string)reader["voornaam"],
@@ -119,6 +120,9 @@ namespace MIS {
         }
     }
 
+    /// <summary>
+    /// De data van een gebruiker, exclusief gebruikers id
+    /// </summary>
     public struct Gebruiker
     {
         public string voornaam;

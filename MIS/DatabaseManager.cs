@@ -47,6 +47,9 @@ namespace MIS {
             //Vraag gebruiker opnieuw op
             var gebruiker3 = GebruikerOpvragen(userid);
             Console.WriteLine(gebruiker3.voornaam + " " + gebruiker3.achternaam);
+
+            //Verwijder de gebruiker weer, want wij zijn efficient
+            GebruikerVerwijderen(userid);
             #endregion
         }
 
@@ -100,9 +103,9 @@ namespace MIS {
         /// <summary>
         /// Wijzigt de gegevens van de gebruiker met het gegeven id
         /// </summary>
-        /// <param name="userid">Het gebeuikers id</param>
+        /// <param name="userid">Het gebruikers id</param>
         /// <param name="gebruiker">De gegevens</param>
-        /// <returns></returns>
+        /// <returns>Of de verandering succesvol is</returns>
         public static bool GebruikerWijzigen(int userid, Gebruiker gebruiker)
         {
             //Create update command
@@ -116,6 +119,19 @@ namespace MIS {
             cmd.Parameters.Add("@admin", DbType.Boolean).Value = gebruiker.admin;
             cmd.Parameters.Add("@vraagprijs", DbType.Double).Value = gebruiker.vraagprijs;
             cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
+            return cmd.ExecuteNonQuery() > 0;
+        }
+
+        /// <summary>
+        /// Verwijderd de gebruiker met het gegeven id
+        /// </summary>
+        /// <param name="userid">Het gebruikers id</param>
+        /// <returns>Of het verwijderen succesvol is</returns>
+        public static bool GebruikerVerwijderen(int userid)
+        {
+            //Create delete command
+            var cmd = new SQLiteCommand("DELETE FROM gebruikers WHERE userid = @userid", SqlTools.Connection);
+            cmd.Parameters.Add("@userid", DbType.String).Value = userid;
             return cmd.ExecuteNonQuery() > 0;
         }
     }

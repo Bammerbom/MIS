@@ -18,15 +18,69 @@ namespace MIS
             InitializeComponent();
         }
 
+        //Click event
         private void ZoekButton_Click(object sender, EventArgs e)
         {
-            Valid = CheckValid(Valid);
-            MessageBox.Show(Convert.ToString(Valid));
+            Valid = CheckValid();
+            if (Valid == true)
+            {
+                MessageBox.Show(Convert.ToString(Valid));
+            }
+            else
+            {
+                MessageBox.Show("ERROR");
+            }
         }
 
-        private bool CheckValid(bool X)
+        /// <summary>
+        /// Zorgt ervoor dat je maar 1 huisdiercheckbox kan checken
+        /// </summary>
+        private void Huisdierbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (ZoektextBox != null)
+            CheckBox box = (CheckBox)sender;
+            if (box.Checked)
+            {
+                List<CheckBox> CBList = new List<CheckBox>()
+                    { HondKatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielAmfibieCheckBox, InsectCheckBox, AndersCheckBox};
+
+                foreach (var Checkbox in CBList)
+                {
+                    if (Checkbox != box)
+                    {
+                        Checkbox.Checked = false;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// zorgt ervoor dat oppas en uitlaat te gelijk gechecked zijn
+        /// </summary>
+        private void Extra_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            if (box.Checked)
+            {
+                List<CheckBox> CBList = new List<CheckBox>()
+                    {OppasCheckBox, UitlaatCheckBox};
+
+                foreach (var Checkbox in CBList)
+                {
+                    if (Checkbox != box)
+                    {
+                        Checkbox.Checked = false;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Zorgt dat er geldige parameters zijn gegeven.
+        /// </summary>
+        /// <returns>of het een geldige zoek functie is</returns>
+        private bool CheckValid()
+        {
+            if (ZoektextBox.Text != "")
             {
                 int CheckedCount = 0;
                 List<CheckBox> CBList = new List<CheckBox>()
@@ -58,8 +112,6 @@ namespace MIS
         private void Buildquery()
         {
 
-        }
-
-        
+        }  
     }
 }

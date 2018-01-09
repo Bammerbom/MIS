@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBekijkenprofiel));
             this.SDierLabel = new System.Windows.Forms.Label();
             this.LocatieLabel = new System.Windows.Forms.Label();
             this.VogelCheckBox = new System.Windows.Forms.CheckBox();
@@ -48,9 +49,31 @@
             this.Naam = new System.Windows.Forms.Label();
             this.Test = new System.Windows.Forms.PictureBox();
             this.Vertified = new System.Windows.Forms.PictureBox();
+            this.Adres = new System.Windows.Forms.Label();
+            this.Kanpassenop = new System.Windows.Forms.Label();
+            this.Overmij = new System.Windows.Forms.Label();
+            this.Overmijinfo = new System.Windows.Forms.TextBox();
+            this.Scrol = new System.Windows.Forms.VScrollBar();
+            this.Woningtitel = new System.Windows.Forms.Label();
+            this.Woninginfo = new System.Windows.Forms.Label();
+            this.Dienstentitel = new System.Windows.Forms.Label();
+            this.Logeren = new System.Windows.Forms.Label();
+            this.Dagopvang = new System.Windows.Forms.Label();
+            this.nul = new System.Windows.Forms.PictureBox();
+            this.een = new System.Windows.Forms.PictureBox();
+            this.twee = new System.Windows.Forms.PictureBox();
+            this.drie = new System.Windows.Forms.PictureBox();
+            this.vier = new System.Windows.Forms.PictureBox();
+            this.vijf = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Test)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vertified)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nul)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.een)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vijf)).BeginInit();
             this.SuspendLayout();
             // 
             // SDierLabel
@@ -139,7 +162,7 @@
             this.ZoekButton.Location = new System.Drawing.Point(350, 23);
             this.ZoekButton.Margin = new System.Windows.Forms.Padding(4);
             this.ZoekButton.Name = "ZoekButton";
-            this.ZoekButton.Size = new System.Drawing.Size(100, 28);
+            this.ZoekButton.Size = new System.Drawing.Size(104, 28);
             this.ZoekButton.TabIndex = 20;
             this.ZoekButton.Text = "Zoek";
             this.ZoekButton.UseVisualStyleBackColor = true;
@@ -240,43 +263,231 @@
             // 
             // Profielfoto
             // 
-            this.Profielfoto.Location = new System.Drawing.Point(58, 189);
+            this.Profielfoto.Image = ((System.Drawing.Image)(resources.GetObject("Profielfoto.Image")));
+            this.Profielfoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("Profielfoto.InitialImage")));
+            this.Profielfoto.Location = new System.Drawing.Point(205, 227);
             this.Profielfoto.Name = "Profielfoto";
             this.Profielfoto.Size = new System.Drawing.Size(225, 207);
+            this.Profielfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Profielfoto.TabIndex = 33;
             this.Profielfoto.TabStop = false;
             // 
             // Naam
             // 
             this.Naam.AutoSize = true;
-            this.Naam.Font = new System.Drawing.Font("Tw Cen MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Naam.Location = new System.Drawing.Point(345, 189);
+            this.Naam.Font = new System.Drawing.Font("Tw Cen MT Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Naam.Location = new System.Drawing.Point(490, 218);
             this.Naam.Name = "Naam";
-            this.Naam.Size = new System.Drawing.Size(188, 28);
+            this.Naam.Size = new System.Drawing.Size(235, 35);
             this.Naam.TabIndex = 34;
             this.Naam.Text = "Naam + achternaam";
             // 
             // Test
             // 
-            this.Test.Location = new System.Drawing.Point(601, 190);
+            this.Test.Image = ((System.Drawing.Image)(resources.GetObject("Test.Image")));
+            this.Test.InitialImage = null;
+            this.Test.Location = new System.Drawing.Point(800, 218);
             this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(32, 27);
+            this.Test.Size = new System.Drawing.Size(47, 40);
+            this.Test.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Test.TabIndex = 35;
             this.Test.TabStop = false;
+            this.Test.Visible = false;
             // 
             // Vertified
             // 
-            this.Vertified.Location = new System.Drawing.Point(554, 189);
+            this.Vertified.Image = ((System.Drawing.Image)(resources.GetObject("Vertified.Image")));
+            this.Vertified.InitialImage = ((System.Drawing.Image)(resources.GetObject("Vertified.InitialImage")));
+            this.Vertified.Location = new System.Drawing.Point(737, 218);
             this.Vertified.Name = "Vertified";
-            this.Vertified.Size = new System.Drawing.Size(30, 28);
+            this.Vertified.Size = new System.Drawing.Size(41, 40);
+            this.Vertified.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Vertified.TabIndex = 36;
             this.Vertified.TabStop = false;
+            this.Vertified.Visible = false;
+            // 
+            // Adres
+            // 
+            this.Adres.AutoSize = true;
+            this.Adres.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adres.Location = new System.Drawing.Point(492, 309);
+            this.Adres.Name = "Adres";
+            this.Adres.Size = new System.Drawing.Size(160, 21);
+            this.Adres.TabIndex = 37;
+            this.Adres.Text = "Postcode + woonplaats";
+            // 
+            // Kanpassenop
+            // 
+            this.Kanpassenop.AutoSize = true;
+            this.Kanpassenop.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kanpassenop.Location = new System.Drawing.Point(492, 335);
+            this.Kanpassenop.Name = "Kanpassenop";
+            this.Kanpassenop.Size = new System.Drawing.Size(153, 21);
+            this.Kanpassenop.TabIndex = 38;
+            this.Kanpassenop.Text = "Kan passen op: x, y, z";
+            // 
+            // Overmij
+            // 
+            this.Overmij.AutoSize = true;
+            this.Overmij.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Overmij.Location = new System.Drawing.Point(489, 377);
+            this.Overmij.Name = "Overmij";
+            this.Overmij.Size = new System.Drawing.Size(55, 18);
+            this.Overmij.TabIndex = 39;
+            this.Overmij.Text = "Over mij";
+            // 
+            // Overmijinfo
+            // 
+            this.Overmijinfo.BackColor = System.Drawing.SystemColors.Control;
+            this.Overmijinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Overmijinfo.Location = new System.Drawing.Point(492, 406);
+            this.Overmijinfo.Multiline = true;
+            this.Overmijinfo.Name = "Overmijinfo";
+            this.Overmijinfo.Size = new System.Drawing.Size(386, 150);
+            this.Overmijinfo.TabIndex = 40;
+            this.Overmijinfo.Text = resources.GetString("Overmijinfo.Text");
+            // 
+            // Scrol
+            // 
+            this.Scrol.Location = new System.Drawing.Point(977, 227);
+            this.Scrol.Name = "Scrol";
+            this.Scrol.Size = new System.Drawing.Size(21, 458);
+            this.Scrol.TabIndex = 41;
+            // 
+            // Woningtitel
+            // 
+            this.Woningtitel.AutoSize = true;
+            this.Woningtitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Woningtitel.Location = new System.Drawing.Point(489, 568);
+            this.Woningtitel.Name = "Woningtitel";
+            this.Woningtitel.Size = new System.Drawing.Size(62, 17);
+            this.Woningtitel.TabIndex = 42;
+            this.Woningtitel.Text = "Woning";
+            // 
+            // Woninginfo
+            // 
+            this.Woninginfo.AutoSize = true;
+            this.Woninginfo.Location = new System.Drawing.Point(486, 595);
+            this.Woninginfo.Name = "Woninginfo";
+            this.Woninginfo.Size = new System.Drawing.Size(167, 17);
+            this.Woninginfo.TabIndex = 43;
+            this.Woninginfo.Text = "Rijtjeshuis met grote tuin.";
+            // 
+            // Dienstentitel
+            // 
+            this.Dienstentitel.AutoSize = true;
+            this.Dienstentitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dienstentitel.Location = new System.Drawing.Point(486, 648);
+            this.Dienstentitel.Name = "Dienstentitel";
+            this.Dienstentitel.Size = new System.Drawing.Size(77, 17);
+            this.Dienstentitel.TabIndex = 44;
+            this.Dienstentitel.Text = "Diensten:";
+            // 
+            // Logeren
+            // 
+            this.Logeren.AutoSize = true;
+            this.Logeren.Location = new System.Drawing.Point(486, 677);
+            this.Logeren.Name = "Logeren";
+            this.Logeren.Size = new System.Drawing.Size(197, 17);
+            this.Logeren.TabIndex = 45;
+            this.Logeren.Text = "Logeren            €25 per nacht";
+            // 
+            // Dagopvang
+            // 
+            this.Dagopvang.AutoSize = true;
+            this.Dagopvang.Location = new System.Drawing.Point(486, 706);
+            this.Dagopvang.Name = "Dagopvang";
+            this.Dagopvang.Size = new System.Drawing.Size(186, 17);
+            this.Dagopvang.TabIndex = 46;
+            this.Dagopvang.Text = "Dagopvang       €15 per dag";
+            // 
+            // nul
+            // 
+            this.nul.Image = ((System.Drawing.Image)(resources.GetObject("nul.Image")));
+            this.nul.Location = new System.Drawing.Point(493, 265);
+            this.nul.Name = "nul";
+            this.nul.Size = new System.Drawing.Size(167, 29);
+            this.nul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.nul.TabIndex = 47;
+            this.nul.TabStop = false;
+            this.nul.Visible = false;
+            // 
+            // een
+            // 
+            this.een.Image = ((System.Drawing.Image)(resources.GetObject("een.Image")));
+            this.een.Location = new System.Drawing.Point(493, 265);
+            this.een.Name = "een";
+            this.een.Size = new System.Drawing.Size(167, 29);
+            this.een.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.een.TabIndex = 48;
+            this.een.TabStop = false;
+            this.een.Visible = false;
+            // 
+            // twee
+            // 
+            this.twee.Image = ((System.Drawing.Image)(resources.GetObject("twee.Image")));
+            this.twee.Location = new System.Drawing.Point(493, 264);
+            this.twee.Name = "twee";
+            this.twee.Size = new System.Drawing.Size(167, 30);
+            this.twee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.twee.TabIndex = 49;
+            this.twee.TabStop = false;
+            this.twee.Visible = false;
+            // 
+            // drie
+            // 
+            this.drie.Image = ((System.Drawing.Image)(resources.GetObject("drie.Image")));
+            this.drie.Location = new System.Drawing.Point(493, 264);
+            this.drie.Name = "drie";
+            this.drie.Size = new System.Drawing.Size(167, 29);
+            this.drie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.drie.TabIndex = 50;
+            this.drie.TabStop = false;
+            this.drie.Visible = false;
+            // 
+            // vier
+            // 
+            this.vier.Image = ((System.Drawing.Image)(resources.GetObject("vier.Image")));
+            this.vier.Location = new System.Drawing.Point(493, 265);
+            this.vier.Name = "vier";
+            this.vier.Size = new System.Drawing.Size(167, 30);
+            this.vier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.vier.TabIndex = 51;
+            this.vier.TabStop = false;
+            this.vier.Visible = false;
+            // 
+            // vijf
+            // 
+            this.vijf.Image = ((System.Drawing.Image)(resources.GetObject("vijf.Image")));
+            this.vijf.Location = new System.Drawing.Point(492, 264);
+            this.vijf.Name = "vijf";
+            this.vijf.Size = new System.Drawing.Size(167, 29);
+            this.vijf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.vijf.TabIndex = 52;
+            this.vijf.TabStop = false;
+            this.vijf.Visible = false;
             // 
             // FormBekijkenprofiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 814);
+            this.Controls.Add(this.vijf);
+            this.Controls.Add(this.vier);
+            this.Controls.Add(this.drie);
+            this.Controls.Add(this.twee);
+            this.Controls.Add(this.een);
+            this.Controls.Add(this.nul);
+            this.Controls.Add(this.Dagopvang);
+            this.Controls.Add(this.Logeren);
+            this.Controls.Add(this.Dienstentitel);
+            this.Controls.Add(this.Woninginfo);
+            this.Controls.Add(this.Woningtitel);
+            this.Controls.Add(this.Scrol);
+            this.Controls.Add(this.Overmijinfo);
+            this.Controls.Add(this.Overmij);
+            this.Controls.Add(this.Kanpassenop);
+            this.Controls.Add(this.Adres);
             this.Controls.Add(this.Vertified);
             this.Controls.Add(this.Test);
             this.Controls.Add(this.Naam);
@@ -299,9 +510,16 @@
             this.Controls.Add(this.dateTimePickerVan);
             this.Name = "FormBekijkenprofiel";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vertified)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nul)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.een)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vijf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,6 +546,22 @@
         private System.Windows.Forms.PictureBox Profielfoto;
         private System.Windows.Forms.Label Naam;
         private System.Windows.Forms.PictureBox Test;
-        private System.Windows.Forms.PictureBox Vertified;
+        private System.Windows.Forms.Label Adres;
+        private System.Windows.Forms.Label Kanpassenop;
+        private System.Windows.Forms.Label Overmij;
+        private System.Windows.Forms.TextBox Overmijinfo;
+        private System.Windows.Forms.VScrollBar Scrol;
+        private System.Windows.Forms.Label Woningtitel;
+        private System.Windows.Forms.Label Woninginfo;
+        private System.Windows.Forms.Label Dienstentitel;
+        private System.Windows.Forms.Label Logeren;
+        private System.Windows.Forms.Label Dagopvang;
+        private System.Windows.Forms.PictureBox nul;
+        private System.Windows.Forms.PictureBox een;
+        private System.Windows.Forms.PictureBox twee;
+        private System.Windows.Forms.PictureBox drie;
+        private System.Windows.Forms.PictureBox vier;
+        private System.Windows.Forms.PictureBox vijf;
+        public System.Windows.Forms.PictureBox Vertified;
     }
 }

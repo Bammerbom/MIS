@@ -127,11 +127,6 @@ namespace MIS
         {
 
         }
-
-        private void Scrol_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
     } 
 
 }

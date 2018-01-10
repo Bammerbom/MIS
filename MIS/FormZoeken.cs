@@ -41,7 +41,7 @@ namespace MIS
             if (box.Checked)
             {
                 List<CheckBox> CBList = new List<CheckBox>()
-                    { HondKatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielAmfibieCheckBox, InsectCheckBox, AndersCheckBox};
+                    { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
 
                 foreach (var Checkbox in CBList)
                 {
@@ -84,7 +84,7 @@ namespace MIS
             {
                 int CheckedCount = 0;
                 List<CheckBox> CBList = new List<CheckBox>()
-                    { HondKatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielAmfibieCheckBox, InsectCheckBox, AndersCheckBox};
+                    { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
 
                 foreach (var y in CBList)
                 {
@@ -111,6 +111,17 @@ namespace MIS
 
         private void Buildquery()
         {
+            DatabaseManager.AlleGebruikers();
+
+
+
+
+
+
+
+
+
+
 
         }  
     }

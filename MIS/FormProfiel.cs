@@ -18,7 +18,11 @@ namespace MIS
         }
         private void ProfielAanmakenButton_Click(object sender, EventArgs e)
         {
-            if (VoornaamTextbox.Text == "")
+            if (OppasCheckbox.Checked == false ^ UitlaatCheckbox.Checked == false)
+            {
+                MessageBox.Show("Geef alsjeblieft aan of je op wil passen, uit wil laten of beschikbaar bent voor beide");
+            }
+            else if (VoornaamTextbox.Text == "")
             {
                 MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
             }
@@ -79,6 +83,22 @@ namespace MIS
             else
             {
                 PremiumCheckbox.Text = "Nee, ik wil geen gebruik maken van de voordelen van een premium gebruiker";
+            }
+        }
+
+        private void VraagprijsTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(VraagprijsTextbox.Text, " ^[0-9]"))
+            {
+                VraagprijsTextbox.Text = "";
+            }
+        }
+
+        private void VraagprijsTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit (e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
     }

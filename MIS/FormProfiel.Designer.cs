@@ -263,6 +263,8 @@
             this.VraagprijsTextbox.Name = "VraagprijsTextbox";
             this.VraagprijsTextbox.Size = new System.Drawing.Size(100, 20);
             this.VraagprijsTextbox.TabIndex = 4;
+            this.VraagprijsTextbox.TextChanged += new System.EventHandler(this.VraagprijsTextbox_TextChanged);
+            this.VraagprijsTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VraagprijsTextbox_KeyPress);
             // 
             // KatCheckbox
             // 

@@ -70,11 +70,6 @@ namespace MIS
                 PremiumCheckbox.Text = "Nee, ik wil geen gebruik maken van de voordelen van een premium gebruiker";
             }
         }
-
-        private void date1label_Click(object sender, EventArgs e)
-        {
-            Datumpick1.Value.ToString();
-        }
     }
 }
  

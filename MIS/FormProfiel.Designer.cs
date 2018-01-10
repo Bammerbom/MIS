@@ -58,7 +58,7 @@
             // VoornaamLabel
             // 
             this.VoornaamLabel.AutoSize = true;
-            this.VoornaamLabel.Location = new System.Drawing.Point(37, 55);
+            this.VoornaamLabel.Location = new System.Drawing.Point(37, 71);
             this.VoornaamLabel.Name = "VoornaamLabel";
             this.VoornaamLabel.Size = new System.Drawing.Size(55, 13);
             this.VoornaamLabel.TabIndex = 0;
@@ -67,7 +67,7 @@
             // WoonplaatsLabel
             // 
             this.WoonplaatsLabel.AutoSize = true;
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 116);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 166);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(64, 13);
             this.WoonplaatsLabel.TabIndex = 3;
@@ -75,22 +75,22 @@
             // 
             // VoornaamTextbox
             // 
-            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 48);
+            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 64);
             this.VoornaamTextbox.Name = "VoornaamTextbox";
             this.VoornaamTextbox.Size = new System.Drawing.Size(100, 20);
-            this.VoornaamTextbox.TabIndex = 5;
+            this.VoornaamTextbox.TabIndex = 1;
             // 
             // WoonplaatsTextbox
             // 
-            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 109);
+            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 159);
             this.WoonplaatsTextbox.Name = "WoonplaatsTextbox";
             this.WoonplaatsTextbox.Size = new System.Drawing.Size(100, 20);
-            this.WoonplaatsTextbox.TabIndex = 8;
+            this.WoonplaatsTextbox.TabIndex = 3;
             // 
             // Achternaamlabel
             // 
             this.Achternaamlabel.AutoSize = true;
-            this.Achternaamlabel.Location = new System.Drawing.Point(37, 90);
+            this.Achternaamlabel.Location = new System.Drawing.Point(35, 119);
             this.Achternaamlabel.Name = "Achternaamlabel";
             this.Achternaamlabel.Size = new System.Drawing.Size(64, 13);
             this.Achternaamlabel.TabIndex = 10;
@@ -98,15 +98,15 @@
             // 
             // AchternaamTextbox
             // 
-            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 83);
+            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 112);
             this.AchternaamTextbox.Name = "AchternaamTextbox";
             this.AchternaamTextbox.Size = new System.Drawing.Size(100, 20);
-            this.AchternaamTextbox.TabIndex = 11;
+            this.AchternaamTextbox.TabIndex = 2;
             // 
             // OverMijLabel
             // 
             this.OverMijLabel.AutoSize = true;
-            this.OverMijLabel.Location = new System.Drawing.Point(557, 32);
+            this.OverMijLabel.Location = new System.Drawing.Point(482, 48);
             this.OverMijLabel.Name = "OverMijLabel";
             this.OverMijLabel.Size = new System.Drawing.Size(45, 13);
             this.OverMijLabel.TabIndex = 15;
@@ -114,16 +114,16 @@
             // 
             // OverMijTextbox
             // 
-            this.OverMijTextbox.Location = new System.Drawing.Point(560, 55);
+            this.OverMijTextbox.Location = new System.Drawing.Point(485, 64);
             this.OverMijTextbox.Multiline = true;
             this.OverMijTextbox.Name = "OverMijTextbox";
-            this.OverMijTextbox.Size = new System.Drawing.Size(392, 119);
-            this.OverMijTextbox.TabIndex = 16;
+            this.OverMijTextbox.Size = new System.Drawing.Size(467, 158);
+            this.OverMijTextbox.TabIndex = 5;
             // 
             // HondCheckbox
             // 
             this.HondCheckbox.AutoSize = true;
-            this.HondCheckbox.Location = new System.Drawing.Point(40, 250);
+            this.HondCheckbox.Location = new System.Drawing.Point(40, 298);
             this.HondCheckbox.Name = "HondCheckbox";
             this.HondCheckbox.Size = new System.Drawing.Size(52, 17);
             this.HondCheckbox.TabIndex = 17;
@@ -133,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 225);
+            this.label1.Location = new System.Drawing.Point(37, 273);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 18;
@@ -142,7 +142,7 @@
             // KnaagdierCheckbox
             // 
             this.KnaagdierCheckbox.AutoSize = true;
-            this.KnaagdierCheckbox.Location = new System.Drawing.Point(40, 296);
+            this.KnaagdierCheckbox.Location = new System.Drawing.Point(40, 344);
             this.KnaagdierCheckbox.Name = "KnaagdierCheckbox";
             this.KnaagdierCheckbox.Size = new System.Drawing.Size(74, 17);
             this.KnaagdierCheckbox.TabIndex = 19;
@@ -152,7 +152,7 @@
             // ReptielCheckbox
             // 
             this.ReptielCheckbox.AutoSize = true;
-            this.ReptielCheckbox.Location = new System.Drawing.Point(40, 342);
+            this.ReptielCheckbox.Location = new System.Drawing.Point(40, 390);
             this.ReptielCheckbox.Name = "ReptielCheckbox";
             this.ReptielCheckbox.Size = new System.Drawing.Size(59, 17);
             this.ReptielCheckbox.TabIndex = 20;
@@ -162,7 +162,7 @@
             // VogelCheckbox
             // 
             this.VogelCheckbox.AutoSize = true;
-            this.VogelCheckbox.Location = new System.Drawing.Point(40, 319);
+            this.VogelCheckbox.Location = new System.Drawing.Point(40, 367);
             this.VogelCheckbox.Name = "VogelCheckbox";
             this.VogelCheckbox.Size = new System.Drawing.Size(53, 17);
             this.VogelCheckbox.TabIndex = 21;
@@ -172,7 +172,7 @@
             // InsectCheckbox
             // 
             this.InsectCheckbox.AutoSize = true;
-            this.InsectCheckbox.Location = new System.Drawing.Point(40, 388);
+            this.InsectCheckbox.Location = new System.Drawing.Point(40, 436);
             this.InsectCheckbox.Name = "InsectCheckbox";
             this.InsectCheckbox.Size = new System.Drawing.Size(55, 17);
             this.InsectCheckbox.TabIndex = 22;
@@ -182,7 +182,7 @@
             // VissenCheckbox
             // 
             this.VissenCheckbox.AutoSize = true;
-            this.VissenCheckbox.Location = new System.Drawing.Point(40, 411);
+            this.VissenCheckbox.Location = new System.Drawing.Point(40, 459);
             this.VissenCheckbox.Name = "VissenCheckbox";
             this.VissenCheckbox.Size = new System.Drawing.Size(57, 17);
             this.VissenCheckbox.TabIndex = 23;
@@ -192,7 +192,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 225);
+            this.label2.Location = new System.Drawing.Point(153, 273);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 24;
@@ -201,7 +201,7 @@
             // OppasCheckbox
             // 
             this.OppasCheckbox.AutoSize = true;
-            this.OppasCheckbox.Location = new System.Drawing.Point(156, 250);
+            this.OppasCheckbox.Location = new System.Drawing.Point(156, 298);
             this.OppasCheckbox.Name = "OppasCheckbox";
             this.OppasCheckbox.Size = new System.Drawing.Size(89, 17);
             this.OppasCheckbox.TabIndex = 25;
@@ -211,7 +211,7 @@
             // UitlaatCheckbox
             // 
             this.UitlaatCheckbox.AutoSize = true;
-            this.UitlaatCheckbox.Location = new System.Drawing.Point(156, 274);
+            this.UitlaatCheckbox.Location = new System.Drawing.Point(156, 322);
             this.UitlaatCheckbox.Name = "UitlaatCheckbox";
             this.UitlaatCheckbox.Size = new System.Drawing.Size(77, 17);
             this.UitlaatCheckbox.TabIndex = 26;
@@ -231,7 +231,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(560, 225);
+            this.label3.Location = new System.Drawing.Point(482, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(238, 13);
             this.label3.TabIndex = 28;
@@ -240,7 +240,7 @@
             // PremiumCheckbox
             // 
             this.PremiumCheckbox.AutoSize = true;
-            this.PremiumCheckbox.Location = new System.Drawing.Point(560, 250);
+            this.PremiumCheckbox.Location = new System.Drawing.Point(482, 298);
             this.PremiumCheckbox.Name = "PremiumCheckbox";
             this.PremiumCheckbox.Size = new System.Drawing.Size(392, 17);
             this.PremiumCheckbox.TabIndex = 29;
@@ -251,7 +251,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 150);
+            this.label4.Location = new System.Drawing.Point(37, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 31;
@@ -259,15 +259,15 @@
             // 
             // VraagprijsTextbox
             // 
-            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 147);
+            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 202);
             this.VraagprijsTextbox.Name = "VraagprijsTextbox";
             this.VraagprijsTextbox.Size = new System.Drawing.Size(100, 20);
-            this.VraagprijsTextbox.TabIndex = 32;
+            this.VraagprijsTextbox.TabIndex = 4;
             // 
             // KatCheckbox
             // 
             this.KatCheckbox.AutoSize = true;
-            this.KatCheckbox.Location = new System.Drawing.Point(40, 273);
+            this.KatCheckbox.Location = new System.Drawing.Point(40, 321);
             this.KatCheckbox.Name = "KatCheckbox";
             this.KatCheckbox.Size = new System.Drawing.Size(42, 17);
             this.KatCheckbox.TabIndex = 33;
@@ -277,7 +277,7 @@
             // AmfibieCheckbox
             // 
             this.AmfibieCheckbox.AutoSize = true;
-            this.AmfibieCheckbox.Location = new System.Drawing.Point(40, 365);
+            this.AmfibieCheckbox.Location = new System.Drawing.Point(40, 413);
             this.AmfibieCheckbox.Name = "AmfibieCheckbox";
             this.AmfibieCheckbox.Size = new System.Drawing.Size(60, 17);
             this.AmfibieCheckbox.TabIndex = 34;

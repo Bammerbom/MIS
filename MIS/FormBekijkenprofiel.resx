@@ -3199,7 +3199,7 @@
         AAAAAAAAAAAAAAC8Iu+88/8Ayv89rljx3AEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Vertified.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Verified.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAFF0RVh0Q29t
         bWVudABDb3B5cmlnaHQgSU5DT1JTIEdtYkggKHd3dy5pY29uZXhwZXJpZW5jZS5jb20pIC0gVW5saWNl
@@ -3404,7 +3404,7 @@
         QgYJAwAhxA8DACGEEDJgGAAIIYSQAcMAQAghhAyXw+H/A4EpEtt+dQU/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Vertified.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Verified.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAFF0RVh0Q29t
         bWVudABDb3B5cmlnaHQgSU5DT1JTIEdtYkggKHd3dy5pY29uZXhwZXJpZW5jZS5jb20pIC0gVW5saWNl
@@ -3608,9 +3608,6 @@
         M2Fiz/HvB4mdkeSci627+M+be84Jk1qf8xxCcsMAQMggoTAIIX4YAAgZJAwAhBA/DACEDBIGAEKIHwYA
         QgYJAwAhxA8DACGEEDJgGAAIIYSQAcMAQAghhAyXw+H/A4EpEtt+dQU/AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="Overmijinfo.Text" xml:space="preserve">
-    <value>What the fuck did you just fucking say about me, you little bitch? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I’m the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words.</value>
   </data>
   <data name="nul.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4295,33 +4292,5 @@
         Nun6Jf7Q5JwiruKzOOAzj9ffs3U+FSASVFJeSQdHAdEW7ylNra+6tkYStGorf7cc/1w2dU75vDwbkgDR
         P6O//UQj+j8hRLC2cy6GTgAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="checkbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\checkbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="education-icon-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\education-icon-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stock-photo-half-body-shot-of-a-shirtless-athletic-young-man-carrying-two-dogs-on-his-shoulders-and-looking-at-318334103" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\stock-photo-half-body-shot-of-a-shirtless-athletic-young-man-carrying-two-dogs-on-his-shoulders-and-looking-at-318334103.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

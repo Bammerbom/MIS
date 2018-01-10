@@ -28,7 +28,8 @@ namespace MIS {
                                       "oppassen boolean, " +
                                       "uitlaten boolean, " +
                                       "woonplaats text, " +
-                                      "diertypes text)", SqlTools.Connection);
+                                      "diertypes text, " +
+                                      "rating integer)", SqlTools.Connection);
                 cmd.ExecuteNonQuery();
             }
         }
@@ -41,8 +42,8 @@ namespace MIS {
         public static int GebruikerToevoegen(Gebruiker gebruiker)
         {
             //Create insert command
-            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes) " +
-                "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes)", SqlTools.Connection);
+            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes, rating) " +
+                "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes, @rating)", SqlTools.Connection);
             cmd = GebruikerNaarData(cmd, gebruiker);
             cmd.ExecuteNonQuery();
 
@@ -78,7 +79,7 @@ namespace MIS {
             //Create update command
             var cmd = new SQLiteCommand("UPDATE gebruikers SET " +
                 "voornaam = @voornaam, achternaam = @achternaam, overmij = @overmij, verified = @verified, admin = @admin, " +
-                "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes " +
+                "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes, rating = @rating " +
                 "WHERE userid = @userid", SqlTools.Connection);
             cmd.Parameters.Add("@userid", DbType.Int32).Value = userid;
             cmd = GebruikerNaarData(cmd, gebruiker);
@@ -133,7 +134,8 @@ namespace MIS {
                 oppassen = (bool)reader["oppassen"],
                 uitlaten = (bool)reader["uitlaten"],
                 woonplaats = (string)reader["woonplaats"],
-                diertypes = (string)reader["diertypes"]
+                diertypes = (string)reader["diertypes"],
+                rating = Convert.ToInt32(reader["rating"])
             };
         }
 
@@ -149,6 +151,7 @@ namespace MIS {
             cmd.Parameters.Add("@uitlaten", DbType.Boolean).Value = gebruiker.uitlaten;
             cmd.Parameters.Add("@woonplaats", DbType.String).Value = gebruiker.woonplaats;
             cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
+            cmd.Parameters.Add("@rating", DbType.Int32).Value = gebruiker.rating;
             return cmd;
         }
         #endregion Utils
@@ -169,5 +172,6 @@ namespace MIS {
         public bool uitlaten;
         public string woonplaats;
         public string diertypes;
+        public int rating;
     }
 }

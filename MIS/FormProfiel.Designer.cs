@@ -53,6 +53,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.PremiumCheckbox = new System.Windows.Forms.CheckBox();
             this.date1label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.VraagprijsTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // VoornaamLabel
@@ -67,7 +69,7 @@
             // WoonplaatsLabel
             // 
             this.WoonplaatsLabel.AutoSize = true;
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 147);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 109);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(64, 13);
             this.WoonplaatsLabel.TabIndex = 3;
@@ -82,7 +84,7 @@
             // 
             // WoonplaatsTextbox
             // 
-            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 147);
+            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 102);
             this.WoonplaatsTextbox.Name = "WoonplaatsTextbox";
             this.WoonplaatsTextbox.Size = new System.Drawing.Size(100, 20);
             this.WoonplaatsTextbox.TabIndex = 8;
@@ -90,7 +92,7 @@
             // Achternaamlabel
             // 
             this.Achternaamlabel.AutoSize = true;
-            this.Achternaamlabel.Location = new System.Drawing.Point(37, 86);
+            this.Achternaamlabel.Location = new System.Drawing.Point(37, 67);
             this.Achternaamlabel.Name = "Achternaamlabel";
             this.Achternaamlabel.Size = new System.Drawing.Size(64, 13);
             this.Achternaamlabel.TabIndex = 10;
@@ -98,7 +100,7 @@
             // 
             // AchternaamTextbox
             // 
-            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 86);
+            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 60);
             this.AchternaamTextbox.Name = "AchternaamTextbox";
             this.AchternaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.AchternaamTextbox.TabIndex = 11;
@@ -281,11 +283,29 @@
             this.date1label.Text = "label4";
             this.date1label.Click += new System.EventHandler(this.date1label_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Vraagprijs per dag (€)";
+            // 
+            // VraagprijsTextbox
+            // 
+            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 147);
+            this.VraagprijsTextbox.Name = "VraagprijsTextbox";
+            this.VraagprijsTextbox.Size = new System.Drawing.Size(100, 20);
+            this.VraagprijsTextbox.TabIndex = 32;
+            // 
             // FormProfiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.VraagprijsTextbox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.date1label);
             this.Controls.Add(this.PremiumCheckbox);
             this.Controls.Add(this.label3);
@@ -345,5 +365,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox PremiumCheckbox;
         private System.Windows.Forms.Label date1label;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox VraagprijsTextbox;
     }
 }

@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.VoornaamLabel = new System.Windows.Forms.Label();
-            this.EmailLabel = new System.Windows.Forms.Label();
-            this.AdresLabel = new System.Windows.Forms.Label();
-            this.PostcodeLabel = new System.Windows.Forms.Label();
+            this.WoonplaatsLabel = new System.Windows.Forms.Label();
             this.VoornaamTextbox = new System.Windows.Forms.TextBox();
-            this.EmailTextbox = new System.Windows.Forms.TextBox();
-            this.AdresTextbox = new System.Windows.Forms.TextBox();
-            this.PostcodeTextbox = new System.Windows.Forms.TextBox();
+            this.WoonplaatsTextbox = new System.Windows.Forms.TextBox();
             this.Achternaamlabel = new System.Windows.Forms.Label();
             this.AchternaamTextbox = new System.Windows.Forms.TextBox();
             this.BeschikbaarheidLabel = new System.Windows.Forms.Label();
@@ -54,76 +50,49 @@
             this.OppasCheckbox = new System.Windows.Forms.CheckBox();
             this.UitlaatCheckbox = new System.Windows.Forms.CheckBox();
             this.ProfielAanmakenButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PremiumCheckbox = new System.Windows.Forms.CheckBox();
+            this.date1label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.VraagprijsTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // VoornaamLabel
             // 
             this.VoornaamLabel.AutoSize = true;
-            this.VoornaamLabel.Location = new System.Drawing.Point(37, 28);
+            this.VoornaamLabel.Location = new System.Drawing.Point(37, 32);
             this.VoornaamLabel.Name = "VoornaamLabel";
             this.VoornaamLabel.Size = new System.Drawing.Size(55, 13);
             this.VoornaamLabel.TabIndex = 0;
             this.VoornaamLabel.Text = "Voornaam";
             // 
-            // EmailLabel
+            // WoonplaatsLabel
             // 
-            this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(37, 65);
-            this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(58, 13);
-            this.EmailLabel.TabIndex = 1;
-            this.EmailLabel.Text = "Emailadres";
-            // 
-            // AdresLabel
-            // 
-            this.AdresLabel.AutoSize = true;
-            this.AdresLabel.Location = new System.Drawing.Point(37, 104);
-            this.AdresLabel.Name = "AdresLabel";
-            this.AdresLabel.Size = new System.Drawing.Size(34, 13);
-            this.AdresLabel.TabIndex = 3;
-            this.AdresLabel.Text = "Adres";
-            // 
-            // PostcodeLabel
-            // 
-            this.PostcodeLabel.AutoSize = true;
-            this.PostcodeLabel.Location = new System.Drawing.Point(37, 147);
-            this.PostcodeLabel.Name = "PostcodeLabel";
-            this.PostcodeLabel.Size = new System.Drawing.Size(52, 13);
-            this.PostcodeLabel.TabIndex = 4;
-            this.PostcodeLabel.Text = "Postcode";
+            this.WoonplaatsLabel.AutoSize = true;
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 109);
+            this.WoonplaatsLabel.Name = "WoonplaatsLabel";
+            this.WoonplaatsLabel.Size = new System.Drawing.Size(64, 13);
+            this.WoonplaatsLabel.TabIndex = 3;
+            this.WoonplaatsLabel.Text = "Woonplaats";
             // 
             // VoornaamTextbox
             // 
-            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 21);
+            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 25);
             this.VoornaamTextbox.Name = "VoornaamTextbox";
             this.VoornaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.VoornaamTextbox.TabIndex = 5;
             // 
-            // EmailTextbox
+            // WoonplaatsTextbox
             // 
-            this.EmailTextbox.Location = new System.Drawing.Point(156, 65);
-            this.EmailTextbox.Name = "EmailTextbox";
-            this.EmailTextbox.Size = new System.Drawing.Size(100, 20);
-            this.EmailTextbox.TabIndex = 6;
-            // 
-            // AdresTextbox
-            // 
-            this.AdresTextbox.Location = new System.Drawing.Point(156, 104);
-            this.AdresTextbox.Name = "AdresTextbox";
-            this.AdresTextbox.Size = new System.Drawing.Size(100, 20);
-            this.AdresTextbox.TabIndex = 8;
-            // 
-            // PostcodeTextbox
-            // 
-            this.PostcodeTextbox.Location = new System.Drawing.Point(156, 147);
-            this.PostcodeTextbox.Name = "PostcodeTextbox";
-            this.PostcodeTextbox.Size = new System.Drawing.Size(100, 20);
-            this.PostcodeTextbox.TabIndex = 9;
+            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 102);
+            this.WoonplaatsTextbox.Name = "WoonplaatsTextbox";
+            this.WoonplaatsTextbox.Size = new System.Drawing.Size(100, 20);
+            this.WoonplaatsTextbox.TabIndex = 8;
             // 
             // Achternaamlabel
             // 
             this.Achternaamlabel.AutoSize = true;
-            this.Achternaamlabel.Location = new System.Drawing.Point(308, 28);
+            this.Achternaamlabel.Location = new System.Drawing.Point(37, 67);
             this.Achternaamlabel.Name = "Achternaamlabel";
             this.Achternaamlabel.Size = new System.Drawing.Size(64, 13);
             this.Achternaamlabel.TabIndex = 10;
@@ -131,7 +100,7 @@
             // 
             // AchternaamTextbox
             // 
-            this.AchternaamTextbox.Location = new System.Drawing.Point(398, 21);
+            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 60);
             this.AchternaamTextbox.Name = "AchternaamTextbox";
             this.AchternaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.AchternaamTextbox.TabIndex = 11;
@@ -139,7 +108,7 @@
             // BeschikbaarheidLabel
             // 
             this.BeschikbaarheidLabel.AutoSize = true;
-            this.BeschikbaarheidLabel.Location = new System.Drawing.Point(37, 466);
+            this.BeschikbaarheidLabel.Location = new System.Drawing.Point(37, 474);
             this.BeschikbaarheidLabel.Name = "BeschikbaarheidLabel";
             this.BeschikbaarheidLabel.Size = new System.Drawing.Size(119, 13);
             this.BeschikbaarheidLabel.TabIndex = 12;
@@ -154,7 +123,7 @@
             // 
             // Datumpick2
             // 
-            this.Datumpick2.Location = new System.Drawing.Point(298, 501);
+            this.Datumpick2.Location = new System.Drawing.Point(246, 501);
             this.Datumpick2.Name = "Datumpick2";
             this.Datumpick2.Size = new System.Drawing.Size(200, 20);
             this.Datumpick2.TabIndex = 14;
@@ -162,7 +131,7 @@
             // OverMijLabel
             // 
             this.OverMijLabel.AutoSize = true;
-            this.OverMijLabel.Location = new System.Drawing.Point(557, 27);
+            this.OverMijLabel.Location = new System.Drawing.Point(557, 32);
             this.OverMijLabel.Name = "OverMijLabel";
             this.OverMijLabel.Size = new System.Drawing.Size(45, 13);
             this.OverMijLabel.TabIndex = 15;
@@ -282,12 +251,64 @@
             this.ProfielAanmakenButton.TabIndex = 27;
             this.ProfielAanmakenButton.Text = "Profiel aanmaken";
             this.ProfielAanmakenButton.UseVisualStyleBackColor = true;
+            this.ProfielAanmakenButton.Click += new System.EventHandler(this.ProfielAanmakenButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(560, 225);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(238, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Wil je gebruik maken van onze premium service?";
+            // 
+            // PremiumCheckbox
+            // 
+            this.PremiumCheckbox.AutoSize = true;
+            this.PremiumCheckbox.Location = new System.Drawing.Point(560, 250);
+            this.PremiumCheckbox.Name = "PremiumCheckbox";
+            this.PremiumCheckbox.Size = new System.Drawing.Size(392, 17);
+            this.PremiumCheckbox.TabIndex = 29;
+            this.PremiumCheckbox.Text = "Nee, ik wil geen gebruik maken van de voordelen van een premium gebruiker";
+            this.PremiumCheckbox.UseVisualStyleBackColor = true;
+            this.PremiumCheckbox.CheckedChanged += new System.EventHandler(this.PremiumCheckbox_CheckedChanged);
+            // 
+            // date1label
+            // 
+            this.date1label.AutoSize = true;
+            this.date1label.Location = new System.Drawing.Point(40, 554);
+            this.date1label.Name = "date1label";
+            this.date1label.Size = new System.Drawing.Size(35, 13);
+            this.date1label.TabIndex = 30;
+            this.date1label.Text = "label4";
+            this.date1label.Click += new System.EventHandler(this.date1label_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Vraagprijs per dag (€)";
+            // 
+            // VraagprijsTextbox
+            // 
+            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 147);
+            this.VraagprijsTextbox.Name = "VraagprijsTextbox";
+            this.VraagprijsTextbox.Size = new System.Drawing.Size(100, 20);
+            this.VraagprijsTextbox.TabIndex = 32;
             // 
             // FormProfiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.VraagprijsTextbox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.date1label);
+            this.Controls.Add(this.PremiumCheckbox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.ProfielAanmakenButton);
             this.Controls.Add(this.UitlaatCheckbox);
             this.Controls.Add(this.OppasCheckbox);
@@ -306,13 +327,9 @@
             this.Controls.Add(this.BeschikbaarheidLabel);
             this.Controls.Add(this.AchternaamTextbox);
             this.Controls.Add(this.Achternaamlabel);
-            this.Controls.Add(this.PostcodeTextbox);
-            this.Controls.Add(this.AdresTextbox);
-            this.Controls.Add(this.EmailTextbox);
+            this.Controls.Add(this.WoonplaatsTextbox);
             this.Controls.Add(this.VoornaamTextbox);
-            this.Controls.Add(this.PostcodeLabel);
-            this.Controls.Add(this.AdresLabel);
-            this.Controls.Add(this.EmailLabel);
+            this.Controls.Add(this.WoonplaatsLabel);
             this.Controls.Add(this.VoornaamLabel);
             this.Name = "FormProfiel";
             this.Text = "FormProfiel";
@@ -324,13 +341,9 @@
         #endregion
 
         private System.Windows.Forms.Label VoornaamLabel;
-        private System.Windows.Forms.Label EmailLabel;
-        private System.Windows.Forms.Label AdresLabel;
-        private System.Windows.Forms.Label PostcodeLabel;
+        private System.Windows.Forms.Label WoonplaatsLabel;
         private System.Windows.Forms.TextBox VoornaamTextbox;
-        private System.Windows.Forms.TextBox EmailTextbox;
-        private System.Windows.Forms.TextBox AdresTextbox;
-        private System.Windows.Forms.TextBox PostcodeTextbox;
+        private System.Windows.Forms.TextBox WoonplaatsTextbox;
         private System.Windows.Forms.Label Achternaamlabel;
         private System.Windows.Forms.TextBox AchternaamTextbox;
         private System.Windows.Forms.Label BeschikbaarheidLabel;
@@ -349,5 +362,10 @@
         private System.Windows.Forms.CheckBox OppasCheckbox;
         private System.Windows.Forms.CheckBox UitlaatCheckbox;
         private System.Windows.Forms.Button ProfielAanmakenButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox PremiumCheckbox;
+        private System.Windows.Forms.Label date1label;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox VraagprijsTextbox;
     }
 }

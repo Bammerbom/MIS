@@ -24,6 +24,7 @@ namespace MIS
         {
             var gebruiker = DatabaseManager.GebruikerOpvragen(UserId);
             Naam.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
+            this.Text = "Profiel van " + gebruiker.voornaam + " " + gebruiker.achternaam;
             Adres.Text = gebruiker.woonplaats;
             Kanpassenop.Text = gebruiker.diertypes;
             Overmijinfo.Text = gebruiker.overmij;

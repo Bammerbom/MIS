@@ -317,7 +317,7 @@
             this.Controls.Add(this.WoonplaatsLabel);
             this.Controls.Add(this.VoornaamLabel);
             this.Name = "FormProfiel";
-            this.Text = "FormProfiel";
+            this.Text = "Profiel maken";
             this.ResumeLayout(false);
             this.PerformLayout();
 

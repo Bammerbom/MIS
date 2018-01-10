@@ -273,7 +273,7 @@
             this.Controls.Add(this.Profielfoto);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormBekijkenprofiel";
-            this.Text = "Form1";
+            this.Text = "Profiel van *naam*";
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Test)).EndInit();

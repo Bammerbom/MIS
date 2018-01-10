@@ -24,7 +24,8 @@ namespace MIS
             Valid = CheckValid();
             if (Valid == true)
             {
-                MessageBox.Show(Convert.ToString(Valid));
+                Gebruiker[] gebruikers = Buildquery();
+
             }
             else
             {
@@ -80,28 +81,34 @@ namespace MIS
         /// <returns>of het een geldige zoek functie is</returns>
         private bool CheckValid()
         {
-            if (ZoektextBox.Text != "")
+            if (PrijsTextBox.Text != "")
             {
-                int CheckedCount = 0;
-                List<CheckBox> CBList = new List<CheckBox>()
-                    { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
-
-                foreach (var y in CBList)
+                try
                 {
-                    if (y.Checked)
-                    {
-                        CheckedCount++;
-                    }
+                    Convert.ToDouble(PrijsTextBox.Text);
                 }
-
-                if (CheckedCount == 1)
+                catch
                 {
-                    return true;
-                }
-                else
-                {
+                    MessageBox.Show("Foutieve prijs ingevuld.");
                     return false;
                 }
+            }
+            
+            int CheckedCount = 0;
+            List<CheckBox> CBList = new List<CheckBox>()
+                { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
+
+            foreach (var y in CBList)
+            {
+                if (y.Checked)
+                {
+                    CheckedCount++;
+                }
+            }
+
+            if (CheckedCount == 1)
+            {
+                return true;
             }
             else
             {
@@ -109,11 +116,10 @@ namespace MIS
             }
         }
 
-        private void Buildquery()
+        private Gebruiker[] Buildquery()
         {
             string dier = "", woonplaats;
             bool Verified, uitlaat, oppas;
-            double prijs;
             List<CheckBox> CBList = new List<CheckBox>()
                     { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
 
@@ -125,28 +131,32 @@ namespace MIS
                 }
             }
 
-            {
-
-            }
-            //prijs = PrijsTextBox;
-
-
             Verified = VerifiedCheckBox.Checked;
             uitlaat = UitlaatCheckBox.Checked;
             oppas = OppasCheckBox.Checked;
-
             woonplaats = ZoektextBox.Text;
             Gebruiker[] allegebruikers = DatabaseManager.AlleGebruikers();
-            List<Gebruiker> filter1 = new List<Gebruiker>();
+            List<Gebruiker> filteredgebruikers = new List<Gebruiker>();
 
             foreach (var gebruiker in allegebruikers)
             {
                 if (!gebruiker.diertypes.Contains(dier)) continue;
-                if (gebruiker.woonplaats != woonplaats) continue;
-                //if (gebrui)
-
+                if (woonplaats != "" && gebruiker.woonplaats != woonplaats) continue;
+                if (PrijsTextBox.Text != "" && (gebruiker.vraagprijs > Convert.ToDouble(PrijsTextBox.Text))) continue;
+                if (VerifiedCheckBox.Checked && !gebruiker.verified) continue;
+                if (UitlaatCheckBox.Checked  && !gebruiker.uitlaten) continue;
+                if (OppasCheckBox.Checked && !gebruiker.oppassen) continue;
+                filteredgebruikers.Add(gebruiker);
             }
 
+            filteredgebruikers.Sort((Gebruiker a, Gebruiker b) =>
+            {
+                if (a.verified) return -1;
+                if (b.verified) return 1;
+                return -1;
+            });
+
+            return filteredgebruikers.ToArray();
         }  
     }
 }

@@ -65,6 +65,7 @@
             this.drie = new System.Windows.Forms.PictureBox();
             this.vier = new System.Windows.Forms.PictureBox();
             this.vijf = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Test)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vertified)).BeginInit();
@@ -74,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.drie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vijf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SDierLabel
@@ -265,7 +267,7 @@
             // 
             this.Profielfoto.Image = ((System.Drawing.Image)(resources.GetObject("Profielfoto.Image")));
             this.Profielfoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("Profielfoto.InitialImage")));
-            this.Profielfoto.Location = new System.Drawing.Point(205, 227);
+            this.Profielfoto.Location = new System.Drawing.Point(203, 196);
             this.Profielfoto.Name = "Profielfoto";
             this.Profielfoto.Size = new System.Drawing.Size(225, 207);
             this.Profielfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -276,17 +278,18 @@
             // 
             this.Naam.AutoSize = true;
             this.Naam.Font = new System.Drawing.Font("Tw Cen MT Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Naam.Location = new System.Drawing.Point(490, 218);
+            this.Naam.Location = new System.Drawing.Point(488, 187);
             this.Naam.Name = "Naam";
             this.Naam.Size = new System.Drawing.Size(235, 35);
             this.Naam.TabIndex = 34;
             this.Naam.Text = "Naam + achternaam";
+            this.Naam.Click += new System.EventHandler(this.Naam_Click);
             // 
             // Test
             // 
             this.Test.Image = ((System.Drawing.Image)(resources.GetObject("Test.Image")));
             this.Test.InitialImage = null;
-            this.Test.Location = new System.Drawing.Point(800, 218);
+            this.Test.Location = new System.Drawing.Point(798, 187);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(47, 40);
             this.Test.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -298,58 +301,63 @@
             // 
             this.Vertified.Image = ((System.Drawing.Image)(resources.GetObject("Vertified.Image")));
             this.Vertified.InitialImage = ((System.Drawing.Image)(resources.GetObject("Vertified.InitialImage")));
-            this.Vertified.Location = new System.Drawing.Point(737, 218);
+            this.Vertified.Location = new System.Drawing.Point(735, 187);
             this.Vertified.Name = "Vertified";
             this.Vertified.Size = new System.Drawing.Size(41, 40);
             this.Vertified.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Vertified.TabIndex = 36;
             this.Vertified.TabStop = false;
             this.Vertified.Visible = false;
+            this.Vertified.Click += new System.EventHandler(this.Vertified_Click);
             // 
             // Adres
             // 
             this.Adres.AutoSize = true;
             this.Adres.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adres.Location = new System.Drawing.Point(492, 309);
+            this.Adres.Location = new System.Drawing.Point(490, 278);
             this.Adres.Name = "Adres";
             this.Adres.Size = new System.Drawing.Size(160, 21);
             this.Adres.TabIndex = 37;
             this.Adres.Text = "Postcode + woonplaats";
+            this.Adres.Click += new System.EventHandler(this.Adres_Click);
             // 
             // Kanpassenop
             // 
             this.Kanpassenop.AutoSize = true;
             this.Kanpassenop.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Kanpassenop.Location = new System.Drawing.Point(492, 335);
+            this.Kanpassenop.Location = new System.Drawing.Point(490, 304);
             this.Kanpassenop.Name = "Kanpassenop";
             this.Kanpassenop.Size = new System.Drawing.Size(153, 21);
             this.Kanpassenop.TabIndex = 38;
             this.Kanpassenop.Text = "Kan passen op: x, y, z";
+            this.Kanpassenop.Click += new System.EventHandler(this.Kanpassenop_Click);
             // 
             // Overmij
             // 
             this.Overmij.AutoSize = true;
             this.Overmij.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overmij.Location = new System.Drawing.Point(489, 377);
+            this.Overmij.Location = new System.Drawing.Point(487, 346);
             this.Overmij.Name = "Overmij";
             this.Overmij.Size = new System.Drawing.Size(55, 18);
             this.Overmij.TabIndex = 39;
             this.Overmij.Text = "Over mij";
+            this.Overmij.Click += new System.EventHandler(this.Overmij_Click);
             // 
             // Overmijinfo
             // 
             this.Overmijinfo.BackColor = System.Drawing.SystemColors.Control;
             this.Overmijinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Overmijinfo.Location = new System.Drawing.Point(492, 406);
+            this.Overmijinfo.Location = new System.Drawing.Point(490, 375);
             this.Overmijinfo.Multiline = true;
             this.Overmijinfo.Name = "Overmijinfo";
             this.Overmijinfo.Size = new System.Drawing.Size(386, 150);
             this.Overmijinfo.TabIndex = 40;
             this.Overmijinfo.Text = resources.GetString("Overmijinfo.Text");
+            this.Overmijinfo.TextChanged += new System.EventHandler(this.Overmijinfo_TextChanged);
             // 
             // Scrol
             // 
-            this.Scrol.Location = new System.Drawing.Point(977, 227);
+            this.Scrol.Location = new System.Drawing.Point(975, 196);
             this.Scrol.Name = "Scrol";
             this.Scrol.Size = new System.Drawing.Size(21, 458);
             this.Scrol.TabIndex = 41;
@@ -358,114 +366,139 @@
             // 
             this.Woningtitel.AutoSize = true;
             this.Woningtitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Woningtitel.Location = new System.Drawing.Point(489, 568);
+            this.Woningtitel.Location = new System.Drawing.Point(488, 552);
             this.Woningtitel.Name = "Woningtitel";
             this.Woningtitel.Size = new System.Drawing.Size(62, 17);
             this.Woningtitel.TabIndex = 42;
             this.Woningtitel.Text = "Woning";
+            this.Woningtitel.Click += new System.EventHandler(this.Woningtitel_Click);
             // 
             // Woninginfo
             // 
             this.Woninginfo.AutoSize = true;
-            this.Woninginfo.Location = new System.Drawing.Point(486, 595);
+            this.Woninginfo.Location = new System.Drawing.Point(488, 582);
             this.Woninginfo.Name = "Woninginfo";
             this.Woninginfo.Size = new System.Drawing.Size(167, 17);
             this.Woninginfo.TabIndex = 43;
             this.Woninginfo.Text = "Rijtjeshuis met grote tuin.";
+            this.Woninginfo.Click += new System.EventHandler(this.Woninginfo_Click);
             // 
             // Dienstentitel
             // 
             this.Dienstentitel.AutoSize = true;
+            this.Dienstentitel.BackColor = System.Drawing.Color.Transparent;
             this.Dienstentitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dienstentitel.Location = new System.Drawing.Point(486, 648);
             this.Dienstentitel.Name = "Dienstentitel";
             this.Dienstentitel.Size = new System.Drawing.Size(77, 17);
             this.Dienstentitel.TabIndex = 44;
             this.Dienstentitel.Text = "Diensten:";
+            this.Dienstentitel.Click += new System.EventHandler(this.Dienstentitel_Click);
             // 
             // Logeren
             // 
             this.Logeren.AutoSize = true;
+            this.Logeren.BackColor = System.Drawing.Color.Transparent;
             this.Logeren.Location = new System.Drawing.Point(486, 677);
             this.Logeren.Name = "Logeren";
             this.Logeren.Size = new System.Drawing.Size(197, 17);
             this.Logeren.TabIndex = 45;
             this.Logeren.Text = "Logeren            €25 per nacht";
+            this.Logeren.Click += new System.EventHandler(this.Logeren_Click);
             // 
             // Dagopvang
             // 
             this.Dagopvang.AutoSize = true;
+            this.Dagopvang.BackColor = System.Drawing.Color.Transparent;
             this.Dagopvang.Location = new System.Drawing.Point(486, 706);
             this.Dagopvang.Name = "Dagopvang";
             this.Dagopvang.Size = new System.Drawing.Size(186, 17);
             this.Dagopvang.TabIndex = 46;
             this.Dagopvang.Text = "Dagopvang       €15 per dag";
+            this.Dagopvang.Click += new System.EventHandler(this.Dagopvang_Click);
             // 
             // nul
             // 
             this.nul.Image = ((System.Drawing.Image)(resources.GetObject("nul.Image")));
-            this.nul.Location = new System.Drawing.Point(493, 265);
+            this.nul.Location = new System.Drawing.Point(491, 234);
             this.nul.Name = "nul";
             this.nul.Size = new System.Drawing.Size(167, 29);
             this.nul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.nul.TabIndex = 47;
             this.nul.TabStop = false;
             this.nul.Visible = false;
+            this.nul.Click += new System.EventHandler(this.nul_Click);
             // 
             // een
             // 
             this.een.Image = ((System.Drawing.Image)(resources.GetObject("een.Image")));
-            this.een.Location = new System.Drawing.Point(493, 265);
+            this.een.Location = new System.Drawing.Point(491, 234);
             this.een.Name = "een";
             this.een.Size = new System.Drawing.Size(167, 29);
             this.een.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.een.TabIndex = 48;
             this.een.TabStop = false;
             this.een.Visible = false;
+            this.een.Click += new System.EventHandler(this.een_Click);
             // 
             // twee
             // 
             this.twee.Image = ((System.Drawing.Image)(resources.GetObject("twee.Image")));
-            this.twee.Location = new System.Drawing.Point(493, 264);
+            this.twee.Location = new System.Drawing.Point(491, 233);
             this.twee.Name = "twee";
             this.twee.Size = new System.Drawing.Size(167, 30);
             this.twee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.twee.TabIndex = 49;
             this.twee.TabStop = false;
             this.twee.Visible = false;
+            this.twee.Click += new System.EventHandler(this.twee_Click);
             // 
             // drie
             // 
             this.drie.Image = ((System.Drawing.Image)(resources.GetObject("drie.Image")));
-            this.drie.Location = new System.Drawing.Point(493, 264);
+            this.drie.Location = new System.Drawing.Point(491, 233);
             this.drie.Name = "drie";
             this.drie.Size = new System.Drawing.Size(167, 29);
             this.drie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.drie.TabIndex = 50;
             this.drie.TabStop = false;
             this.drie.Visible = false;
+            this.drie.Click += new System.EventHandler(this.drie_Click);
             // 
             // vier
             // 
             this.vier.Image = ((System.Drawing.Image)(resources.GetObject("vier.Image")));
-            this.vier.Location = new System.Drawing.Point(493, 265);
+            this.vier.Location = new System.Drawing.Point(491, 234);
             this.vier.Name = "vier";
             this.vier.Size = new System.Drawing.Size(167, 30);
             this.vier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.vier.TabIndex = 51;
             this.vier.TabStop = false;
             this.vier.Visible = false;
+            this.vier.Click += new System.EventHandler(this.vier_Click);
             // 
             // vijf
             // 
             this.vijf.Image = ((System.Drawing.Image)(resources.GetObject("vijf.Image")));
-            this.vijf.Location = new System.Drawing.Point(492, 264);
+            this.vijf.Location = new System.Drawing.Point(490, 233);
             this.vijf.Name = "vijf";
             this.vijf.Size = new System.Drawing.Size(167, 29);
             this.vijf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.vijf.TabIndex = 52;
             this.vijf.TabStop = false;
             this.vijf.Visible = false;
+            this.vijf.Click += new System.EventHandler(this.vijf_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(302, 543);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(670, 291);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormBekijkenprofiel
             // 
@@ -508,6 +541,7 @@
             this.Controls.Add(this.VanLabel);
             this.Controls.Add(this.dateTimePickerTot);
             this.Controls.Add(this.dateTimePickerVan);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "FormBekijkenprofiel";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
@@ -520,6 +554,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.drie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vijf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,5 +598,6 @@
         private System.Windows.Forms.PictureBox vier;
         private System.Windows.Forms.PictureBox vijf;
         public System.Windows.Forms.PictureBox Vertified;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

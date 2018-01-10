@@ -111,8 +111,9 @@ namespace MIS
 
         private void Buildquery()
         {
-            string dier, woonplaats;
+            string dier = "", woonplaats;
             bool Verified, uitlaat, oppas;
+            double prijs;
             List<CheckBox> CBList = new List<CheckBox>()
                     { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
 
@@ -124,30 +125,27 @@ namespace MIS
                 }
             }
 
-            if(VerifiedCheckBox.Checked = true)
-            {
-                Verified = true;
-            }
-            else
-            {
-                Verified = false;
-            }
-            if (UitlaatCheckBox.Checked = true)
             {
 
             }
-            if (OppasCheckBox.Checked = true)
-            {
+            //prijs = PrijsTextBox;
 
-            }
+
+            Verified = VerifiedCheckBox.Checked;
+            uitlaat = UitlaatCheckBox.Checked;
+            oppas = OppasCheckBox.Checked;
 
             woonplaats = ZoektextBox.Text;
-
-
-
-
             Gebruiker[] allegebruikers = DatabaseManager.AlleGebruikers();
+            List<Gebruiker> filter1 = new List<Gebruiker>();
 
+            foreach (var gebruiker in allegebruikers)
+            {
+                if (!gebruiker.diertypes.Contains(dier)) continue;
+                if (gebruiker.woonplaats != woonplaats) continue;
+                //if (gebrui)
+
+            }
 
         }  
     }

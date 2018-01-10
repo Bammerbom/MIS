@@ -45,7 +45,7 @@
             this.OppasCheckBox = new System.Windows.Forms.CheckBox();
             this.UitlaatCheckBox = new System.Windows.Forms.CheckBox();
             this.VerifiedCheckBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PrijsTextBox = new System.Windows.Forms.TextBox();
             this.AmfibieCheckBox = new System.Windows.Forms.CheckBox();
             this.KatCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -243,12 +243,12 @@
             this.VerifiedCheckBox.Text = "Alleen gecertificeerd ";
             this.VerifiedCheckBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // PrijsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 54;
+            this.PrijsTextBox.Location = new System.Drawing.Point(103, 55);
+            this.PrijsTextBox.Name = "PrijsTextBox";
+            this.PrijsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PrijsTextBox.TabIndex = 54;
             // 
             // AmfibieCheckBox
             // 
@@ -283,7 +283,7 @@
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.KatCheckBox);
             this.Controls.Add(this.AmfibieCheckBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PrijsTextBox);
             this.Controls.Add(this.OppasCheckBox);
             this.Controls.Add(this.UitlaatCheckBox);
             this.Controls.Add(this.VerifiedCheckBox);
@@ -326,7 +326,7 @@
         private System.Windows.Forms.CheckBox OppasCheckBox;
         private System.Windows.Forms.CheckBox UitlaatCheckBox;
         private System.Windows.Forms.CheckBox VerifiedCheckBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PrijsTextBox;
         private System.Windows.Forms.CheckBox AmfibieCheckBox;
         private System.Windows.Forms.CheckBox KatCheckBox;
     }

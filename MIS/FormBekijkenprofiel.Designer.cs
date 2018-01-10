@@ -62,10 +62,9 @@
             // 
             this.Profielfoto.Image = ((System.Drawing.Image)(resources.GetObject("Profielfoto.Image")));
             this.Profielfoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("Profielfoto.InitialImage")));
-            this.Profielfoto.Location = new System.Drawing.Point(184, 153);
-            this.Profielfoto.Margin = new System.Windows.Forms.Padding(2);
+            this.Profielfoto.Location = new System.Drawing.Point(245, 200);
             this.Profielfoto.Name = "Profielfoto";
-            this.Profielfoto.Size = new System.Drawing.Size(169, 168);
+            this.Profielfoto.Size = new System.Drawing.Size(225, 220);
             this.Profielfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Profielfoto.TabIndex = 33;
             this.Profielfoto.TabStop = false;
@@ -74,8 +73,7 @@
             // 
             this.Naam.AutoSize = true;
             this.Naam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Naam.Location = new System.Drawing.Point(364, 153);
-            this.Naam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Naam.Location = new System.Drawing.Point(485, 200);
             this.Naam.Name = "Naam";
             this.Naam.Size = new System.Drawing.Size(103, 29);
             this.Naam.TabIndex = 34;
@@ -85,10 +83,9 @@
             // 
             this.Test.Image = ((System.Drawing.Image)(resources.GetObject("Test.Image")));
             this.Test.InitialImage = null;
-            this.Test.Location = new System.Drawing.Point(644, 150);
-            this.Test.Margin = new System.Windows.Forms.Padding(2);
+            this.Test.Location = new System.Drawing.Point(859, 196);
             this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(35, 32);
+            this.Test.Size = new System.Drawing.Size(47, 42);
             this.Test.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Test.TabIndex = 35;
             this.Test.TabStop = false;
@@ -98,10 +95,9 @@
             // 
             this.Verified.Image = ((System.Drawing.Image)(resources.GetObject("Verified.Image")));
             this.Verified.InitialImage = ((System.Drawing.Image)(resources.GetObject("Verified.InitialImage")));
-            this.Verified.Location = new System.Drawing.Point(609, 150);
-            this.Verified.Margin = new System.Windows.Forms.Padding(2);
+            this.Verified.Location = new System.Drawing.Point(812, 196);
             this.Verified.Name = "Verified";
-            this.Verified.Size = new System.Drawing.Size(31, 32);
+            this.Verified.Size = new System.Drawing.Size(41, 42);
             this.Verified.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Verified.TabIndex = 36;
             this.Verified.TabStop = false;
@@ -111,8 +107,7 @@
             // 
             this.Adres.AutoSize = true;
             this.Adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adres.Location = new System.Drawing.Point(380, 240);
-            this.Adres.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Adres.Location = new System.Drawing.Point(507, 314);
             this.Adres.Name = "Adres";
             this.Adres.Size = new System.Drawing.Size(93, 17);
             this.Adres.TabIndex = 37;
@@ -122,8 +117,7 @@
             // 
             this.Kanpassenop.AutoSize = true;
             this.Kanpassenop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Kanpassenop.Location = new System.Drawing.Point(380, 281);
-            this.Kanpassenop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Kanpassenop.Location = new System.Drawing.Point(507, 367);
             this.Kanpassenop.Name = "Kanpassenop";
             this.Kanpassenop.Size = new System.Drawing.Size(69, 17);
             this.Kanpassenop.TabIndex = 38;
@@ -133,8 +127,7 @@
             // 
             this.Overmij.AutoSize = true;
             this.Overmij.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overmij.Location = new System.Drawing.Point(368, 348);
-            this.Overmij.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Overmij.Location = new System.Drawing.Point(491, 455);
             this.Overmij.Name = "Overmij";
             this.Overmij.Size = new System.Drawing.Size(60, 15);
             this.Overmij.TabIndex = 39;
@@ -144,8 +137,7 @@
             // 
             this.Dienstentitel.AutoSize = true;
             this.Dienstentitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dienstentitel.Location = new System.Drawing.Point(367, 308);
-            this.Dienstentitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Dienstentitel.Location = new System.Drawing.Point(489, 403);
             this.Dienstentitel.Name = "Dienstentitel";
             this.Dienstentitel.Size = new System.Drawing.Size(61, 13);
             this.Dienstentitel.TabIndex = 44;
@@ -154,20 +146,18 @@
             // Prijs
             // 
             this.Prijs.AutoSize = true;
-            this.Prijs.Location = new System.Drawing.Point(380, 321);
-            this.Prijs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Prijs.Location = new System.Drawing.Point(507, 420);
             this.Prijs.Name = "Prijs";
-            this.Prijs.Size = new System.Drawing.Size(33, 13);
+            this.Prijs.Size = new System.Drawing.Size(44, 17);
             this.Prijs.TabIndex = 45;
             this.Prijs.Text = "*prijs*";
             // 
             // nul
             // 
             this.nul.Image = ((System.Drawing.Image)(resources.GetObject("nul.Image")));
-            this.nul.Location = new System.Drawing.Point(367, 187);
-            this.nul.Margin = new System.Windows.Forms.Padding(2);
+            this.nul.Location = new System.Drawing.Point(489, 245);
             this.nul.Name = "nul";
-            this.nul.Size = new System.Drawing.Size(125, 24);
+            this.nul.Size = new System.Drawing.Size(167, 31);
             this.nul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.nul.TabIndex = 47;
             this.nul.TabStop = false;
@@ -176,10 +166,9 @@
             // een
             // 
             this.een.Image = ((System.Drawing.Image)(resources.GetObject("een.Image")));
-            this.een.Location = new System.Drawing.Point(367, 187);
-            this.een.Margin = new System.Windows.Forms.Padding(2);
+            this.een.Location = new System.Drawing.Point(489, 245);
             this.een.Name = "een";
-            this.een.Size = new System.Drawing.Size(125, 24);
+            this.een.Size = new System.Drawing.Size(167, 31);
             this.een.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.een.TabIndex = 48;
             this.een.TabStop = false;
@@ -188,10 +177,9 @@
             // twee
             // 
             this.twee.Image = ((System.Drawing.Image)(resources.GetObject("twee.Image")));
-            this.twee.Location = new System.Drawing.Point(367, 187);
-            this.twee.Margin = new System.Windows.Forms.Padding(2);
+            this.twee.Location = new System.Drawing.Point(489, 245);
             this.twee.Name = "twee";
-            this.twee.Size = new System.Drawing.Size(125, 24);
+            this.twee.Size = new System.Drawing.Size(167, 31);
             this.twee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.twee.TabIndex = 49;
             this.twee.TabStop = false;
@@ -200,10 +188,9 @@
             // drie
             // 
             this.drie.Image = ((System.Drawing.Image)(resources.GetObject("drie.Image")));
-            this.drie.Location = new System.Drawing.Point(367, 187);
-            this.drie.Margin = new System.Windows.Forms.Padding(2);
+            this.drie.Location = new System.Drawing.Point(489, 245);
             this.drie.Name = "drie";
-            this.drie.Size = new System.Drawing.Size(125, 24);
+            this.drie.Size = new System.Drawing.Size(167, 31);
             this.drie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.drie.TabIndex = 50;
             this.drie.TabStop = false;
@@ -212,10 +199,9 @@
             // vier
             // 
             this.vier.Image = ((System.Drawing.Image)(resources.GetObject("vier.Image")));
-            this.vier.Location = new System.Drawing.Point(367, 187);
-            this.vier.Margin = new System.Windows.Forms.Padding(2);
+            this.vier.Location = new System.Drawing.Point(489, 245);
             this.vier.Name = "vier";
-            this.vier.Size = new System.Drawing.Size(125, 24);
+            this.vier.Size = new System.Drawing.Size(167, 31);
             this.vier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.vier.TabIndex = 51;
             this.vier.TabStop = false;
@@ -224,10 +210,9 @@
             // vijf
             // 
             this.vijf.Image = ((System.Drawing.Image)(resources.GetObject("vijf.Image")));
-            this.vijf.Location = new System.Drawing.Point(367, 187);
-            this.vijf.Margin = new System.Windows.Forms.Padding(2);
+            this.vijf.Location = new System.Drawing.Point(489, 245);
             this.vijf.Name = "vijf";
-            this.vijf.Size = new System.Drawing.Size(125, 24);
+            this.vijf.Size = new System.Drawing.Size(167, 31);
             this.vijf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.vijf.TabIndex = 52;
             this.vijf.TabStop = false;
@@ -237,8 +222,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(367, 225);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(489, 294);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 53;
@@ -248,8 +232,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(368, 266);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(491, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 15);
             this.label2.TabIndex = 54;
@@ -259,8 +242,7 @@
             // 
             this.Overmijinfo.AutoSize = true;
             this.Overmijinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overmijinfo.Location = new System.Drawing.Point(380, 363);
-            this.Overmijinfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Overmijinfo.Location = new System.Drawing.Point(507, 475);
             this.Overmijinfo.Name = "Overmijinfo";
             this.Overmijinfo.Size = new System.Drawing.Size(63, 17);
             this.Overmijinfo.TabIndex = 55;
@@ -268,9 +250,9 @@
             // 
             // FormBekijkenprofiel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(1312, 864);
             this.Controls.Add(this.Overmijinfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -289,7 +271,7 @@
             this.Controls.Add(this.Test);
             this.Controls.Add(this.Naam);
             this.Controls.Add(this.Profielfoto);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormBekijkenprofiel";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);

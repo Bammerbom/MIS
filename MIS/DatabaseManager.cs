@@ -6,6 +6,10 @@ using System.Data.SQLite;
 
 namespace MIS {
     public class DatabaseManager {
+
+        /// <summary>
+        /// Laad de database, of maak een nieuwe als hij nog niet bestaat
+        /// </summary>
         public static void Init() {
             //Open connection
             bool isNew = SqlTools.LoadDatabase();
@@ -39,16 +43,7 @@ namespace MIS {
             //Create insert command
             var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes) " +
                 "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes)", SqlTools.Connection);
-            cmd.Parameters.Add("@voornaam", DbType.String).Value = gebruiker.voornaam;
-            cmd.Parameters.Add("@achternaam", DbType.String).Value = gebruiker.achternaam;
-            cmd.Parameters.Add("@overmij", DbType.String).Value = gebruiker.overmij;
-            cmd.Parameters.Add("@verified", DbType.Boolean).Value = gebruiker.verified;
-            cmd.Parameters.Add("@admin", DbType.Boolean).Value = gebruiker.admin;
-            cmd.Parameters.Add("@vraagprijs", DbType.Double).Value = gebruiker.vraagprijs;
-            cmd.Parameters.Add("@oppassen", DbType.Boolean).Value = gebruiker.oppassen;
-            cmd.Parameters.Add("@uitlaten", DbType.Boolean).Value = gebruiker.uitlaten;
-            cmd.Parameters.Add("@woonplaats", DbType.String).Value = gebruiker.woonplaats;
-            cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
+            cmd = GebruikerNaarData(cmd, gebruiker);
             cmd.ExecuteNonQuery();
 
             //Verkrijg userid
@@ -69,19 +64,7 @@ namespace MIS {
             reader.Read();
 
             //Sla data op in een gebruiker struct
-            return new Gebruiker
-            {
-                voornaam = (string)reader["voornaam"],
-                achternaam = (string)reader["achternaam"],
-                overmij = (string)reader["overmij"],
-                verified = (bool)reader["verified"],
-                admin = (bool)reader["admin"],
-                vraagprijs = Convert.ToDouble(reader["vraagprijs"]),
-                oppassen = (bool)reader["oppassen"],
-                uitlaten = (bool)reader["uitlaten"],
-                woonplaats = (string)reader["woonplaats"],
-                diertypes = (string)reader["diertypes"]
-            };
+            return GebruikerVanData(reader);
         }
 
         /// <summary>
@@ -98,16 +81,7 @@ namespace MIS {
                 "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes " +
                 "WHERE userid = @userid", SqlTools.Connection);
             cmd.Parameters.Add("@userid", DbType.Int32).Value = userid;
-            cmd.Parameters.Add("@voornaam", DbType.String).Value = gebruiker.voornaam;
-            cmd.Parameters.Add("@achternaam", DbType.String).Value = gebruiker.achternaam;
-            cmd.Parameters.Add("@overmij", DbType.String).Value = gebruiker.overmij;
-            cmd.Parameters.Add("@verified", DbType.Boolean).Value = gebruiker.verified;
-            cmd.Parameters.Add("@admin", DbType.Boolean).Value = gebruiker.admin;
-            cmd.Parameters.Add("@vraagprijs", DbType.Double).Value = gebruiker.vraagprijs;
-            cmd.Parameters.Add("@oppassen", DbType.Boolean).Value = gebruiker.oppassen;
-            cmd.Parameters.Add("@uitlaten", DbType.Boolean).Value = gebruiker.uitlaten;
-            cmd.Parameters.Add("@woonplaats", DbType.String).Value = gebruiker.woonplaats;
-            cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
+            cmd = GebruikerNaarData(cmd, gebruiker);
             return cmd.ExecuteNonQuery() > 0;
         }
 
@@ -138,24 +112,46 @@ namespace MIS {
             var gebruikers = new List<Gebruiker>();
             while (reader.Read())
             {
-                gebruikers.Add(new Gebruiker
-                {
-                    voornaam = (string)reader["voornaam"],
-                    achternaam = (string)reader["achternaam"],
-                    overmij = (string)reader["overmij"],
-                    verified = (bool)reader["verified"],
-                    admin = (bool)reader["admin"],
-                    vraagprijs = Convert.ToDouble(reader["vraagprijs"]),
-                    oppassen = (bool)reader["oppassen"],
-                    uitlaten = (bool)reader["uitlaten"],
-                    woonplaats = (string)reader["woonplaats"],
-                    diertypes = (string)reader["diertypes"]
-                });
+                gebruikers.Add(GebruikerVanData(reader));
             }
 
             //Return
             return gebruikers.ToArray();
         }
+
+        #region Utils
+        private static Gebruiker GebruikerVanData(SQLiteDataReader reader)
+        {
+            return new Gebruiker
+            {
+                voornaam = (string)reader["voornaam"],
+                achternaam = (string)reader["achternaam"],
+                overmij = (string)reader["overmij"],
+                verified = (bool)reader["verified"],
+                admin = (bool)reader["admin"],
+                vraagprijs = Convert.ToDouble(reader["vraagprijs"]),
+                oppassen = (bool)reader["oppassen"],
+                uitlaten = (bool)reader["uitlaten"],
+                woonplaats = (string)reader["woonplaats"],
+                diertypes = (string)reader["diertypes"]
+            };
+        }
+
+        private static SQLiteCommand GebruikerNaarData(SQLiteCommand cmd, Gebruiker gebruiker)
+        {
+            cmd.Parameters.Add("@voornaam", DbType.String).Value = gebruiker.voornaam;
+            cmd.Parameters.Add("@achternaam", DbType.String).Value = gebruiker.achternaam;
+            cmd.Parameters.Add("@overmij", DbType.String).Value = gebruiker.overmij;
+            cmd.Parameters.Add("@verified", DbType.Boolean).Value = gebruiker.verified;
+            cmd.Parameters.Add("@admin", DbType.Boolean).Value = gebruiker.admin;
+            cmd.Parameters.Add("@vraagprijs", DbType.Double).Value = gebruiker.vraagprijs;
+            cmd.Parameters.Add("@oppassen", DbType.Boolean).Value = gebruiker.oppassen;
+            cmd.Parameters.Add("@uitlaten", DbType.Boolean).Value = gebruiker.uitlaten;
+            cmd.Parameters.Add("@woonplaats", DbType.String).Value = gebruiker.woonplaats;
+            cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
+            return cmd;
+        }
+        #endregion Utils
     }
 
     /// <summary>

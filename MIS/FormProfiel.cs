@@ -40,6 +40,19 @@ namespace MIS
             }
             else
             {
+                 
+                List<CheckBox> CBList = new List<CheckBox>()
+                    { HondCheckbox, KatCheckbox, KnaagdierCheckbox, VogelCheckbox, ReptielCheckbox, AmfibieCheckbox, InsectCheckbox, VissenCheckbox};
+                string diertypes = "";
+                foreach (var checkbox in CBList)
+                {
+                    if (checkbox.Checked)
+                    {
+                        diertypes += checkbox.Text + ", ";
+                    }
+                }
+                if(diertypes != "") diertypes = diertypes.Substring(0, diertypes.Length - 2);
+                    
                 var gebruiker = new Gebruiker
                 {
                     voornaam = VoornaamTextbox.Text,
@@ -48,17 +61,15 @@ namespace MIS
                     vraagprijs = Convert.ToDouble(VraagprijsTextbox.Text),
                     verified = PremiumCheckbox.Checked,
                     admin = false,
-                    diertypes = "",
+                    diertypes = diertypes,
                     oppassen = OppasCheckbox.Checked,
-                    uitlaten = UitlaatCheckbox.Checked
+                    uitlaten = UitlaatCheckbox.Checked,
+                    overmij = OverMijTextbox.Text    
                 };
                 DatabaseManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");
             }
-
-
         }
-
         private void PremiumCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             if (PremiumCheckbox.Checked)

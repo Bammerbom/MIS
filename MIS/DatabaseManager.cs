@@ -16,6 +16,7 @@ namespace MIS {
                 var cmd = new SQLiteCommand("CREATE TABLE gebruikers (" +
                                       "userid integer NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                                       "voornaam text, " +
+                                      "overmij text, " +
                                       "achternaam text, " +
                                       "verified boolean, " +
                                       "admin boolean, " +
@@ -36,10 +37,11 @@ namespace MIS {
         public static int GebruikerToevoegen(Gebruiker gebruiker)
         {
             //Create insert command
-            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes) " +
-                "VALUES (@voornaam, @achternaam, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes)", SqlTools.Connection);
+            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes) " +
+                "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes)", SqlTools.Connection);
             cmd.Parameters.Add("@voornaam", DbType.String).Value = gebruiker.voornaam;
             cmd.Parameters.Add("@achternaam", DbType.String).Value = gebruiker.achternaam;
+            cmd.Parameters.Add("@overmij", DbType.String).Value = gebruiker.overmij;
             cmd.Parameters.Add("@verified", DbType.Boolean).Value = gebruiker.verified;
             cmd.Parameters.Add("@admin", DbType.Boolean).Value = gebruiker.admin;
             cmd.Parameters.Add("@vraagprijs", DbType.Double).Value = gebruiker.vraagprijs;
@@ -71,6 +73,7 @@ namespace MIS {
             {
                 voornaam = (string)reader["voornaam"],
                 achternaam = (string)reader["achternaam"],
+                overmij = (string)reader["overmij"],
                 verified = (bool)reader["verified"],
                 admin = (bool)reader["admin"],
                 vraagprijs = Convert.ToDouble(reader["vraagprijs"]),
@@ -91,12 +94,13 @@ namespace MIS {
         {
             //Create update command
             var cmd = new SQLiteCommand("UPDATE gebruikers SET " +
-                "voornaam = @voornaam, achternaam = @achternaam, verified = @verified, admin = @admin, " +
+                "voornaam = @voornaam, achternaam = @achternaam, overmij = @overmij, verified = @verified, admin = @admin, " +
                 "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes " +
                 "WHERE userid = @userid", SqlTools.Connection);
             cmd.Parameters.Add("@userid", DbType.Int32).Value = userid;
             cmd.Parameters.Add("@voornaam", DbType.String).Value = gebruiker.voornaam;
             cmd.Parameters.Add("@achternaam", DbType.String).Value = gebruiker.achternaam;
+            cmd.Parameters.Add("@overmij", DbType.String).Value = gebruiker.overmij;
             cmd.Parameters.Add("@verified", DbType.Boolean).Value = gebruiker.verified;
             cmd.Parameters.Add("@admin", DbType.Boolean).Value = gebruiker.admin;
             cmd.Parameters.Add("@vraagprijs", DbType.Double).Value = gebruiker.vraagprijs;
@@ -138,6 +142,7 @@ namespace MIS {
                 {
                     voornaam = (string)reader["voornaam"],
                     achternaam = (string)reader["achternaam"],
+                    overmij = (string)reader["overmij"],
                     verified = (bool)reader["verified"],
                     admin = (bool)reader["admin"],
                     vraagprijs = Convert.ToDouble(reader["vraagprijs"]),
@@ -160,6 +165,7 @@ namespace MIS {
     {
         public string voornaam;
         public string achternaam;
+        public string overmij;
         public bool verified;
         public bool admin;
         public double vraagprijs;

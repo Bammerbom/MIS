@@ -111,16 +111,42 @@ namespace MIS
 
         private void Buildquery()
         {
-            DatabaseManager.AlleGebruikers();
+            string dier, woonplaats;
+            bool Verified, uitlaat, oppas;
+            List<CheckBox> CBList = new List<CheckBox>()
+                    { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
+
+            foreach (CheckBox CB in CBList)
+            {
+                if (CB.Checked == true)
+                {
+                    dier = CB.Text;
+                }
+            }
+
+            if(VerifiedCheckBox.Checked = true)
+            {
+                Verified = true;
+            }
+            else
+            {
+                Verified = false;
+            }
+            if (UitlaatCheckBox.Checked = true)
+            {
+
+            }
+            if (OppasCheckBox.Checked = true)
+            {
+
+            }
+
+            woonplaats = ZoektextBox.Text;
 
 
 
 
-
-
-
-
-
+            Gebruiker[] allegebruikers = DatabaseManager.AlleGebruikers();
 
 
         }  

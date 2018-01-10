@@ -302,7 +302,7 @@
             this.Controls.Add(this.PrijsLabel);
             this.Name = "FormZoeken";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Form1";
+            this.Text = "Zoeken";
             this.ResumeLayout(false);
             this.PerformLayout();
 

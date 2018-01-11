@@ -18,7 +18,7 @@ namespace MIS
             DatabaseManager.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProfiel());
+            Application.Run(new FormAdmin());
         }
     }
 }

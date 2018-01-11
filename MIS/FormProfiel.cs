@@ -18,9 +18,13 @@ namespace MIS
         }
         private void ProfielAanmakenButton_Click(object sender, EventArgs e)
         {
-            if (OppasCheckbox.Checked == false ^ UitlaatCheckbox.Checked == false)
+            if (!HondCheckbox.Checked && !KatCheckbox.Checked && !ReptielCheckbox.Checked && !AmfibieCheckbox.Checked && !VissenCheckbox.Checked && InsectCheckbox.Checked && !KnaagdierCheckbox.Checked && !VogelCheckbox.Checked)
             {
-                MessageBox.Show("Geef alsjeblieft aan of je op wil passen, uit wil laten of beschikbaar bent voor beide");
+                MessageBox.Show("Geef aan met welke dieren je ervaring hebt");
+            }
+            else if (!OppasCheckbox.Checked && !UitlaatCheckbox.Checked)
+            {
+                MessageBox.Show("Geef aan of je op wil passen, uit wil laten of geïntresseerd  bent in beide");
             }
             else if (VoornaamTextbox.Text == "")
             {
@@ -68,7 +72,8 @@ namespace MIS
                     diertypes = diertypes,
                     oppassen = OppasCheckbox.Checked,
                     uitlaten = UitlaatCheckbox.Checked,
-                    overmij = OverMijTextbox.Text    
+                    overmij = OverMijTextbox.Text,    
+                    rating = Convert.ToInt32(RatingTextbox.Text)
                 };
                 DatabaseManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");

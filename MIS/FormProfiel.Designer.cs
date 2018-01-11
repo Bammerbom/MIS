@@ -53,6 +53,8 @@
             this.VraagprijsTextbox = new System.Windows.Forms.TextBox();
             this.KatCheckbox = new System.Windows.Forms.CheckBox();
             this.AmfibieCheckbox = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.RatingTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // VoornaamLabel
@@ -286,11 +288,29 @@
             this.AmfibieCheckbox.Text = "Amfibie";
             this.AmfibieCheckbox.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(485, 344);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Rating (1 t/m 5)";
+            // 
+            // RatingTextbox
+            // 
+            this.RatingTextbox.Location = new System.Drawing.Point(482, 367);
+            this.RatingTextbox.Name = "RatingTextbox";
+            this.RatingTextbox.Size = new System.Drawing.Size(100, 20);
+            this.RatingTextbox.TabIndex = 36;
+            // 
             // FormProfiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.RatingTextbox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.AmfibieCheckbox);
             this.Controls.Add(this.KatCheckbox);
             this.Controls.Add(this.VraagprijsTextbox);
@@ -350,5 +370,7 @@
         private System.Windows.Forms.TextBox VraagprijsTextbox;
         private System.Windows.Forms.CheckBox KatCheckbox;
         private System.Windows.Forms.CheckBox AmfibieCheckbox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox RatingTextbox;
     }
 }

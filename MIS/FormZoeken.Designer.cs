@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 96);
+            this.label1.Location = new System.Drawing.Point(-3, 96);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1123, 13);
@@ -303,6 +303,7 @@
             this.Name = "FormZoeken";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Zoeken";
+            this.Load += new System.EventHandler(this.FormZoeken_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,6 +330,7 @@
         private System.Windows.Forms.TextBox PrijsTextBox;
         private System.Windows.Forms.CheckBox AmfibieCheckBox;
         private System.Windows.Forms.CheckBox KatCheckBox;
+
     }
 }
 

@@ -192,6 +192,10 @@ namespace MIS
             // ResultaatLabel
             // 
             var ResultaatLabel = new Label();
+            ResultaatLabel.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             ResultaatLabel.AutoSize = true;
             ResultaatLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             ResultaatLabel.Location = new Point(blokX + 70 + bufferX, blokY + bufferY);
@@ -205,6 +209,10 @@ namespace MIS
             // ProfielFotoPictureBox
             // 
             var ProfielFotoPictureBox = new PictureBox();
+            ProfielFotoPictureBox.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             ProfielFotoPictureBox.Location = new Point(blokX, blokY + bufferY);
             ProfielFotoPictureBox.Name = "ProfielFotoPictureBox";
             ProfielFotoPictureBox.Size = new Size(70, 70);
@@ -218,6 +226,10 @@ namespace MIS
             // OppassenUitlaten
             // 
             var OppassenUitlaten = new Label();
+            OppassenUitlaten.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             OppassenUitlaten.AutoSize = true;
             OppassenUitlaten.Location = new Point(blokX + 70 + bufferX, blokY + bufferY + 20);
             OppassenUitlaten.Name = "OppassenUitlaten";
@@ -230,6 +242,10 @@ namespace MIS
             // RatingPictureBox
             // 
             var RatingPictureBox = new PictureBox();
+            RatingPictureBox.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             RatingPictureBox.Location = new Point(blokX + 70 + bufferX, blokY + bufferY + 20 + 15 + 15);
             RatingPictureBox.Name = "RatingPictureBox";
             RatingPictureBox.Size = new Size(100, 20);
@@ -247,6 +263,10 @@ namespace MIS
             if (gebruiker.verified)
             {
                 var VerifiedPicktureBox = new PictureBox();
+                VerifiedPicktureBox.Click += delegate
+                {
+                    profiel_ClickEvent(gebruiker);
+                };
                 VerifiedPicktureBox.Location = new Point(blokX + 70 + bufferX + ResultaatLabel.Width, blokY + bufferY);
                 VerifiedPicktureBox.Name = "VerifiedPicktureBox";
                 VerifiedPicktureBox.Size = new Size(20, 20);
@@ -261,6 +281,10 @@ namespace MIS
             // Locatielabel
             // 
             var Locatielabel = new Label();
+            Locatielabel.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             Locatielabel.AutoSize = true;
             Locatielabel.Location = new Point(blokX + 70 + bufferX, blokY + bufferY + 20 + 15);
             Locatielabel.Name = "Locatielabel";
@@ -277,6 +301,12 @@ namespace MIS
             {
                 DR.Dispose();
             }
+        }
+
+        private void profiel_ClickEvent(Gebruiker GB)
+        {
+            var Bekijkenprofiel = new FormBekijkenprofiel(GB.userid);
+            Bekijkenprofiel.Show();
         }
     }
 }

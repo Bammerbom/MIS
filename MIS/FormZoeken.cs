@@ -180,7 +180,7 @@ namespace MIS
             int H = 100;
             int W = 400;
             int posX = Convert.ToInt32(500 - 0.5 * W);
-            int posY = 109;
+            int posY = 0;
             int bufferY = 15;
             int bufferX = 10;
 
@@ -192,6 +192,10 @@ namespace MIS
             // ResultaatLabel
             // 
             var ResultaatLabel = new Label();
+            ResultaatLabel.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             ResultaatLabel.AutoSize = true;
             ResultaatLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             ResultaatLabel.Location = new Point(blokX + 70 + bufferX, blokY + bufferY);
@@ -199,12 +203,16 @@ namespace MIS
             ResultaatLabel.Size = new Size(180, 20);
             ResultaatLabel.TabIndex = 57;
             ResultaatLabel.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
-            Controls.Add(ResultaatLabel);
+            panel.Controls.Add(ResultaatLabel);
             ResultaatList.Add(ResultaatLabel);
             // 
             // ProfielFotoPictureBox
             // 
             var ProfielFotoPictureBox = new PictureBox();
+            ProfielFotoPictureBox.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             ProfielFotoPictureBox.Location = new Point(blokX, blokY + bufferY);
             ProfielFotoPictureBox.Name = "ProfielFotoPictureBox";
             ProfielFotoPictureBox.Size = new Size(70, 70);
@@ -212,24 +220,32 @@ namespace MIS
             ProfielFotoPictureBox.TabStop = false;
             ProfielFotoPictureBox.Image = Properties.Resources.stock_dierenliefhebber;
             ProfielFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            Controls.Add(ProfielFotoPictureBox);
+            panel.Controls.Add(ProfielFotoPictureBox);
             ResultaatList.Add(ProfielFotoPictureBox);
             // 
             // OppassenUitlaten
             // 
             var OppassenUitlaten = new Label();
+            OppassenUitlaten.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             OppassenUitlaten.AutoSize = true;
             OppassenUitlaten.Location = new Point(blokX + 70 + bufferX, blokY + bufferY + 20);
             OppassenUitlaten.Name = "OppassenUitlaten";
             OppassenUitlaten.Size = new Size(136, 13);
             OppassenUitlaten.TabIndex = 59;
             OppassenUitlaten.Text = "Kan een "+ gebruiker.diertypes + " verzorgen.";
-            Controls.Add(OppassenUitlaten);
+            panel.Controls.Add(OppassenUitlaten);
             ResultaatList.Add(OppassenUitlaten);
             // 
             // RatingPictureBox
             // 
             var RatingPictureBox = new PictureBox();
+            RatingPictureBox.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             RatingPictureBox.Location = new Point(blokX + 70 + bufferX, blokY + bufferY + 20 + 15 + 15);
             RatingPictureBox.Name = "RatingPictureBox";
             RatingPictureBox.Size = new Size(100, 20);
@@ -239,7 +255,7 @@ namespace MIS
                 Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
             RatingPictureBox.Image = images[gebruiker.rating];
             RatingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            Controls.Add(RatingPictureBox);
+            panel.Controls.Add(RatingPictureBox);
             ResultaatList.Add(RatingPictureBox);
             // 
             // VerifiedPicktureBox
@@ -247,6 +263,10 @@ namespace MIS
             if (gebruiker.verified)
             {
                 var VerifiedPicktureBox = new PictureBox();
+                VerifiedPicktureBox.Click += delegate
+                {
+                    profiel_ClickEvent(gebruiker);
+                };
                 VerifiedPicktureBox.Location = new Point(blokX + 70 + bufferX + ResultaatLabel.Width, blokY + bufferY);
                 VerifiedPicktureBox.Name = "VerifiedPicktureBox";
                 VerifiedPicktureBox.Size = new Size(20, 20);
@@ -254,20 +274,24 @@ namespace MIS
                 VerifiedPicktureBox.TabStop = false;
                 VerifiedPicktureBox.Image = Properties.Resources.checkbox;
                 VerifiedPicktureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                Controls.Add(VerifiedPicktureBox);
+                panel.Controls.Add(VerifiedPicktureBox);
                 ResultaatList.Add(VerifiedPicktureBox);
             } 
             // 
             // Locatielabel
             // 
             var Locatielabel = new Label();
+            Locatielabel.Click += delegate
+            {
+                profiel_ClickEvent(gebruiker);
+            };
             Locatielabel.AutoSize = true;
             Locatielabel.Location = new Point(blokX + 70 + bufferX, blokY + bufferY + 20 + 15);
             Locatielabel.Name = "Locatielabel";
             Locatielabel.Size = new Size(51, 13);
             Locatielabel.TabIndex = 62;
             Locatielabel.Text = gebruiker.woonplaats + " - €" + gebruiker.vraagprijs + " per dag";
-            Controls.Add(Locatielabel);
+            panel.Controls.Add(Locatielabel);
             ResultaatList.Add(Locatielabel);
         }
 
@@ -277,6 +301,12 @@ namespace MIS
             {
                 DR.Dispose();
             }
+        }
+
+        private void profiel_ClickEvent(Gebruiker GB)
+        {
+            var Bekijkenprofiel = new FormBekijkenprofiel(GB.userid);
+            Bekijkenprofiel.Show();
         }
     }
 }

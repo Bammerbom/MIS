@@ -12,6 +12,7 @@ namespace MIS
 {
     public partial class FormZoeken : Form
     {
+        List<Control> ResultaatList = new List<Control>();
         bool Valid;
         public FormZoeken()
         {
@@ -20,7 +21,6 @@ namespace MIS
 
         private void FormZoeken_Load(object sender, EventArgs e)
         {
-            MaakResultaat(DatabaseManager.GebruikerOpvragen(1), 0);
         }
 
         #region Zoeken
@@ -30,9 +30,15 @@ namespace MIS
             Valid = CheckValid();
             if (Valid == true)
             {
+                DisposeResultaat();
+                int FEcount = 0;
                 Gebruiker[] gebruikers = Buildquery();
-                //ResultaatLabel.Text = gebruikers[0].voornaam;
-
+                
+                foreach(Gebruiker GB in gebruikers)
+                {
+                    MaakResultaat(GB, FEcount);
+                    FEcount++;
+                }
             }
             else
             {
@@ -158,9 +164,9 @@ namespace MIS
 
             filteredgebruikers.Sort((Gebruiker a, Gebruiker b) =>
             {
-                if (a.verified) return -1;
-                if (b.verified) return 1;
-                return -1;
+                if (a.verified && !b.verified) return -1;
+                if (b.verified && !a.verified) return 1;
+                return b.rating.CompareTo(a.rating);
             });
 
             return filteredgebruikers.ToArray();
@@ -169,6 +175,7 @@ namespace MIS
 
         public void MaakResultaat(Gebruiker gebruiker , int pos)
         {
+            
             //Globale variabelen
             int H = 100;
             int W = 400;
@@ -176,7 +183,7 @@ namespace MIS
             int posY = 109;
             int bufferY = 15;
             int bufferX = 10;
-            
+
             //Per blok variabelen
             int blokX = posX;
             int blokY = posY + H * pos;
@@ -193,6 +200,7 @@ namespace MIS
             ResultaatLabel.TabIndex = 57;
             ResultaatLabel.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
             Controls.Add(ResultaatLabel);
+            ResultaatList.Add(ResultaatLabel);
             // 
             // ProfielFotoPictureBox
             // 
@@ -205,6 +213,7 @@ namespace MIS
             ProfielFotoPictureBox.Image = Properties.Resources.stock_dierenliefhebber;
             ProfielFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             Controls.Add(ProfielFotoPictureBox);
+            ResultaatList.Add(ProfielFotoPictureBox);
             // 
             // OppassenUitlaten
             // 
@@ -216,6 +225,7 @@ namespace MIS
             OppassenUitlaten.TabIndex = 59;
             OppassenUitlaten.Text = "Kan een "+ gebruiker.diertypes + " verzorgen.";
             Controls.Add(OppassenUitlaten);
+            ResultaatList.Add(OppassenUitlaten);
             // 
             // RatingPictureBox
             // 
@@ -230,6 +240,7 @@ namespace MIS
             RatingPictureBox.Image = images[gebruiker.rating];
             RatingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             Controls.Add(RatingPictureBox);
+            ResultaatList.Add(RatingPictureBox);
             // 
             // VerifiedPicktureBox
             // 
@@ -244,6 +255,7 @@ namespace MIS
                 VerifiedPicktureBox.Image = Properties.Resources.checkbox;
                 VerifiedPicktureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 Controls.Add(VerifiedPicktureBox);
+                ResultaatList.Add(VerifiedPicktureBox);
             } 
             // 
             // Locatielabel
@@ -254,8 +266,17 @@ namespace MIS
             Locatielabel.Name = "Locatielabel";
             Locatielabel.Size = new Size(51, 13);
             Locatielabel.TabIndex = 62;
-            Locatielabel.Text = gebruiker.woonplaats;
+            Locatielabel.Text = gebruiker.woonplaats + " - €" + gebruiker.vraagprijs + " per dag";
             Controls.Add(Locatielabel);
+            ResultaatList.Add(Locatielabel);
+        }
+
+        private void DisposeResultaat()
+        {
+            foreach(var DR in ResultaatList)
+            {
+                DR.Dispose();
+            }
         }
     }
 }

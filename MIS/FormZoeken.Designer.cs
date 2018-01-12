@@ -33,7 +33,7 @@
             this.VisCheckBox = new System.Windows.Forms.CheckBox();
             this.InsectCheckBox = new System.Windows.Forms.CheckBox();
             this.SDierLabel = new System.Windows.Forms.Label();
-            this.LocatieLabel = new System.Windows.Forms.Label();
+            this.WoonplaatsLabel = new System.Windows.Forms.Label();
             this.VogelCheckBox = new System.Windows.Forms.CheckBox();
             this.ReptielCheckBox = new System.Windows.Forms.CheckBox();
             this.KnaagdierCheckBox = new System.Windows.Forms.CheckBox();
@@ -101,15 +101,15 @@
             this.SDierLabel.TabIndex = 45;
             this.SDierLabel.Text = "Soort Dier:";
             // 
-            // LocatieLabel
+            // WoonplaatsLabel
             // 
-            this.LocatieLabel.AutoSize = true;
-            this.LocatieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocatieLabel.Location = new System.Drawing.Point(10, 17);
-            this.LocatieLabel.Name = "LocatieLabel";
-            this.LocatieLabel.Size = new System.Drawing.Size(87, 17);
-            this.LocatieLabel.TabIndex = 44;
-            this.LocatieLabel.Text = "Woonplaats:";
+            this.WoonplaatsLabel.AutoSize = true;
+            this.WoonplaatsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(10, 17);
+            this.WoonplaatsLabel.Name = "WoonplaatsLabel";
+            this.WoonplaatsLabel.Size = new System.Drawing.Size(87, 17);
+            this.WoonplaatsLabel.TabIndex = 44;
+            this.WoonplaatsLabel.Text = "Woonplaats:";
             // 
             // VogelCheckBox
             // 
@@ -292,7 +292,7 @@
             this.Controls.Add(this.VisCheckBox);
             this.Controls.Add(this.InsectCheckBox);
             this.Controls.Add(this.SDierLabel);
-            this.Controls.Add(this.LocatieLabel);
+            this.Controls.Add(this.WoonplaatsLabel);
             this.Controls.Add(this.VogelCheckBox);
             this.Controls.Add(this.ReptielCheckBox);
             this.Controls.Add(this.KnaagdierCheckBox);
@@ -315,7 +315,7 @@
         private System.Windows.Forms.CheckBox VisCheckBox;
         private System.Windows.Forms.CheckBox InsectCheckBox;
         private System.Windows.Forms.Label SDierLabel;
-        private System.Windows.Forms.Label LocatieLabel;
+        private System.Windows.Forms.Label WoonplaatsLabel;
         private System.Windows.Forms.CheckBox VogelCheckBox;
         private System.Windows.Forms.CheckBox ReptielCheckBox;
         private System.Windows.Forms.CheckBox KnaagdierCheckBox;

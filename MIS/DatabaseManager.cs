@@ -94,6 +94,7 @@ namespace MIS {
         {
             //Create delete command
             var cmd = new SQLiteCommand("DELETE FROM gebruikers WHERE userid = @userid", SqlTools.Connection);
+            cmd.Parameters.Add("@userid", DbType.String).Value = userid;
             return cmd.ExecuteNonQuery() > 0;
         }
 

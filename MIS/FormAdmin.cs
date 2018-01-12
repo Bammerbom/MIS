@@ -21,22 +21,31 @@ namespace MIS
         private void FormAdmin_Load(object sender, EventArgs e)
         {
             AdminDatagrid.DataSource = GetDataTable();
-            AdminDatagrid.Columns[0].Width = 125;
+            AdminDatagrid.Columns[0].Width = 40;
             AdminDatagrid.Columns[1].Width = 125;
-            AdminDatagrid.Columns[2].Width = 100;
-            AdminDatagrid.Columns[3].Width = 50;
-            AdminDatagrid.Columns[4].Width = 50;
-            AdminDatagrid.Columns[5].Width = 71;
+            AdminDatagrid.Columns[2].Width = 125;
+            AdminDatagrid.Columns[3].Width = 100;
+            AdminDatagrid.Columns[4].Width = 60;
+            AdminDatagrid.Columns[5].Width = 60;
             AdminDatagrid.Columns[6].Width = 60;
             AdminDatagrid.Columns[7].Width = 60;
-            AdminDatagrid.Columns[8].Width = 225;
-            AdminDatagrid.Columns[9].Width = 50;
+            AdminDatagrid.Columns[8].Width = 60;
+            AdminDatagrid.Columns[9].Width = 150;
+            AdminDatagrid.Columns[10].Width = 40;
+
+            var deleteButton = new DataGridViewButtonColumn();
+            deleteButton.Name = "dataGridViewDeleteButton";
+            deleteButton.HeaderText = "Verwijder Profiel";
+            deleteButton.Text = "Verwijder";
+            deleteButton.UseColumnTextForButtonValue = true;
+            AdminDatagrid.Columns.Add(deleteButton);
         }
 
         public DataTable GetDataTable()
         {
             //Maak een nieuwe tabel
             DataTable table = new DataTable();
+            table.Columns.Add("userid", typeof(int));
             table.Columns.Add("voornaam", typeof(string));
             table.Columns.Add("achternaam", typeof(string));
             table.Columns.Add("woonplaats", typeof(string));
@@ -47,14 +56,28 @@ namespace MIS
             table.Columns.Add("uitlaten", typeof(bool));
             table.Columns.Add("diertypes", typeof(string));
             table.Columns.Add("rating", typeof(int));
-
+            
             //Data toevoegen
             foreach (var gebruiker in DatabaseManager.AlleGebruikers())
             {
-                table.Rows.Add(gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.rating);
+                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.rating);
             }
 
             return table;
+        }
+
+        private void AdminDatagrid_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == AdminDatagrid.Columns["dataGridViewDeleteButton"].Index)
+            {
+                DialogResult ResultaatVerwijderen = MessageBox.Show("Weet je zeker dat je het geselecteerde profiel wilt verwijderen?", "Verwijderen Profiel", MessageBoxButtons.YesNo);
+                if (ResultaatVerwijderen == DialogResult.Yes)
+                {
+                    int userid = (int) AdminDatagrid[0, e.RowIndex].Value;
+                    DatabaseManager.GebruikerVerwijderen(userid);
+                    AdminDatagrid.DataSource = GetDataTable();
+                }
+            }
         }
     }
 }

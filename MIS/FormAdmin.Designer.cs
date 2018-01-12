@@ -34,12 +34,17 @@
             // 
             // AdminDatagrid
             // 
+            this.AdminDatagrid.AllowUserToAddRows = false;
+            this.AdminDatagrid.AllowUserToDeleteRows = false;
+            this.AdminDatagrid.AllowUserToResizeColumns = false;
+            this.AdminDatagrid.AllowUserToResizeRows = false;
             this.AdminDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdminDatagrid.Location = new System.Drawing.Point(13, 13);
             this.AdminDatagrid.Name = "AdminDatagrid";
             this.AdminDatagrid.ReadOnly = true;
             this.AdminDatagrid.Size = new System.Drawing.Size(959, 636);
             this.AdminDatagrid.TabIndex = 0;
+            this.AdminDatagrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminDatagrid_CellMouseClick);
             // 
             // FormAdmin
             // 

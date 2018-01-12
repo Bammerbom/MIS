@@ -21,17 +21,17 @@ namespace MIS
         private void FormAdmin_Load(object sender, EventArgs e)
         {
             AdminDatagrid.DataSource = GetDataTable();
-            AdminDatagrid.Columns[0].Width = 40;
-            AdminDatagrid.Columns[1].Width = 125;
-            AdminDatagrid.Columns[2].Width = 125;
-            AdminDatagrid.Columns[3].Width = 100;
-            AdminDatagrid.Columns[4].Width = 60;
-            AdminDatagrid.Columns[5].Width = 60;
-            AdminDatagrid.Columns[6].Width = 60;
-            AdminDatagrid.Columns[7].Width = 60;
-            AdminDatagrid.Columns[8].Width = 60;
-            AdminDatagrid.Columns[9].Width = 150;
-            AdminDatagrid.Columns[10].Width = 40;
+            AdminDatagrid.Columns[0].Width = 50;
+            AdminDatagrid.Columns[1].Width = 135;
+            AdminDatagrid.Columns[2].Width = 135;
+            AdminDatagrid.Columns[3].Width = 110;
+            AdminDatagrid.Columns[4].Width = 70;
+            AdminDatagrid.Columns[5].Width = 70;
+            AdminDatagrid.Columns[6].Width = 70;
+            AdminDatagrid.Columns[7].Width = 70;
+            AdminDatagrid.Columns[8].Width = 70;
+            AdminDatagrid.Columns[9].Width = 160;
+            AdminDatagrid.Columns[10].Width = 50 ;
 
             var deleteButton = new DataGridViewButtonColumn();
             deleteButton.Name = "dataGridViewDeleteButton";
@@ -78,6 +78,16 @@ namespace MIS
                     AdminDatagrid.DataSource = GetDataTable();
                 }
             }
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            AdminDatagrid.ReadOnly = false;
+        }
+
+        private void ReadButton_Click(object sender, EventArgs e)
+        {
+            AdminDatagrid.ReadOnly = true;
         }
     }
 }

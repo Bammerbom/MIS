@@ -26,6 +26,18 @@ namespace MIS
             Naam.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
             this.Text = "Profiel van " + gebruiker.voornaam + " " + gebruiker.achternaam;
             Adres.Text = gebruiker.woonplaats;
+            if (gebruiker.oppassen && gebruiker.uitlaten == false)
+            {
+                OppassenUitlatenLabel.Text = "Kan passen op:";
+            }
+            else if (gebruiker.oppassen == false && gebruiker.uitlaten)
+            {
+                OppassenUitlatenLabel.Text = "Kan de volgende dieren uitlaten:";
+            }
+            else if (gebruiker.oppassen && gebruiker.uitlaten)
+            {
+                OppassenUitlatenLabel.Text = "Kan op de volgende dieren passen en is bereid om ze uit te laten:";
+            }
             Kanpassenop.Text = gebruiker.diertypes;
             Overmijinfo.Text = gebruiker.overmij;
             Prijs.Text = "Prijs per dag: €" + gebruiker.vraagprijs;

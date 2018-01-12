@@ -225,6 +225,7 @@ namespace MIS
             // 
             // OppassenUitlaten
             // 
+            string verzorgen = "";
             var OppassenUitlaten = new Label();
             OppassenUitlaten.Click += delegate
             {
@@ -235,7 +236,19 @@ namespace MIS
             OppassenUitlaten.Name = "OppassenUitlaten";
             OppassenUitlaten.Size = new Size(136, 13);
             OppassenUitlaten.TabIndex = 59;
-            OppassenUitlaten.Text = "Kan een "+ gebruiker.diertypes + " verzorgen.";
+            if (gebruiker.oppassen && gebruiker.uitlaten == false)
+            {
+                verzorgen = " verzorgen.";
+            }
+            else if (gebruiker.oppassen == false && gebruiker.uitlaten)
+            {
+                verzorgen = " uitlaten.";
+            }
+            else if (gebruiker.oppassen && gebruiker.uitlaten)
+            {
+                verzorgen = " verzorgen en uitlaten.";
+            }
+            OppassenUitlaten.Text = "Kan een "+ gebruiker.diertypes + verzorgen;
             panel.Controls.Add(OppassenUitlaten);
             ResultaatList.Add(OppassenUitlaten);
             // 

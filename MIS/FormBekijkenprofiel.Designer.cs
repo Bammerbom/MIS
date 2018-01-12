@@ -45,7 +45,7 @@
             this.vier = new System.Windows.Forms.PictureBox();
             this.vijf = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.OppassenUitlatenLabel = new System.Windows.Forms.Label();
             this.Overmijinfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Test)).BeginInit();
@@ -228,15 +228,15 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Woonplaats";
             // 
-            // label2
+            // OppassenUitlatenLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(491, 348);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 15);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Kan passen op";
+            this.OppassenUitlatenLabel.AutoSize = true;
+            this.OppassenUitlatenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OppassenUitlatenLabel.Location = new System.Drawing.Point(491, 348);
+            this.OppassenUitlatenLabel.Name = "OppassenUitlatenLabel";
+            this.OppassenUitlatenLabel.Size = new System.Drawing.Size(102, 15);
+            this.OppassenUitlatenLabel.TabIndex = 54;
+            this.OppassenUitlatenLabel.Text = "Kan passen op";
             // 
             // Overmijinfo
             // 
@@ -252,9 +252,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 864);
+            this.ClientSize = new System.Drawing.Size(1312, 749);
             this.Controls.Add(this.Overmijinfo);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.OppassenUitlatenLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.vijf);
             this.Controls.Add(this.vier);
@@ -306,7 +306,7 @@
         private System.Windows.Forms.PictureBox vijf;
         public System.Windows.Forms.PictureBox Verified;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label OppassenUitlatenLabel;
         private System.Windows.Forms.Label Overmijinfo;
     }
 }

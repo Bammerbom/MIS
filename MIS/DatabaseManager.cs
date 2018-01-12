@@ -74,14 +74,13 @@ namespace MIS {
         /// <param name="userid">Het gebruikers id</param>
         /// <param name="gebruiker">De gegevens</param>
         /// <returns>Of de verandering succesvol is</returns>
-        public static bool GebruikerWijzigen(int userid, Gebruiker gebruiker)
+        public static bool GebruikerWijzigen(Gebruiker gebruiker)
         {
             //Create update command
             var cmd = new SQLiteCommand("UPDATE gebruikers SET " +
                 "voornaam = @voornaam, achternaam = @achternaam, overmij = @overmij, verified = @verified, admin = @admin, " +
                 "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes, rating = @rating " +
                 "WHERE userid = @userid", SqlTools.Connection);
-            cmd.Parameters.Add("@userid", DbType.Int32).Value = userid;
             cmd = GebruikerNaarData(cmd, gebruiker);
             return cmd.ExecuteNonQuery() > 0;
         }
@@ -95,7 +94,6 @@ namespace MIS {
         {
             //Create delete command
             var cmd = new SQLiteCommand("DELETE FROM gebruikers WHERE userid = @userid", SqlTools.Connection);
-            cmd.Parameters.Add("@userid", DbType.String).Value = userid;
             return cmd.ExecuteNonQuery() > 0;
         }
 
@@ -125,6 +123,7 @@ namespace MIS {
         {
             return new Gebruiker
             {
+                userid = Convert.ToInt32(reader["userid"]),
                 voornaam = (string)reader["voornaam"],
                 achternaam = (string)reader["achternaam"],
                 overmij = (string)reader["overmij"],
@@ -141,6 +140,7 @@ namespace MIS {
 
         private static SQLiteCommand GebruikerNaarData(SQLiteCommand cmd, Gebruiker gebruiker)
         {
+            cmd.Parameters.Add("@userid", DbType.String).Value = gebruiker.userid;
             cmd.Parameters.Add("@voornaam", DbType.String).Value = gebruiker.voornaam;
             cmd.Parameters.Add("@achternaam", DbType.String).Value = gebruiker.achternaam;
             cmd.Parameters.Add("@overmij", DbType.String).Value = gebruiker.overmij;
@@ -162,6 +162,7 @@ namespace MIS {
     /// </summary>
     public struct Gebruiker
     {
+        public int userid;
         public string voornaam;
         public string achternaam;
         public string overmij;

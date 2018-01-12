@@ -164,10 +164,9 @@ namespace MIS
 
             filteredgebruikers.Sort((Gebruiker a, Gebruiker b) =>
             {
-                if (a.verified && b.verified) return 0;
-                if (a.verified) return -1;
-                if (b.verified) return 1;
-                return 0;
+                if (a.verified && !b.verified) return -1;
+                if (b.verified && !a.verified) return 1;
+                return b.rating.CompareTo(a.rating);
             });
 
             return filteredgebruikers.ToArray();

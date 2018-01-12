@@ -164,9 +164,10 @@ namespace MIS
 
             filteredgebruikers.Sort((Gebruiker a, Gebruiker b) =>
             {
+                if (a.verified && b.verified) return 0;
                 if (a.verified) return -1;
                 if (b.verified) return 1;
-                return -1;
+                return 0;
             });
 
             return filteredgebruikers.ToArray();
@@ -266,7 +267,7 @@ namespace MIS
             Locatielabel.Name = "Locatielabel";
             Locatielabel.Size = new Size(51, 13);
             Locatielabel.TabIndex = 62;
-            Locatielabel.Text = gebruiker.woonplaats;
+            Locatielabel.Text = gebruiker.woonplaats + " - €" + gebruiker.vraagprijs + " per dag";
             Controls.Add(Locatielabel);
             ResultaatList.Add(Locatielabel);
         }

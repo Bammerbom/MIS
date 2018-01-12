@@ -45,6 +45,8 @@ namespace MIS
             var list = new List<PictureBox>() { nul, een, twee, drie, vier, vijf };
             list[gebruiker.rating].Visible = true;
             Verified.Visible = gebruiker.verified;
+            //Profielfoto
+            Profielfoto.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
         }
     } 
 

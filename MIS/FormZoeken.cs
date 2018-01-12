@@ -218,7 +218,7 @@ namespace MIS
             ProfielFotoPictureBox.Size = new Size(70, 70);
             ProfielFotoPictureBox.TabIndex = 58;
             ProfielFotoPictureBox.TabStop = false;
-            ProfielFotoPictureBox.Image = Properties.Resources.stock_dierenliefhebber;
+            ProfielFotoPictureBox.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
             ProfielFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             panel.Controls.Add(ProfielFotoPictureBox);
             ResultaatList.Add(ProfielFotoPictureBox);

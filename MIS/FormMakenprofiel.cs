@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MIS
 {
-    public partial class FormProfiel : Form
+    public partial class FormMakenprofiel : Form
     {
-        public FormProfiel()
+        public FormMakenprofiel()
         {
             InitializeComponent();
         }

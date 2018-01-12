@@ -1,6 +1,6 @@
 ﻿namespace MIS
 {
-    partial class FormProfiel
+    partial class FormMakenprofiel
     {
         /// <summary>
         /// Required designer variable.

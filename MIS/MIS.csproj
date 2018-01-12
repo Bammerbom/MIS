@@ -73,6 +73,7 @@
     <Compile Include="FormZoeken.Designer.cs">
       <DependentUpon>FormZoeken.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfielfotoManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
@@ -141,6 +142,156 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_nul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto39.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto47.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profielfotos\foto50.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBekijkenprofiel));
             this.Profielfoto = new System.Windows.Forms.PictureBox();
             this.Naam = new System.Windows.Forms.Label();
-            this.Test = new System.Windows.Forms.PictureBox();
             this.Verified = new System.Windows.Forms.PictureBox();
             this.Adres = new System.Windows.Forms.Label();
             this.Kanpassenop = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.OppassenUitlatenLabel = new System.Windows.Forms.Label();
             this.Overmijinfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Test)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nul)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.een)).BeginInit();
@@ -78,18 +76,6 @@
             this.Naam.Size = new System.Drawing.Size(103, 29);
             this.Naam.TabIndex = 34;
             this.Naam.Text = "*Naam*";
-            // 
-            // Test
-            // 
-            this.Test.Image = ((System.Drawing.Image)(resources.GetObject("Test.Image")));
-            this.Test.InitialImage = null;
-            this.Test.Location = new System.Drawing.Point(859, 196);
-            this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(47, 42);
-            this.Test.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Test.TabIndex = 35;
-            this.Test.TabStop = false;
-            this.Test.Visible = false;
             // 
             // Verified
             // 
@@ -240,11 +226,10 @@
             // 
             // Overmijinfo
             // 
-            this.Overmijinfo.AutoSize = true;
             this.Overmijinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Overmijinfo.Location = new System.Drawing.Point(507, 475);
             this.Overmijinfo.Name = "Overmijinfo";
-            this.Overmijinfo.Size = new System.Drawing.Size(63, 17);
+            this.Overmijinfo.Size = new System.Drawing.Size(507, 209);
             this.Overmijinfo.TabIndex = 55;
             this.Overmijinfo.Text = "*overmij*";
             // 
@@ -268,7 +253,6 @@
             this.Controls.Add(this.Kanpassenop);
             this.Controls.Add(this.Adres);
             this.Controls.Add(this.Verified);
-            this.Controls.Add(this.Test);
             this.Controls.Add(this.Naam);
             this.Controls.Add(this.Profielfoto);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,7 +260,6 @@
             this.Text = "Profiel van *naam*";
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nul)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.een)).EndInit();
@@ -292,7 +275,6 @@
         #endregion
         private System.Windows.Forms.PictureBox Profielfoto;
         private System.Windows.Forms.Label Naam;
-        private System.Windows.Forms.PictureBox Test;
         private System.Windows.Forms.Label Adres;
         private System.Windows.Forms.Label Kanpassenop;
         private System.Windows.Forms.Label Overmij;

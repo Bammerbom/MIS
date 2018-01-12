@@ -180,7 +180,7 @@ namespace MIS
             int H = 100;
             int W = 400;
             int posX = Convert.ToInt32(500 - 0.5 * W);
-            int posY = 109;
+            int posY = 0;
             int bufferY = 15;
             int bufferX = 10;
 
@@ -203,7 +203,7 @@ namespace MIS
             ResultaatLabel.Size = new Size(180, 20);
             ResultaatLabel.TabIndex = 57;
             ResultaatLabel.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
-            Controls.Add(ResultaatLabel);
+            panel.Controls.Add(ResultaatLabel);
             ResultaatList.Add(ResultaatLabel);
             // 
             // ProfielFotoPictureBox
@@ -220,7 +220,7 @@ namespace MIS
             ProfielFotoPictureBox.TabStop = false;
             ProfielFotoPictureBox.Image = Properties.Resources.stock_dierenliefhebber;
             ProfielFotoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            Controls.Add(ProfielFotoPictureBox);
+            panel.Controls.Add(ProfielFotoPictureBox);
             ResultaatList.Add(ProfielFotoPictureBox);
             // 
             // OppassenUitlaten
@@ -236,7 +236,7 @@ namespace MIS
             OppassenUitlaten.Size = new Size(136, 13);
             OppassenUitlaten.TabIndex = 59;
             OppassenUitlaten.Text = "Kan een "+ gebruiker.diertypes + " verzorgen.";
-            Controls.Add(OppassenUitlaten);
+            panel.Controls.Add(OppassenUitlaten);
             ResultaatList.Add(OppassenUitlaten);
             // 
             // RatingPictureBox
@@ -255,7 +255,7 @@ namespace MIS
                 Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
             RatingPictureBox.Image = images[gebruiker.rating];
             RatingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            Controls.Add(RatingPictureBox);
+            panel.Controls.Add(RatingPictureBox);
             ResultaatList.Add(RatingPictureBox);
             // 
             // VerifiedPicktureBox
@@ -274,7 +274,7 @@ namespace MIS
                 VerifiedPicktureBox.TabStop = false;
                 VerifiedPicktureBox.Image = Properties.Resources.checkbox;
                 VerifiedPicktureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                Controls.Add(VerifiedPicktureBox);
+                panel.Controls.Add(VerifiedPicktureBox);
                 ResultaatList.Add(VerifiedPicktureBox);
             } 
             // 
@@ -291,7 +291,7 @@ namespace MIS
             Locatielabel.Size = new Size(51, 13);
             Locatielabel.TabIndex = 62;
             Locatielabel.Text = gebruiker.woonplaats + " - €" + gebruiker.vraagprijs + " per dag";
-            Controls.Add(Locatielabel);
+            panel.Controls.Add(Locatielabel);
             ResultaatList.Add(Locatielabel);
         }
 

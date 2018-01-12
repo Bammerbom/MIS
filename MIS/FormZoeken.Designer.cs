@@ -48,6 +48,7 @@
             this.PrijsTextBox = new System.Windows.Forms.TextBox();
             this.AmfibieCheckBox = new System.Windows.Forms.CheckBox();
             this.KatCheckBox = new System.Windows.Forms.CheckBox();
+            this.panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -276,11 +277,20 @@
             this.KatCheckBox.UseVisualStyleBackColor = true;
             this.KatCheckBox.CheckedChanged += new System.EventHandler(this.Huisdierbox_CheckedChanged);
             // 
+            // panel
+            // 
+            this.panel.AutoScroll = true;
+            this.panel.Location = new System.Drawing.Point(0, 109);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(984, 549);
+            this.panel.TabIndex = 57;
+            // 
             // FormZoeken
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.KatCheckBox);
             this.Controls.Add(this.AmfibieCheckBox);
             this.Controls.Add(this.PrijsTextBox);
@@ -330,7 +340,7 @@
         private System.Windows.Forms.TextBox PrijsTextBox;
         private System.Windows.Forms.CheckBox AmfibieCheckBox;
         private System.Windows.Forms.CheckBox KatCheckBox;
-
+        private System.Windows.Forms.Panel panel;
     }
 }
 

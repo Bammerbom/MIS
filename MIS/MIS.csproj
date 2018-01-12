@@ -61,11 +61,11 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProfiel.cs">
+    <Compile Include="FormMakenprofiel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProfiel.Designer.cs">
-      <DependentUpon>FormProfiel.cs</DependentUpon>
+    <Compile Include="FormMakenprofiel.Designer.cs">
+      <DependentUpon>FormMakenprofiel.cs</DependentUpon>
     </Compile>
     <Compile Include="FormZoeken.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProfiel.resx">
-      <DependentUpon>FormProfiel.cs</DependentUpon>
+    <EmbeddedResource Include="FormMakenprofiel.resx">
+      <DependentUpon>FormMakenprofiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBekijkenprofiel.resx">
       <DependentUpon>FormBekijkenprofiel.cs</DependentUpon>

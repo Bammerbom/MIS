@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MIS
 {
-    public partial class FormZoeken : Form
+    public partial class ControlZoeken : UserControl
     {
         List<Control> ResultaatList = new List<Control>();
         bool Valid;
-        public FormZoeken()
+        public ControlZoeken()
         {
             InitializeComponent();
         }
@@ -33,8 +33,8 @@ namespace MIS
                 DisposeResultaat();
                 int FEcount = 0;
                 Gebruiker[] gebruikers = Buildquery();
-                
-                foreach(Gebruiker GB in gebruikers)
+
+                foreach (Gebruiker GB in gebruikers)
                 {
                     MaakResultaat(GB, FEcount);
                     FEcount++;
@@ -106,7 +106,7 @@ namespace MIS
                     return false;
                 }
             }
-            
+
             int CheckedCount = 0;
             List<CheckBox> CBList = new List<CheckBox>()
                 { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox};
@@ -157,7 +157,7 @@ namespace MIS
                 if (woonplaats != "" && gebruiker.woonplaats != woonplaats) continue;
                 if (PrijsTextBox.Text != "" && (gebruiker.vraagprijs > Convert.ToDouble(PrijsTextBox.Text))) continue;
                 if (VerifiedCheckBox.Checked && !gebruiker.verified) continue;
-                if (UitlaatCheckBox.Checked  && !gebruiker.uitlaten) continue;
+                if (UitlaatCheckBox.Checked && !gebruiker.uitlaten) continue;
                 if (OppasCheckBox.Checked && !gebruiker.oppassen) continue;
                 filteredgebruikers.Add(gebruiker);
             }
@@ -173,9 +173,9 @@ namespace MIS
         }
         #endregion Zoeken
 
-        public void MaakResultaat(Gebruiker gebruiker , int pos)
+        public void MaakResultaat(Gebruiker gebruiker, int pos)
         {
-            
+
             //Globale variabelen
             int H = 100;
             int W = 400;
@@ -248,7 +248,7 @@ namespace MIS
             {
                 verzorgen = " verzorgen en uitlaten.";
             }
-            OppassenUitlaten.Text = "Kan een "+ gebruiker.diertypes + verzorgen;
+            OppassenUitlaten.Text = "Kan een " + gebruiker.diertypes + verzorgen;
             panel.Controls.Add(OppassenUitlaten);
             ResultaatList.Add(OppassenUitlaten);
             // 
@@ -289,7 +289,7 @@ namespace MIS
                 VerifiedPicktureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 panel.Controls.Add(VerifiedPicktureBox);
                 ResultaatList.Add(VerifiedPicktureBox);
-            } 
+            }
             // 
             // Locatielabel
             // 
@@ -310,7 +310,7 @@ namespace MIS
 
         private void DisposeResultaat()
         {
-            foreach(var DR in ResultaatList)
+            foreach (var DR in ResultaatList)
             {
                 DR.Dispose();
             }
@@ -318,7 +318,7 @@ namespace MIS
 
         private void profiel_ClickEvent(Gebruiker GB)
         {
-            var Bekijkenprofiel = new FormBekijkenprofiel(GB.userid);
+            var Bekijkenprofiel = new ControlBekijkenprofiel(GB.userid);
             Bekijkenprofiel.Show();
         }
     }

@@ -48,18 +48,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlBekijkenprofiel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBekijkenprofiel.Designer.cs">
+      <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlZoeken.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlZoeken.Designer.cs">
+      <DependentUpon>ControlZoeken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlZoekenBody.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlZoekenBody.Designer.cs">
+      <DependentUpon>ControlZoekenBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlZoekenHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlZoekenHeader.Designer.cs">
+      <DependentUpon>ControlZoekenHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="FormBekijkenprofiel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBekijkenprofiel.Designer.cs">
-      <DependentUpon>FormBekijkenprofiel.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMakenprofiel.cs">
       <SubType>Form</SubType>
@@ -67,27 +91,26 @@
     <Compile Include="FormMakenprofiel.Designer.cs">
       <DependentUpon>FormMakenprofiel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormZoeken.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormZoeken.Designer.cs">
-      <DependentUpon>FormZoeken.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProfielfotoManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlBekijkenprofiel.resx">
+      <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlZoekenBody.resx">
+      <DependentUpon>ControlZoekenBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlZoekenHeader.resx">
+      <DependentUpon>ControlZoekenHeader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMakenprofiel.resx">
       <DependentUpon>FormMakenprofiel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBekijkenprofiel.resx">
-      <DependentUpon>FormBekijkenprofiel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormZoeken.resx">
-      <DependentUpon>FormZoeken.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="SqlTools.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -144,6 +167,7 @@
     <None Include="Resources\_nul.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\backbuttoncircle_79559.png" />
     <Content Include="Resources\profielfotos\foto1.jpg" />
     <Content Include="Resources\profielfotos\foto10.jpg" />
     <Content Include="Resources\profielfotos\foto11.jpg" />
@@ -194,6 +218,7 @@
     <Content Include="Resources\profielfotos\foto7.jpg" />
     <Content Include="Resources\profielfotos\foto8.jpg" />
     <Content Include="Resources\profielfotos\foto9.jpg" />
+    <None Include="Resources\terug.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

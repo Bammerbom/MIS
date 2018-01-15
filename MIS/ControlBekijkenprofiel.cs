@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MIS
 {
-    public partial class FormBekijkenprofiel : Form
+    public partial class ControlBekijkenprofiel : UserControl
     {
         private int UserId;
 
-        public FormBekijkenprofiel(int userid)
+        public ControlBekijkenprofiel(int userid)
         {
             InitializeComponent();
             UserId = userid;
@@ -48,6 +48,5 @@ namespace MIS
             //Profielfoto
             Profielfoto.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
         }
-    } 
-
+    }
 }

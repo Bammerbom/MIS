@@ -42,9 +42,9 @@ namespace MIS
             Overmijinfo.Text = gebruiker.overmij;
             Prijs.Text = "Prijs per dag: €" + gebruiker.vraagprijs;
             //Rating
-            var list = new List<PictureBox>() { nul, een, twee, drie, vier, vijf };
-            list[gebruiker.rating].Visible = true;
-            Verified.Visible = gebruiker.verified;
+            Bitmap[] Ster = new Bitmap[6] 
+                {Properties.Resources.ster0, Properties.Resources.ster1, Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
+            RatingPictureBox.Image = Ster[gebruiker.rating];
             //Profielfoto
             Profielfoto.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
         }

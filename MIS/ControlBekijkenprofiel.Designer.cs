@@ -39,8 +39,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.OppassenUitlatenLabel = new System.Windows.Forms.Label();
             this.Overmijinfo = new System.Windows.Forms.Label();
+            this.RatingPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RatingPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Profielfoto
@@ -152,10 +154,20 @@
             this.Overmijinfo.TabIndex = 55;
             this.Overmijinfo.Text = "*overmij*";
             // 
+            // RatingPictureBox
+            // 
+            this.RatingPictureBox.Location = new System.Drawing.Point(349, 77);
+            this.RatingPictureBox.Name = "RatingPictureBox";
+            this.RatingPictureBox.Size = new System.Drawing.Size(167, 31);
+            this.RatingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RatingPictureBox.TabIndex = 56;
+            this.RatingPictureBox.TabStop = false;
+            // 
             // ControlBekijkenprofiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.RatingPictureBox);
             this.Controls.Add(this.Overmijinfo);
             this.Controls.Add(this.OppassenUitlatenLabel);
             this.Controls.Add(this.label1);
@@ -173,6 +185,7 @@
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RatingPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +204,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label OppassenUitlatenLabel;
         private System.Windows.Forms.Label Overmijinfo;
+        private System.Windows.Forms.PictureBox RatingPictureBox;
     }
 }

@@ -69,7 +69,7 @@
             this.VisCheckBox.AutoSize = true;
             this.VisCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.VisCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisCheckBox.Location = new System.Drawing.Point(761, 79);
+            this.VisCheckBox.Location = new System.Drawing.Point(761, 78);
             this.VisCheckBox.Name = "VisCheckBox";
             this.VisCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.VisCheckBox.Size = new System.Drawing.Size(46, 21);
@@ -83,7 +83,7 @@
             this.InsectCheckBox.AutoSize = true;
             this.InsectCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.InsectCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsectCheckBox.Location = new System.Drawing.Point(743, 62);
+            this.InsectCheckBox.Location = new System.Drawing.Point(743, 61);
             this.InsectCheckBox.Name = "InsectCheckBox";
             this.InsectCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.InsectCheckBox.Size = new System.Drawing.Size(64, 21);
@@ -96,7 +96,7 @@
             // 
             this.SDierLabel.AutoSize = true;
             this.SDierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SDierLabel.Location = new System.Drawing.Point(654, 7);
+            this.SDierLabel.Location = new System.Drawing.Point(654, 6);
             this.SDierLabel.Name = "SDierLabel";
             this.SDierLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SDierLabel.Size = new System.Drawing.Size(76, 17);
@@ -107,7 +107,7 @@
             // 
             this.WoonplaatsLabel.AutoSize = true;
             this.WoonplaatsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(201, 24);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(201, 23);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(87, 17);
             this.WoonplaatsLabel.TabIndex = 44;
@@ -117,7 +117,7 @@
             // 
             this.VogelCheckBox.AutoSize = true;
             this.VogelCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VogelCheckBox.Location = new System.Drawing.Point(667, 79);
+            this.VogelCheckBox.Location = new System.Drawing.Point(667, 78);
             this.VogelCheckBox.Name = "VogelCheckBox";
             this.VogelCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.VogelCheckBox.Size = new System.Drawing.Size(63, 21);
@@ -130,7 +130,7 @@
             // 
             this.ReptielCheckBox.AutoSize = true;
             this.ReptielCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReptielCheckBox.Location = new System.Drawing.Point(736, 26);
+            this.ReptielCheckBox.Location = new System.Drawing.Point(736, 25);
             this.ReptielCheckBox.Name = "ReptielCheckBox";
             this.ReptielCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ReptielCheckBox.Size = new System.Drawing.Size(71, 21);
@@ -143,7 +143,7 @@
             // 
             this.KnaagdierCheckBox.AutoSize = true;
             this.KnaagdierCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KnaagdierCheckBox.Location = new System.Drawing.Point(638, 62);
+            this.KnaagdierCheckBox.Location = new System.Drawing.Point(638, 61);
             this.KnaagdierCheckBox.Name = "KnaagdierCheckBox";
             this.KnaagdierCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.KnaagdierCheckBox.Size = new System.Drawing.Size(92, 21);
@@ -156,7 +156,7 @@
             // 
             this.HondCheckBox.AutoSize = true;
             this.HondCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HondCheckBox.Location = new System.Drawing.Point(669, 26);
+            this.HondCheckBox.Location = new System.Drawing.Point(669, 25);
             this.HondCheckBox.Name = "HondCheckBox";
             this.HondCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.HondCheckBox.Size = new System.Drawing.Size(61, 21);
@@ -168,7 +168,7 @@
             // ZoektextBox
             // 
             this.ZoektextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoektextBox.Location = new System.Drawing.Point(294, 22);
+            this.ZoektextBox.Location = new System.Drawing.Point(294, 21);
             this.ZoektextBox.Name = "ZoektextBox";
             this.ZoektextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ZoektextBox.Size = new System.Drawing.Size(206, 23);
@@ -177,7 +177,7 @@
             // ZoekButton
             // 
             this.ZoekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoekButton.Location = new System.Drawing.Point(501, 22);
+            this.ZoekButton.Location = new System.Drawing.Point(501, 21);
             this.ZoekButton.Name = "ZoekButton";
             this.ZoekButton.Size = new System.Drawing.Size(75, 23);
             this.ZoekButton.TabIndex = 38;
@@ -189,7 +189,7 @@
             // 
             this.PrijsLabel.AutoSize = true;
             this.PrijsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrijsLabel.Location = new System.Drawing.Point(196, 62);
+            this.PrijsLabel.Location = new System.Drawing.Point(196, 61);
             this.PrijsLabel.Name = "PrijsLabel";
             this.PrijsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PrijsLabel.Size = new System.Drawing.Size(92, 17);
@@ -200,7 +200,7 @@
             // 
             this.ExtraLabel.AutoSize = true;
             this.ExtraLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraLabel.Location = new System.Drawing.Point(806, 7);
+            this.ExtraLabel.Location = new System.Drawing.Point(806, 6);
             this.ExtraLabel.Name = "ExtraLabel";
             this.ExtraLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ExtraLabel.Size = new System.Drawing.Size(44, 17);
@@ -211,7 +211,7 @@
             // 
             this.OppasCheckBox.AutoSize = true;
             this.OppasCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OppasCheckBox.Location = new System.Drawing.Point(835, 62);
+            this.OppasCheckBox.Location = new System.Drawing.Point(835, 61);
             this.OppasCheckBox.Name = "OppasCheckBox";
             this.OppasCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.OppasCheckBox.Size = new System.Drawing.Size(132, 21);
@@ -224,7 +224,7 @@
             // 
             this.UitlaatCheckBox.AutoSize = true;
             this.UitlaatCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UitlaatCheckBox.Location = new System.Drawing.Point(851, 44);
+            this.UitlaatCheckBox.Location = new System.Drawing.Point(851, 43);
             this.UitlaatCheckBox.Name = "UitlaatCheckBox";
             this.UitlaatCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.UitlaatCheckBox.Size = new System.Drawing.Size(116, 21);
@@ -237,7 +237,7 @@
             // 
             this.VerifiedCheckBox.AutoSize = true;
             this.VerifiedCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerifiedCheckBox.Location = new System.Drawing.Point(807, 26);
+            this.VerifiedCheckBox.Location = new System.Drawing.Point(807, 25);
             this.VerifiedCheckBox.Name = "VerifiedCheckBox";
             this.VerifiedCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.VerifiedCheckBox.Size = new System.Drawing.Size(160, 21);
@@ -247,7 +247,7 @@
             // 
             // PrijsTextBox
             // 
-            this.PrijsTextBox.Location = new System.Drawing.Point(294, 62);
+            this.PrijsTextBox.Location = new System.Drawing.Point(294, 61);
             this.PrijsTextBox.Name = "PrijsTextBox";
             this.PrijsTextBox.Size = new System.Drawing.Size(100, 20);
             this.PrijsTextBox.TabIndex = 54;
@@ -256,7 +256,7 @@
             // 
             this.AmfibieCheckBox.AutoSize = true;
             this.AmfibieCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmfibieCheckBox.Location = new System.Drawing.Point(734, 44);
+            this.AmfibieCheckBox.Location = new System.Drawing.Point(734, 43);
             this.AmfibieCheckBox.Name = "AmfibieCheckBox";
             this.AmfibieCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.AmfibieCheckBox.Size = new System.Drawing.Size(73, 21);
@@ -269,7 +269,7 @@
             // 
             this.KatCheckBox.AutoSize = true;
             this.KatCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KatCheckBox.Location = new System.Drawing.Point(682, 44);
+            this.KatCheckBox.Location = new System.Drawing.Point(682, 43);
             this.KatCheckBox.Name = "KatCheckBox";
             this.KatCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.KatCheckBox.Size = new System.Drawing.Size(48, 21);

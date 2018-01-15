@@ -13,7 +13,6 @@ namespace MIS
     public partial class ControlZoekenHeader : UserControl
     {
         bool Valid;
-
         public ControlZoekenHeader()
         {
             InitializeComponent();
@@ -35,10 +34,15 @@ namespace MIS
                     FormHome.CZB.MaakResultaat(GB, FEcount);
                     FEcount++;
                 }
+                if (!gebruikers.Any())
+                {
+                    FormHome.CZB.GeenResultaat();
+                }
             }
             else
             {
-                MessageBox.Show("ERROR");
+                FormHome.CZB.DisposeResultaat();
+                FormHome.CZB.FoutQuery();
             }
         }
 

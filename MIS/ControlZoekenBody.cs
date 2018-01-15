@@ -13,6 +13,7 @@ namespace MIS
     public partial class ControlZoekenBody : UserControl
     {
         List<Control> ResultaatList = new List<Control>();
+        public static bool GeenResultaatbool;
         public ControlZoekenBody()
         {
             InitializeComponent();
@@ -158,6 +159,36 @@ namespace MIS
             Panel panel = FormHome.Home.panelB;
             panel.Controls.Clear();
             panel.Controls.Add(new ControlBekijkenprofiel(GB.userid));
+        }
+
+        public void GeenResultaat()
+        {
+            var ErrorLabel = new Label();
+            ErrorLabel.AutoSize = true;
+            ErrorLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            ErrorLabel.Location = new Point(410, 10);
+            ErrorLabel.Name = "ResultaatLabel";
+            ErrorLabel.Size = new Size(180, 20);
+            ErrorLabel.TabIndex = 57;
+            ErrorLabel.Text = "Geen Zoekresultaten";
+            panel.Controls.Add(ErrorLabel);
+            ResultaatList.Add(ErrorLabel);
+            GeenResultaatbool = true;
+        }
+
+        public void FoutQuery()
+        {
+            var ErrorLabel = new Label();
+            ErrorLabel.AutoSize = true;
+            ErrorLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            ErrorLabel.Location = new Point(400, 10);
+            ErrorLabel.Name = "ResultaatLabel";
+            ErrorLabel.Size = new Size(180, 20);
+            ErrorLabel.TabIndex = 57;
+            ErrorLabel.Text = "U moet een dier selecteren.";
+            panel.Controls.Add(ErrorLabel);
+            ResultaatList.Add(ErrorLabel);
+            GeenResultaatbool = true;
         }
 
         public void DisposeResultaat()

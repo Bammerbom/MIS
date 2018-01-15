@@ -36,23 +36,11 @@
             this.Overmij = new System.Windows.Forms.Label();
             this.Dienstentitel = new System.Windows.Forms.Label();
             this.Prijs = new System.Windows.Forms.Label();
-            this.nul = new System.Windows.Forms.PictureBox();
-            this.een = new System.Windows.Forms.PictureBox();
-            this.twee = new System.Windows.Forms.PictureBox();
-            this.drie = new System.Windows.Forms.PictureBox();
-            this.vier = new System.Windows.Forms.PictureBox();
-            this.vijf = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.OppassenUitlatenLabel = new System.Windows.Forms.Label();
             this.Overmijinfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nul)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.een)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.twee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vijf)).BeginInit();
             this.SuspendLayout();
             // 
             // Profielfoto
@@ -135,66 +123,6 @@
             this.Prijs.TabIndex = 45;
             this.Prijs.Text = "*prijs*";
             // 
-            // nul
-            // 
-            this.nul.Location = new System.Drawing.Point(349, 77);
-            this.nul.Name = "nul";
-            this.nul.Size = new System.Drawing.Size(167, 31);
-            this.nul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.nul.TabIndex = 47;
-            this.nul.TabStop = false;
-            this.nul.Visible = false;
-            // 
-            // een
-            // 
-            this.een.Location = new System.Drawing.Point(349, 77);
-            this.een.Name = "een";
-            this.een.Size = new System.Drawing.Size(167, 31);
-            this.een.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.een.TabIndex = 48;
-            this.een.TabStop = false;
-            this.een.Visible = false;
-            // 
-            // twee
-            // 
-            this.twee.Location = new System.Drawing.Point(349, 77);
-            this.twee.Name = "twee";
-            this.twee.Size = new System.Drawing.Size(167, 31);
-            this.twee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.twee.TabIndex = 49;
-            this.twee.TabStop = false;
-            this.twee.Visible = false;
-            // 
-            // drie
-            // 
-            this.drie.Location = new System.Drawing.Point(349, 77);
-            this.drie.Name = "drie";
-            this.drie.Size = new System.Drawing.Size(167, 31);
-            this.drie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.drie.TabIndex = 50;
-            this.drie.TabStop = false;
-            this.drie.Visible = false;
-            // 
-            // vier
-            // 
-            this.vier.Location = new System.Drawing.Point(349, 77);
-            this.vier.Name = "vier";
-            this.vier.Size = new System.Drawing.Size(167, 31);
-            this.vier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.vier.TabIndex = 51;
-            this.vier.TabStop = false;
-            this.vier.Visible = false;
-            // 
-            // vijf
-            // 
-            this.vijf.Location = new System.Drawing.Point(349, 77);
-            this.vijf.Name = "vijf";
-            this.vijf.Size = new System.Drawing.Size(167, 31);
-            this.vijf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.vijf.TabIndex = 52;
-            this.vijf.TabStop = false;
-            this.vijf.Visible = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -231,12 +159,6 @@
             this.Controls.Add(this.Overmijinfo);
             this.Controls.Add(this.OppassenUitlatenLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.vijf);
-            this.Controls.Add(this.vier);
-            this.Controls.Add(this.drie);
-            this.Controls.Add(this.twee);
-            this.Controls.Add(this.een);
-            this.Controls.Add(this.nul);
             this.Controls.Add(this.Prijs);
             this.Controls.Add(this.Dienstentitel);
             this.Controls.Add(this.Overmij);
@@ -251,12 +173,6 @@
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nul)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.een)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.twee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vijf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,12 +186,7 @@
         private System.Windows.Forms.Label Overmij;
         private System.Windows.Forms.Label Dienstentitel;
         private System.Windows.Forms.Label Prijs;
-        private System.Windows.Forms.PictureBox nul;
-        private System.Windows.Forms.PictureBox een;
-        private System.Windows.Forms.PictureBox twee;
-        private System.Windows.Forms.PictureBox drie;
-        private System.Windows.Forms.PictureBox vier;
-        private System.Windows.Forms.PictureBox vijf;
+        private System.Windows.Forms.PictureBox SterLabel;
         public System.Windows.Forms.PictureBox Verified;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label OppassenUitlatenLabel;

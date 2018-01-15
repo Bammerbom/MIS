@@ -18,11 +18,6 @@ namespace MIS
             InitializeComponent();
         }
 
-        public void Refresh()
-        {
-
-        }
-
         public void MaakResultaat(Gebruiker gebruiker, int pos)
         {
 
@@ -171,6 +166,8 @@ namespace MIS
             {
                 DR.Dispose();
             }
+            ResultaatList.Clear();
+            GC.Collect();
         }
     }
 }

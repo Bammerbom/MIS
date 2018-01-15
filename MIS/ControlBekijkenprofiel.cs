@@ -42,9 +42,19 @@ namespace MIS
             Overmijinfo.Text = gebruiker.overmij;
             Prijs.Text = "Prijs per dag: €" + gebruiker.vraagprijs;
             //Rating
-            var list = new List<PictureBox>() { nul, een, twee, drie, vier, vijf };
-            list[gebruiker.rating].Visible = true;
-            Verified.Visible = gebruiker.verified;
+            this.SterLabel = new System.Windows.Forms.PictureBox();
+            Bitmap[] Ster = new Bitmap[6] 
+                {Properties.Resources.ster0, Properties.Resources.ster1, Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
+            this.SterLabel.Image = Ster[gebruiker.rating];
+            this.SterLabel.Location = new System.Drawing.Point(349, 77);
+            this.SterLabel.Name = "SterLabel";
+            this.SterLabel.Size = new System.Drawing.Size(167, 31);
+            this.SterLabel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SterLabel.TabIndex = 47;
+            this.SterLabel.TabStop = false;
+            this.SterLabel.Visible = true;
+            this.Controls.Add(this.SterLabel);
+
             //Profielfoto
             Profielfoto.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
         }

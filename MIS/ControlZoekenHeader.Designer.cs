@@ -58,11 +58,11 @@
             this.label1.Location = new System.Drawing.Point(-3, 96);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1123, 13);
+            this.label1.Size = new System.Drawing.Size(991, 13);
             this.label1.TabIndex = 48;
             this.label1.Text = "_________________________________________________________________________________" +
     "________________________________________________________________________________" +
-    "_________________________";
+    "___";
             // 
             // VisCheckBox
             // 
@@ -281,9 +281,9 @@
             // terugknop
             // 
             this.terugknop.Image = global::MIS.Properties.Resources.terug;
-            this.terugknop.Location = new System.Drawing.Point(15, 22);
+            this.terugknop.Location = new System.Drawing.Point(5, 44);
             this.terugknop.Name = "terugknop";
-            this.terugknop.Size = new System.Drawing.Size(64, 61);
+            this.terugknop.Size = new System.Drawing.Size(60, 60);
             this.terugknop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.terugknop.TabIndex = 57;
             this.terugknop.TabStop = false;

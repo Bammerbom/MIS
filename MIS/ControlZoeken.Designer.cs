@@ -106,7 +106,7 @@
             // 
             this.WoonplaatsLabel.AutoSize = true;
             this.WoonplaatsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(10, 17);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(29, 18);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(87, 17);
             this.WoonplaatsLabel.TabIndex = 44;
@@ -167,7 +167,7 @@
             // ZoektextBox
             // 
             this.ZoektextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoektextBox.Location = new System.Drawing.Point(103, 15);
+            this.ZoektextBox.Location = new System.Drawing.Point(122, 15);
             this.ZoektextBox.Name = "ZoektextBox";
             this.ZoektextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ZoektextBox.Size = new System.Drawing.Size(206, 23);
@@ -176,7 +176,7 @@
             // ZoekButton
             // 
             this.ZoekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoekButton.Location = new System.Drawing.Point(310, 15);
+            this.ZoekButton.Location = new System.Drawing.Point(329, 15);
             this.ZoekButton.Name = "ZoekButton";
             this.ZoekButton.Size = new System.Drawing.Size(75, 23);
             this.ZoekButton.TabIndex = 38;
@@ -188,12 +188,12 @@
             // 
             this.PrijsLabel.AutoSize = true;
             this.PrijsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrijsLabel.Location = new System.Drawing.Point(5, 55);
+            this.PrijsLabel.Location = new System.Drawing.Point(4, 56);
             this.PrijsLabel.Name = "PrijsLabel";
             this.PrijsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PrijsLabel.Size = new System.Drawing.Size(92, 17);
+            this.PrijsLabel.Size = new System.Drawing.Size(120, 17);
             this.PrijsLabel.TabIndex = 35;
-            this.PrijsLabel.Text = "Prijs per dag:";
+            this.PrijsLabel.Text = "Max prijs per dag:";
             // 
             // ExtraLabel
             // 
@@ -246,7 +246,7 @@
             // 
             // PrijsTextBox
             // 
-            this.PrijsTextBox.Location = new System.Drawing.Point(103, 55);
+            this.PrijsTextBox.Location = new System.Drawing.Point(122, 55);
             this.PrijsTextBox.Name = "PrijsTextBox";
             this.PrijsTextBox.Size = new System.Drawing.Size(100, 20);
             this.PrijsTextBox.TabIndex = 54;
@@ -313,7 +313,6 @@
             this.Name = "FormZoeken";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Zoeken";
-            this.Load += new System.EventHandler(this.FormZoeken_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

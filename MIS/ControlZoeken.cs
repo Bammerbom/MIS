@@ -19,10 +19,6 @@ namespace MIS
             InitializeComponent();
         }
 
-        private void FormZoeken_Load(object sender, EventArgs e)
-        {
-        }
-
         #region Zoeken
         //Click event
         private void ZoekButton_Click(object sender, EventArgs e)

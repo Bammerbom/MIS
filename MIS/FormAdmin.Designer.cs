@@ -46,8 +46,6 @@
             this.OppassenAdmin = new System.Windows.Forms.CheckBox();
             this.UitlatenAdmin = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.RatingAdmin = new System.Windows.Forms.TextBox();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.AmfibieCheckboxAdmin = new System.Windows.Forms.CheckBox();
             this.KatCheckboxAdmin = new System.Windows.Forms.CheckBox();
@@ -58,6 +56,10 @@
             this.KnaagdierCheckboxAdmin = new System.Windows.Forms.CheckBox();
             this.HondCheckboxAdmin = new System.Windows.Forms.CheckBox();
             this.VerwijderButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.EmailAdmin = new System.Windows.Forms.TextBox();
+            this.WachtwoordAdmin = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,22 +222,6 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Diertypes";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1178, 471);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Rating";
-            // 
-            // RatingAdmin
-            // 
-            this.RatingAdmin.Location = new System.Drawing.Point(1272, 464);
-            this.RatingAdmin.Name = "RatingAdmin";
-            this.RatingAdmin.Size = new System.Drawing.Size(100, 20);
-            this.RatingAdmin.TabIndex = 21;
-            // 
             // UpdateButton
             // 
             this.UpdateButton.Location = new System.Drawing.Point(1297, 726);
@@ -336,11 +322,47 @@
             this.VerwijderButton.UseVisualStyleBackColor = true;
             this.VerwijderButton.Click += new System.EventHandler(this.VerwijderButton_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1178, 450);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Email";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1178, 476);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Wachtwoord";
+            // 
+            // EmailAdmin
+            // 
+            this.EmailAdmin.Location = new System.Drawing.Point(1272, 447);
+            this.EmailAdmin.Name = "EmailAdmin";
+            this.EmailAdmin.Size = new System.Drawing.Size(100, 20);
+            this.EmailAdmin.TabIndex = 46;
+            // 
+            // WachtwoordAdmin
+            // 
+            this.WachtwoordAdmin.Location = new System.Drawing.Point(1272, 473);
+            this.WachtwoordAdmin.Name = "WachtwoordAdmin";
+            this.WachtwoordAdmin.Size = new System.Drawing.Size(100, 20);
+            this.WachtwoordAdmin.TabIndex = 47;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.Controls.Add(this.WachtwoordAdmin);
+            this.Controls.Add(this.EmailAdmin);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.VerwijderButton);
             this.Controls.Add(this.AmfibieCheckboxAdmin);
             this.Controls.Add(this.KatCheckboxAdmin);
@@ -351,8 +373,6 @@
             this.Controls.Add(this.KnaagdierCheckboxAdmin);
             this.Controls.Add(this.HondCheckboxAdmin);
             this.Controls.Add(this.UpdateButton);
-            this.Controls.Add(this.RatingAdmin);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.UitlatenAdmin);
             this.Controls.Add(this.OppassenAdmin);
@@ -400,8 +420,6 @@
         private System.Windows.Forms.CheckBox OppassenAdmin;
         private System.Windows.Forms.CheckBox UitlatenAdmin;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox RatingAdmin;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.CheckBox AmfibieCheckboxAdmin;
         private System.Windows.Forms.CheckBox KatCheckboxAdmin;
@@ -412,5 +430,9 @@
         private System.Windows.Forms.CheckBox KnaagdierCheckboxAdmin;
         private System.Windows.Forms.CheckBox HondCheckboxAdmin;
         private System.Windows.Forms.Button VerwijderButton;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox EmailAdmin;
+        private System.Windows.Forms.TextBox WachtwoordAdmin;
     }
 }

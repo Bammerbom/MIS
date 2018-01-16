@@ -24,17 +24,18 @@ namespace MIS
         {
             this.table = GetDataTable();
             AdminDatagrid.DataSource = table;
-            AdminDatagrid.Columns[0].Width = 50;
-            AdminDatagrid.Columns[1].Width = 135;
-            AdminDatagrid.Columns[2].Width = 135;
+            AdminDatagrid.Columns[0].Width = 30;
+            AdminDatagrid.Columns[1].Width = 105;
+            AdminDatagrid.Columns[2].Width = 105;
             AdminDatagrid.Columns[3].Width = 110;
-            AdminDatagrid.Columns[4].Width = 70;
-            AdminDatagrid.Columns[5].Width = 70;
-            AdminDatagrid.Columns[6].Width = 70;
+            AdminDatagrid.Columns[4].Width = 60;
+            AdminDatagrid.Columns[5].Width = 60;
+            AdminDatagrid.Columns[6].Width = 65;
             AdminDatagrid.Columns[7].Width = 70;
             AdminDatagrid.Columns[8].Width = 70;
-            AdminDatagrid.Columns[9].Width = 160;
-            AdminDatagrid.Columns[10].Width = 50;
+            AdminDatagrid.Columns[9].Width = 180;
+            AdminDatagrid.Columns[10].Width = 124;
+            AdminDatagrid.Columns[11].Width = 120;
         }
 
         public DataTable GetDataTable()
@@ -51,12 +52,13 @@ namespace MIS
             table.Columns.Add("oppassen", typeof(bool));
             table.Columns.Add("uitlaten", typeof(bool));
             table.Columns.Add("diertypes", typeof(string));
-            table.Columns.Add("rating", typeof(int));
+            table.Columns.Add("email", typeof(string));
+            table.Columns.Add("wachtwoord", typeof(string));
 
             //Data toevoegen
             foreach (var gebruiker in GebruikerManager.AlleGebruikers())
             {
-                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, 0);
+                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.email, gebruiker.password);
             }
 
             return table;
@@ -71,11 +73,13 @@ namespace MIS
             AchternaamAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[2].Value.ToString();
             WoonplaatsAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[3].Value.ToString();
             VraagprijsAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[6].Value.ToString();
-            RatingAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[10].Value.ToString();
             OppassenAdmin.Checked = (bool) AdminDatagrid.Rows[e.RowIndex].Cells[7].Value;
             UitlatenAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[8].Value;
             VerifiedAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[4].Value;
             AdminAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[5].Value;
+            EmailAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[10].Value.ToString();
+            WachtwoordAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[11].Value.ToString();
+
 
             foreach (CheckBox cb in CBListAdmin) cb.Checked = false;
             string dieren = (string) AdminDatagrid.Rows[e.RowIndex].Cells[9].Value;
@@ -159,6 +163,8 @@ namespace MIS
                 gebruiker.uitlaten = UitlatenAdmin.Checked;
                 gebruiker.admin = AdminAdmin.Checked;
                 gebruiker.verified = VerifiedAdmin.Checked;
+                gebruiker.email = EmailAdmin.Text;
+                gebruiker.password = WachtwoordAdmin.Text;
 
                 List<string> dierenstrings = new List<string>();
                 if (HondCheckboxAdmin.Checked) dierenstrings.Add("Hond");

@@ -54,13 +54,14 @@ namespace MIS
             table.Columns.Add("rating", typeof(int));
 
             //Data toevoegen
-            foreach (var gebruiker in DatabaseManager.AlleGebruikers())
+            foreach (var gebruiker in GebruikerManager.AlleGebruikers())
             {
-                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.rating);
+                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, 0);
             }
 
             return table;
         }
+
         private void AdminDatagrid_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             CurrentRow = e.RowIndex;
@@ -149,12 +150,11 @@ namespace MIS
 
                 int currentr = (int)CurrentRow;
                 int userid = (int)AdminDatagrid[0, currentr].Value;
-                Gebruiker gebruiker = DatabaseManager.GebruikerOpvragen(userid);
+                Gebruiker gebruiker = GebruikerManager.GebruikerOpvragen(userid);
                 gebruiker.voornaam = VoornaamAdmin.Text;
                 gebruiker.achternaam = AchternaamAdmin.Text;
                 gebruiker.woonplaats = WoonplaatsAdmin.Text;
                 gebruiker.vraagprijs = Convert.ToInt32(VraagprijsAdmin.Text);
-                gebruiker.rating = Convert.ToInt32(RatingAdmin.Text);
                 gebruiker.oppassen = OppassenAdmin.Checked;
                 gebruiker.uitlaten = UitlatenAdmin.Checked;
                 gebruiker.admin = AdminAdmin.Checked;
@@ -172,7 +172,7 @@ namespace MIS
                 string dieren = string.Join(", ", dierenstrings);
                 gebruiker.diertypes = dieren;
 
-                DatabaseManager.GebruikerWijzigen(gebruiker);
+                GebruikerManager.GebruikerWijzigen(gebruiker);
                 Refresh();
                 MessageBox.Show("Het profiel is bijgewerkt");
             }
@@ -191,7 +191,7 @@ namespace MIS
             if (ResultaatVerwijderen == DialogResult.Yes)
             {
                 int userid = (int)AdminDatagrid[0, (int)CurrentRow].Value;
-                DatabaseManager.GebruikerVerwijderen(userid);
+                GebruikerManager.GebruikerVerwijderen(userid);
                 Refresh();
             }
         }

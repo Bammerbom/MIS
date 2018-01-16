@@ -22,7 +22,7 @@ namespace MIS
 
         private void FormBekijkenprofiel_Load(object sender, EventArgs e)
         {
-            var gebruiker = DatabaseManager.GebruikerOpvragen(UserId);
+            var gebruiker = GebruikerManager.GebruikerOpvragen(UserId);
             Naam.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
             this.Text = "Profiel van " + gebruiker.voornaam + " " + gebruiker.achternaam;
             Adres.Text = gebruiker.woonplaats;
@@ -44,7 +44,7 @@ namespace MIS
             //Rating
             Bitmap[] Ster = new Bitmap[6] 
                 {Properties.Resources.ster0, Properties.Resources.ster1, Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
-            RatingPictureBox.Image = Ster[gebruiker.rating];
+            RatingPictureBox.Image = Ster[ReviewManager.BerekenRating(UserId)];
             //Profielfoto
             Profielfoto.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
         }

@@ -22,7 +22,7 @@ namespace MIS
 
         private void FormBekijkenprofiel_Load(object sender, EventArgs e)
         {
-            var gebruiker = DatabaseManager.GebruikerOpvragen(UserId);
+            var gebruiker = GebruikerManager.GebruikerOpvragen(UserId);
             Naam.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
             this.Text = "Profiel van " + gebruiker.voornaam + " " + gebruiker.achternaam;
             Adres.Text = gebruiker.woonplaats;

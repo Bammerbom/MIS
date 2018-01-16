@@ -75,7 +75,7 @@ namespace MIS
                     overmij = OverMijTextbox.Text,    
                     rating = Convert.ToInt32(RatingTextbox.Text)
                 };
-                DatabaseManager.GebruikerToevoegen(gebruiker);
+                GebruikerManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");
             }
         }

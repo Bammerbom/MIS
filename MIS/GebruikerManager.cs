@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Data.SQLite;
 
 namespace MIS {
-    public class DatabaseManager {
+    public class GebruikerManager {
 
         /// <summary>
         /// Laad de database, of maak een nieuwe als hij nog niet bestaat
@@ -16,7 +16,8 @@ namespace MIS {
             var con = SqlTools.Connection;
 
             //Create new tables
-            if (isNew) {
+            if (isNew)
+            {
                 var cmd = new SQLiteCommand("CREATE TABLE gebruikers (" +
                                       "userid integer NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                                       "voornaam text, " +
@@ -29,8 +30,18 @@ namespace MIS {
                                       "uitlaten boolean, " +
                                       "woonplaats text, " +
                                       "diertypes text, " +
-                                      "rating integer)", SqlTools.Connection);
+                                      "email text," +
+                                      "password text)", SqlTools.Connection);
                 cmd.ExecuteNonQuery();
+
+                var cmd2 = new SQLiteCommand("CREATE TABLE reviews (" +
+                                      "reviewid integer NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                      "reviewedid integer, " +
+                                      "reviewerid integer, " +
+                                      "rating integer, " +
+                                      "title text, " +
+                                      "body text)", SqlTools.Connection);
+                cmd2.ExecuteNonQuery();
             }
         }
 
@@ -42,8 +53,8 @@ namespace MIS {
         public static int GebruikerToevoegen(Gebruiker gebruiker)
         {
             //Create insert command
-            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes, rating) " +
-                "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes, @rating)", SqlTools.Connection);
+            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes, rating, email, password) " +
+                "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes, @email, @password)", SqlTools.Connection);
             cmd = GebruikerNaarData(cmd, gebruiker);
             cmd.ExecuteNonQuery();
 
@@ -79,7 +90,7 @@ namespace MIS {
             //Create update command
             var cmd = new SQLiteCommand("UPDATE gebruikers SET " +
                 "voornaam = @voornaam, achternaam = @achternaam, overmij = @overmij, verified = @verified, admin = @admin, " +
-                "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes, rating = @rating " +
+                "vraagprijs = @vraagprijs, oppassen = @oppassen, uitlaten = @uitlaten, woonplaats = @woonplaats, diertypes = @diertypes, email = @email, password = @password " +
                 "WHERE userid = @userid", SqlTools.Connection);
             cmd = GebruikerNaarData(cmd, gebruiker);
             return cmd.ExecuteNonQuery() > 0;
@@ -135,7 +146,8 @@ namespace MIS {
                 uitlaten = (bool)reader["uitlaten"],
                 woonplaats = (string)reader["woonplaats"],
                 diertypes = (string)reader["diertypes"],
-                rating = Convert.ToInt32(reader["rating"])
+                email = (string)reader["email"],
+                password = (string)reader["password"],
             };
         }
 
@@ -152,7 +164,8 @@ namespace MIS {
             cmd.Parameters.Add("@uitlaten", DbType.Boolean).Value = gebruiker.uitlaten;
             cmd.Parameters.Add("@woonplaats", DbType.String).Value = gebruiker.woonplaats;
             cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
-            cmd.Parameters.Add("@rating", DbType.Int32).Value = gebruiker.rating;
+            cmd.Parameters.Add("@email", DbType.String).Value = gebruiker.email;
+            cmd.Parameters.Add("@password", DbType.String).Value = gebruiker.password;
             return cmd;
         }
         #endregion Utils
@@ -174,6 +187,7 @@ namespace MIS {
         public bool uitlaten;
         public string woonplaats;
         public string diertypes;
-        public int rating;
+        public string email;
+        public string password;
     }
 }

@@ -144,7 +144,7 @@ namespace MIS
             uitlaat = UitlaatCheckBox.Checked;
             oppas = OppasCheckBox.Checked;
             woonplaats = ZoektextBox.Text;
-            Gebruiker[] allegebruikers = DatabaseManager.AlleGebruikers();
+            Gebruiker[] allegebruikers = GebruikerManager.AlleGebruikers();
             List<Gebruiker> filteredgebruikers = new List<Gebruiker>();
 
             foreach (var gebruiker in allegebruikers)

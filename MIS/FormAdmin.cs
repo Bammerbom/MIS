@@ -59,7 +59,7 @@ namespace MIS
             table.Columns.Add("rating", typeof(int));
 
             //Data toevoegen
-            foreach (var gebruiker in DatabaseManager.AlleGebruikers())
+            foreach (var gebruiker in GebruikerManager.AlleGebruikers())
             {
                 table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.rating);
             }
@@ -75,7 +75,7 @@ namespace MIS
                 if (ResultaatVerwijderen == DialogResult.Yes)
                 {
                     int userid = (int)AdminDatagrid[0, e.RowIndex].Value;
-                    DatabaseManager.GebruikerVerwijderen(userid);
+                    GebruikerManager.GebruikerVerwijderen(userid);
                     AdminDatagrid.DataSource = GetDataTable();
                 }
             }
@@ -154,7 +154,7 @@ namespace MIS
 
             int currentr = (int)CurrentRow;
             int userid = (int)AdminDatagrid[0, currentr].Value;
-            Gebruiker gebruiker = DatabaseManager.GebruikerOpvragen(userid);
+            Gebruiker gebruiker = GebruikerManager.GebruikerOpvragen(userid);
             gebruiker.voornaam = VoornaamAdmin.Text;
             gebruiker.achternaam = AchternaamAdmin.Text;
             gebruiker.woonplaats = WoonplaatsAdmin.Text;
@@ -177,7 +177,7 @@ namespace MIS
             string dieren = string.Join(", ", dierenstrings);
             gebruiker.diertypes = dieren;
 
-            DatabaseManager.GebruikerWijzigen(gebruiker);
+            GebruikerManager.GebruikerWijzigen(gebruiker);
             AdminDatagrid.DataSource = GetDataTable();
 
             MessageBox.Show("Het profiel is bijgewerkt");

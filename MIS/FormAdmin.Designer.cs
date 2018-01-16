@@ -57,6 +57,7 @@
             this.ReptielCheckboxAdmin = new System.Windows.Forms.CheckBox();
             this.KnaagdierCheckboxAdmin = new System.Windows.Forms.CheckBox();
             this.HondCheckboxAdmin = new System.Windows.Forms.CheckBox();
+            this.VerwijderButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AdminDatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,6 @@
             this.AdminDatagrid.ReadOnly = true;
             this.AdminDatagrid.Size = new System.Drawing.Size(1159, 736);
             this.AdminDatagrid.TabIndex = 0;
-            this.AdminDatagrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminDatagrid_CellMouseClick);
             this.AdminDatagrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminDatagrid_RowHeaderMouseClick_1);
             // 
             // VoornaamAdmin
@@ -326,11 +326,22 @@
             this.HondCheckboxAdmin.Text = "Hond";
             this.HondCheckboxAdmin.UseVisualStyleBackColor = true;
             // 
+            // VerwijderButton
+            // 
+            this.VerwijderButton.Location = new System.Drawing.Point(1184, 726);
+            this.VerwijderButton.Name = "VerwijderButton";
+            this.VerwijderButton.Size = new System.Drawing.Size(75, 23);
+            this.VerwijderButton.TabIndex = 43;
+            this.VerwijderButton.Text = "Verwijderen";
+            this.VerwijderButton.UseVisualStyleBackColor = true;
+            this.VerwijderButton.Click += new System.EventHandler(this.VerwijderButton_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.Controls.Add(this.VerwijderButton);
             this.Controls.Add(this.AmfibieCheckboxAdmin);
             this.Controls.Add(this.KatCheckboxAdmin);
             this.Controls.Add(this.VissenCheckboxAdmin);
@@ -400,5 +411,6 @@
         private System.Windows.Forms.CheckBox ReptielCheckboxAdmin;
         private System.Windows.Forms.CheckBox KnaagdierCheckboxAdmin;
         private System.Windows.Forms.CheckBox HondCheckboxAdmin;
+        private System.Windows.Forms.Button VerwijderButton;
     }
 }

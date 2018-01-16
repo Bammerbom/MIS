@@ -35,13 +35,6 @@ namespace MIS
             AdminDatagrid.Columns[8].Width = 70;
             AdminDatagrid.Columns[9].Width = 160;
             AdminDatagrid.Columns[10].Width = 50;
-
-            var deleteButton = new DataGridViewButtonColumn();
-            deleteButton.Name = "dataGridViewDeleteButton";
-            deleteButton.HeaderText = "Verwijder Profiel";
-            deleteButton.Text = "Verwijder";
-            deleteButton.UseColumnTextForButtonValue = true;
-            AdminDatagrid.Columns.Add(deleteButton);
         }
 
         public DataTable GetDataTable()
@@ -67,34 +60,6 @@ namespace MIS
             }
 
             return table;
-        }
-
-        private void AdminDatagrid_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.ColumnIndex == AdminDatagrid.Columns["dataGridViewDeleteButton"].Index)
-            {
-                DialogResult ResultaatVerwijderen = MessageBox.Show("Weet je zeker dat je het geselecteerde profiel wilt verwijderen?", "Verwijderen Profiel", MessageBoxButtons.YesNo);
-                if (ResultaatVerwijderen == DialogResult.Yes)
-                {
-                    int userid = (int)AdminDatagrid[0, e.RowIndex].Value;
-                    DatabaseManager.GebruikerVerwijderen(userid);
-                    Refresh();
-                }
-            }
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            AdminDatagrid.ReadOnly = false;
-            MessageBox.Show("Je kan nu gegevens aanpassen voor de verschillende profielen");
-
-
-        }
-
-        private void ReadButton_Click(object sender, EventArgs e)
-        {
-            AdminDatagrid.ReadOnly = true;
-            MessageBox.Show("Je kan nu geen gegevens meer aanpassen");
         }
         private void AdminDatagrid_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -210,6 +175,24 @@ namespace MIS
                 DatabaseManager.GebruikerWijzigen(gebruiker);
                 Refresh();
                 MessageBox.Show("Het profiel is bijgewerkt");
+            }
+        }
+
+        private void VerwijderButton_Click(object sender, EventArgs e)
+        {
+            //Als de gebruiker geen rij selecteerd, ga dan zeuren
+            if (CurrentRow == null)
+            {
+                MessageBox.Show("Je hebt geen row geselecteerd");
+                return;
+            }
+
+            DialogResult ResultaatVerwijderen = MessageBox.Show("Weet je zeker dat je het geselecteerde profiel wilt verwijderen?", "Verwijderen Profiel", MessageBoxButtons.YesNo);
+            if (ResultaatVerwijderen == DialogResult.Yes)
+            {
+                int userid = (int)AdminDatagrid[0, (int)CurrentRow].Value;
+                DatabaseManager.GebruikerVerwijderen(userid);
+                Refresh();
             }
         }
 

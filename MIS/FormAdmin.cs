@@ -13,6 +13,7 @@ namespace MIS
 {
     public partial class FormAdmin : Form
     {
+        DataTable table;
         int? CurrentRow = null;
         public FormAdmin()
         {
@@ -21,7 +22,8 @@ namespace MIS
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            AdminDatagrid.DataSource = GetDataTable();
+            this.table = GetDataTable();
+            AdminDatagrid.DataSource = table;
             AdminDatagrid.Columns[0].Width = 50;
             AdminDatagrid.Columns[1].Width = 135;
             AdminDatagrid.Columns[2].Width = 135;
@@ -76,7 +78,7 @@ namespace MIS
                 {
                     int userid = (int)AdminDatagrid[0, e.RowIndex].Value;
                     DatabaseManager.GebruikerVerwijderen(userid);
-                    AdminDatagrid.DataSource = GetDataTable();
+                    Refresh();
                 }
             }
         }
@@ -152,35 +154,72 @@ namespace MIS
                 return;
             }
 
-            int currentr = (int)CurrentRow;
-            int userid = (int)AdminDatagrid[0, currentr].Value;
-            Gebruiker gebruiker = DatabaseManager.GebruikerOpvragen(userid);
-            gebruiker.voornaam = VoornaamAdmin.Text;
-            gebruiker.achternaam = AchternaamAdmin.Text;
-            gebruiker.woonplaats = WoonplaatsAdmin.Text;
-            gebruiker.vraagprijs = Convert.ToInt32(VraagprijsAdmin.Text);
-            gebruiker.rating = Convert.ToInt32(RatingAdmin.Text);
-            gebruiker.oppassen = OppassenAdmin.Checked;
-            gebruiker.uitlaten = UitlatenAdmin.Checked;
-            gebruiker.admin = AdminAdmin.Checked;
-            gebruiker.verified = VerifiedAdmin.Checked;
+            else if (!HondCheckboxAdmin.Checked && !KatCheckboxAdmin.Checked && !ReptielCheckboxAdmin.Checked && !AmfibieCheckboxAdmin.Checked && !VissenCheckboxAdmin.Checked && InsectCheckboxAdmin.Checked && !KnaagdierCheckboxAdmin.Checked && !VogelCheckboxAdmin.Checked)
+            {
+                MessageBox.Show("Geef aan met welke dieren de gebruiker ervaring heeft");
+            }
+            else if (!OppassenAdmin.Checked && !UitlatenAdmin.Checked)
+            {
+                MessageBox.Show("Geef aan of de gebruiker op wil passen, uit wil laten of geïntresseerd is in beide");
+            }
+            else if (VoornaamAdmin.Text == "")
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
+            else if (AchternaamAdmin.Text == "")
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
+            else if (WoonplaatsAdmin.Text == "")
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
+            else if (VraagprijsAdmin.Text == "" && double.TryParse(VraagprijsAdmin.Text, out var n))
+            {
+                MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
+            }
 
-            List<string> dierenstrings = new List<string>();
-            if (HondCheckboxAdmin.Checked) dierenstrings.Add("Hond");
-            if (KatCheckboxAdmin.Checked) dierenstrings.Add("Kat");
-            if (KnaagdierCheckboxAdmin.Checked) dierenstrings.Add("Knaagdier");
-            if (VogelCheckboxAdmin.Checked) dierenstrings.Add("Vogel");
-            if (ReptielCheckboxAdmin.Checked) dierenstrings.Add("Reptiel");
-            if (AmfibieCheckboxAdmin.Checked) dierenstrings.Add("Amfibie");
-            if (InsectCheckboxAdmin.Checked) dierenstrings.Add("Insect");
-            if (VissenCheckboxAdmin.Checked) dierenstrings.Add("Vissen");
-            string dieren = string.Join(", ", dierenstrings);
-            gebruiker.diertypes = dieren;
+            else
+            {
 
-            DatabaseManager.GebruikerWijzigen(gebruiker);
-            AdminDatagrid.DataSource = GetDataTable();
+                int currentr = (int)CurrentRow;
+                int userid = (int)AdminDatagrid[0, currentr].Value;
+                Gebruiker gebruiker = DatabaseManager.GebruikerOpvragen(userid);
+                gebruiker.voornaam = VoornaamAdmin.Text;
+                gebruiker.achternaam = AchternaamAdmin.Text;
+                gebruiker.woonplaats = WoonplaatsAdmin.Text;
+                gebruiker.vraagprijs = Convert.ToInt32(VraagprijsAdmin.Text);
+                gebruiker.rating = Convert.ToInt32(RatingAdmin.Text);
+                gebruiker.oppassen = OppassenAdmin.Checked;
+                gebruiker.uitlaten = UitlatenAdmin.Checked;
+                gebruiker.admin = AdminAdmin.Checked;
+                gebruiker.verified = VerifiedAdmin.Checked;
 
-            MessageBox.Show("Het profiel is bijgewerkt");
+                List<string> dierenstrings = new List<string>();
+                if (HondCheckboxAdmin.Checked) dierenstrings.Add("Hond");
+                if (KatCheckboxAdmin.Checked) dierenstrings.Add("Kat");
+                if (KnaagdierCheckboxAdmin.Checked) dierenstrings.Add("Knaagdier");
+                if (VogelCheckboxAdmin.Checked) dierenstrings.Add("Vogel");
+                if (ReptielCheckboxAdmin.Checked) dierenstrings.Add("Reptiel");
+                if (AmfibieCheckboxAdmin.Checked) dierenstrings.Add("Amfibie");
+                if (InsectCheckboxAdmin.Checked) dierenstrings.Add("Insect");
+                if (VissenCheckboxAdmin.Checked) dierenstrings.Add("Vissen");
+                string dieren = string.Join(", ", dierenstrings);
+                gebruiker.diertypes = dieren;
+
+                DatabaseManager.GebruikerWijzigen(gebruiker);
+                Refresh();
+                MessageBox.Show("Het profiel is bijgewerkt");
+            }
+        }
+
+        public void Refresh()
+        {
+            table.Clear();
+            foreach (DataRow row in GetDataTable().Rows)
+            {
+                table.Rows.Add(row.ItemArray);
+            }
         }
     }
 }

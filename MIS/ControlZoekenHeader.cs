@@ -106,7 +106,7 @@ namespace MIS
             uitlaat = UitlaatCheckBox.Checked;
             oppas = OppasCheckBox.Checked;
             woonplaats = ZoektextBox.Text;
-            Gebruiker[] allegebruikers = DatabaseManager.AlleGebruikers();
+            Gebruiker[] allegebruikers = GebruikerManager.AlleGebruikers();
             List<Gebruiker> filteredgebruikers = new List<Gebruiker>();
 
             foreach (var gebruiker in allegebruikers)
@@ -124,7 +124,9 @@ namespace MIS
             {
                 if (a.verified && !b.verified) return -1;
                 if (b.verified && !a.verified) return 1;
-                return b.rating.CompareTo(a.rating);
+                int Arating = ReviewManager.BerekenRating(a.userid);
+                int Brating = ReviewManager.BerekenRating(b.userid);
+                return Brating.CompareTo(Arating);
             });
 
             return filteredgebruikers.ToArray();

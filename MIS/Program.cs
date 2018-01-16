@@ -15,7 +15,7 @@ namespace MIS
         [STAThread]
         static void Main()
         {
-            DatabaseManager.Init();
+            GebruikerManager.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormHome());

@@ -112,7 +112,7 @@ namespace MIS
             RatingPictureBox.TabStop = false;
             Bitmap[] images = new Bitmap[]{ Properties.Resources.ster0, Properties.Resources.ster1,
                 Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
-            RatingPictureBox.Image = images[gebruiker.rating];
+            RatingPictureBox.Image = images[ReviewManager.BerekenRating(gebruiker.userid)];
             RatingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             panel.Controls.Add(RatingPictureBox);
             ResultaatList.Add(RatingPictureBox);

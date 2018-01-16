@@ -61,7 +61,7 @@ namespace MIS
             //Data toevoegen
             foreach (var gebruiker in GebruikerManager.AlleGebruikers())
             {
-                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.rating);
+                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, 0);
             }
 
             return table;
@@ -159,7 +159,6 @@ namespace MIS
             gebruiker.achternaam = AchternaamAdmin.Text;
             gebruiker.woonplaats = WoonplaatsAdmin.Text;
             gebruiker.vraagprijs = Convert.ToInt32(VraagprijsAdmin.Text);
-            gebruiker.rating = Convert.ToInt32(RatingAdmin.Text);
             gebruiker.oppassen = OppassenAdmin.Checked;
             gebruiker.uitlaten = UitlatenAdmin.Checked;
             gebruiker.admin = AdminAdmin.Checked;

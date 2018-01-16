@@ -44,7 +44,7 @@ namespace MIS
             //Rating
             Bitmap[] Ster = new Bitmap[6] 
                 {Properties.Resources.ster0, Properties.Resources.ster1, Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
-            RatingPictureBox.Image = Ster[gebruiker.rating];
+            RatingPictureBox.Image = Ster[ReviewManager.BerekenRating(UserId)];
             //Profielfoto
             Profielfoto.Image = ProfielfotoManager.getProfielfoto(gebruiker.userid);
         }

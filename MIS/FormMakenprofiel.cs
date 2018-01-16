@@ -73,7 +73,6 @@ namespace MIS
                     oppassen = OppasCheckbox.Checked,
                     uitlaten = UitlaatCheckbox.Checked,
                     overmij = OverMijTextbox.Text,    
-                    rating = Convert.ToInt32(RatingTextbox.Text)
                 };
                 GebruikerManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DiscardButton = new System.Windows.Forms.Button();
             this.PReviewButton = new System.Windows.Forms.Button();
             this.SchrijfhierLabel = new System.Windows.Forms.Label();
             this.ASterLabel = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Reviewlabel = new System.Windows.Forms.Label();
-            this.RatingPictureBox = new System.Windows.Forms.PictureBox();
             this.Overmijinfo = new System.Windows.Forms.Label();
             this.OppassenUitlatenLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,10 +54,10 @@
             this.Overmij = new System.Windows.Forms.Label();
             this.Kanpassenop = new System.Windows.Forms.Label();
             this.Adres = new System.Windows.Forms.Label();
-            this.Verified = new System.Windows.Forms.PictureBox();
             this.Naam = new System.Windows.Forms.Label();
+            this.RatingPictureBox = new System.Windows.Forms.PictureBox();
+            this.Verified = new System.Windows.Forms.PictureBox();
             this.Profielfoto = new System.Windows.Forms.PictureBox();
-            this.DiscardButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RatingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).BeginInit();
@@ -101,6 +101,17 @@
             this.panel1.Size = new System.Drawing.Size(985, 554);
             this.panel1.TabIndex = 0;
             // 
+            // DiscardButton
+            // 
+            this.DiscardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscardButton.Location = new System.Drawing.Point(43, 523);
+            this.DiscardButton.Name = "DiscardButton";
+            this.DiscardButton.Size = new System.Drawing.Size(86, 44);
+            this.DiscardButton.TabIndex = 85;
+            this.DiscardButton.Text = "Verwijder je Review";
+            this.DiscardButton.UseVisualStyleBackColor = true;
+            this.DiscardButton.Click += new System.EventHandler(this.DiscardButton_Click);
+            // 
             // PReviewButton
             // 
             this.PReviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,7 +129,7 @@
             this.SchrijfhierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SchrijfhierLabel.Location = new System.Drawing.Point(218, 587);
             this.SchrijfhierLabel.Name = "SchrijfhierLabel";
-            this.SchrijfhierLabel.Size = new System.Drawing.Size(148, 15);
+            this.SchrijfhierLabel.Size = new System.Drawing.Size(172, 18);
             this.SchrijfhierLabel.TabIndex = 83;
             this.SchrijfhierLabel.Text = "Schrijf hier uw review!";
             // 
@@ -128,7 +139,7 @@
             this.ASterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ASterLabel.Location = new System.Drawing.Point(218, 656);
             this.ASterLabel.Name = "ASterLabel";
-            this.ASterLabel.Size = new System.Drawing.Size(98, 15);
+            this.ASterLabel.Size = new System.Drawing.Size(114, 18);
             this.ASterLabel.TabIndex = 82;
             this.ASterLabel.Text = "Aantal Sterren";
             // 
@@ -138,7 +149,7 @@
             this.RbodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbodyLabel.Location = new System.Drawing.Point(380, 656);
             this.RbodyLabel.Name = "RbodyLabel";
-            this.RbodyLabel.Size = new System.Drawing.Size(51, 15);
+            this.RbodyLabel.Size = new System.Drawing.Size(58, 18);
             this.RbodyLabel.TabIndex = 81;
             this.RbodyLabel.Text = "Inhoud";
             // 
@@ -148,7 +159,7 @@
             this.RtitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RtitelLabel.Location = new System.Drawing.Point(380, 612);
             this.RtitelLabel.Name = "RtitelLabel";
-            this.RtitelLabel.Size = new System.Drawing.Size(35, 15);
+            this.RtitelLabel.Size = new System.Drawing.Size(40, 18);
             this.RtitelLabel.TabIndex = 80;
             this.RtitelLabel.Text = "Titel";
             // 
@@ -176,7 +187,7 @@
             this.Ster5CheckBox.Location = new System.Drawing.Point(221, 744);
             this.Ster5CheckBox.Name = "Ster5CheckBox";
             this.Ster5CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Ster5CheckBox.Size = new System.Drawing.Size(86, 21);
+            this.Ster5CheckBox.Size = new System.Drawing.Size(100, 24);
             this.Ster5CheckBox.TabIndex = 77;
             this.Ster5CheckBox.Text = "5 Sterren";
             this.Ster5CheckBox.UseVisualStyleBackColor = true;
@@ -190,7 +201,7 @@
             this.Ster4CheckBox.Location = new System.Drawing.Point(221, 726);
             this.Ster4CheckBox.Name = "Ster4CheckBox";
             this.Ster4CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Ster4CheckBox.Size = new System.Drawing.Size(86, 21);
+            this.Ster4CheckBox.Size = new System.Drawing.Size(100, 24);
             this.Ster4CheckBox.TabIndex = 76;
             this.Ster4CheckBox.Text = "4 Sterren";
             this.Ster4CheckBox.UseVisualStyleBackColor = true;
@@ -204,7 +215,7 @@
             this.Ster3CheckBox.Location = new System.Drawing.Point(221, 708);
             this.Ster3CheckBox.Name = "Ster3CheckBox";
             this.Ster3CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Ster3CheckBox.Size = new System.Drawing.Size(86, 21);
+            this.Ster3CheckBox.Size = new System.Drawing.Size(100, 24);
             this.Ster3CheckBox.TabIndex = 75;
             this.Ster3CheckBox.Text = "3 Sterren";
             this.Ster3CheckBox.UseVisualStyleBackColor = true;
@@ -218,7 +229,7 @@
             this.Ster2CheckBox.Location = new System.Drawing.Point(221, 690);
             this.Ster2CheckBox.Name = "Ster2CheckBox";
             this.Ster2CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Ster2CheckBox.Size = new System.Drawing.Size(86, 21);
+            this.Ster2CheckBox.Size = new System.Drawing.Size(100, 24);
             this.Ster2CheckBox.TabIndex = 74;
             this.Ster2CheckBox.Text = "2 Sterren";
             this.Ster2CheckBox.UseVisualStyleBackColor = true;
@@ -232,7 +243,7 @@
             this.Ster1CheckBox.Location = new System.Drawing.Point(221, 674);
             this.Ster1CheckBox.Name = "Ster1CheckBox";
             this.Ster1CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Ster1CheckBox.Size = new System.Drawing.Size(65, 21);
+            this.Ster1CheckBox.Size = new System.Drawing.Size(76, 24);
             this.Ster1CheckBox.TabIndex = 73;
             this.Ster1CheckBox.Text = "1 Ster";
             this.Ster1CheckBox.UseVisualStyleBackColor = true;
@@ -253,7 +264,7 @@
             this.label3.Location = new System.Drawing.Point(169, 838);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(632, 17);
+            this.label3.Size = new System.Drawing.Size(790, 22);
             this.label3.TabIndex = 71;
             this.label3.Text = "______________________________________________________________________________";
             // 
@@ -263,7 +274,7 @@
             this.label2.Location = new System.Drawing.Point(175, 564);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(632, 17);
+            this.label2.Size = new System.Drawing.Size(790, 22);
             this.label2.TabIndex = 70;
             this.label2.Text = "______________________________________________________________________________";
             // 
@@ -273,18 +284,9 @@
             this.Reviewlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reviewlabel.Location = new System.Drawing.Point(428, 538);
             this.Reviewlabel.Name = "Reviewlabel";
-            this.Reviewlabel.Size = new System.Drawing.Size(119, 29);
+            this.Reviewlabel.Size = new System.Drawing.Size(144, 36);
             this.Reviewlabel.TabIndex = 69;
             this.Reviewlabel.Text = "Reviews:";
-            // 
-            // RatingPictureBox
-            // 
-            this.RatingPictureBox.Location = new System.Drawing.Point(352, 82);
-            this.RatingPictureBox.Name = "RatingPictureBox";
-            this.RatingPictureBox.Size = new System.Drawing.Size(167, 31);
-            this.RatingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RatingPictureBox.TabIndex = 68;
-            this.RatingPictureBox.TabStop = false;
             // 
             // Overmijinfo
             // 
@@ -301,7 +303,7 @@
             this.OppassenUitlatenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OppassenUitlatenLabel.Location = new System.Drawing.Point(354, 185);
             this.OppassenUitlatenLabel.Name = "OppassenUitlatenLabel";
-            this.OppassenUitlatenLabel.Size = new System.Drawing.Size(102, 15);
+            this.OppassenUitlatenLabel.Size = new System.Drawing.Size(120, 18);
             this.OppassenUitlatenLabel.TabIndex = 66;
             this.OppassenUitlatenLabel.Text = "Kan passen op";
             // 
@@ -311,7 +313,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(352, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(98, 18);
             this.label1.TabIndex = 65;
             this.label1.Text = "Woonplaats";
             // 
@@ -320,7 +322,7 @@
             this.Prijs.AutoSize = true;
             this.Prijs.Location = new System.Drawing.Point(370, 257);
             this.Prijs.Name = "Prijs";
-            this.Prijs.Size = new System.Drawing.Size(44, 17);
+            this.Prijs.Size = new System.Drawing.Size(57, 22);
             this.Prijs.TabIndex = 64;
             this.Prijs.Text = "*prijs*";
             // 
@@ -330,7 +332,7 @@
             this.Dienstentitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dienstentitel.Location = new System.Drawing.Point(352, 240);
             this.Dienstentitel.Name = "Dienstentitel";
-            this.Dienstentitel.Size = new System.Drawing.Size(61, 13);
+            this.Dienstentitel.Size = new System.Drawing.Size(77, 17);
             this.Dienstentitel.TabIndex = 63;
             this.Dienstentitel.Text = "Diensten:";
             // 
@@ -340,7 +342,7 @@
             this.Overmij.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Overmij.Location = new System.Drawing.Point(354, 292);
             this.Overmij.Name = "Overmij";
-            this.Overmij.Size = new System.Drawing.Size(60, 15);
+            this.Overmij.Size = new System.Drawing.Size(71, 18);
             this.Overmij.TabIndex = 62;
             this.Overmij.Text = "Over mij";
             // 
@@ -350,7 +352,7 @@
             this.Kanpassenop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Kanpassenop.Location = new System.Drawing.Point(370, 204);
             this.Kanpassenop.Name = "Kanpassenop";
-            this.Kanpassenop.Size = new System.Drawing.Size(69, 17);
+            this.Kanpassenop.Size = new System.Drawing.Size(80, 20);
             this.Kanpassenop.TabIndex = 61;
             this.Kanpassenop.Text = "*typedier*";
             // 
@@ -360,9 +362,28 @@
             this.Adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Adres.Location = new System.Drawing.Point(370, 151);
             this.Adres.Name = "Adres";
-            this.Adres.Size = new System.Drawing.Size(93, 17);
+            this.Adres.Size = new System.Drawing.Size(109, 20);
             this.Adres.TabIndex = 60;
             this.Adres.Text = "*Woonplaats*";
+            // 
+            // Naam
+            // 
+            this.Naam.AutoSize = true;
+            this.Naam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Naam.Location = new System.Drawing.Point(348, 37);
+            this.Naam.Name = "Naam";
+            this.Naam.Size = new System.Drawing.Size(122, 36);
+            this.Naam.TabIndex = 58;
+            this.Naam.Text = "*Naam*";
+            // 
+            // RatingPictureBox
+            // 
+            this.RatingPictureBox.Location = new System.Drawing.Point(352, 82);
+            this.RatingPictureBox.Name = "RatingPictureBox";
+            this.RatingPictureBox.Size = new System.Drawing.Size(167, 31);
+            this.RatingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RatingPictureBox.TabIndex = 68;
+            this.RatingPictureBox.TabStop = false;
             // 
             // Verified
             // 
@@ -375,16 +396,6 @@
             this.Verified.TabStop = false;
             this.Verified.Visible = false;
             // 
-            // Naam
-            // 
-            this.Naam.AutoSize = true;
-            this.Naam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Naam.Location = new System.Drawing.Point(348, 37);
-            this.Naam.Name = "Naam";
-            this.Naam.Size = new System.Drawing.Size(103, 29);
-            this.Naam.TabIndex = 58;
-            this.Naam.Text = "*Naam*";
-            // 
             // Profielfoto
             // 
             this.Profielfoto.InitialImage = null;
@@ -395,20 +406,9 @@
             this.Profielfoto.TabIndex = 57;
             this.Profielfoto.TabStop = false;
             // 
-            // DiscardButton
-            // 
-            this.DiscardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiscardButton.Location = new System.Drawing.Point(43, 523);
-            this.DiscardButton.Name = "DiscardButton";
-            this.DiscardButton.Size = new System.Drawing.Size(86, 44);
-            this.DiscardButton.TabIndex = 85;
-            this.DiscardButton.Text = "Verwijder je Review";
-            this.DiscardButton.UseVisualStyleBackColor = true;
-            this.DiscardButton.Click += new System.EventHandler(this.DiscardButton_Click);
-            // 
             // ControlBekijkenprofiel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

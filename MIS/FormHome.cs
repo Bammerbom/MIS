@@ -46,6 +46,10 @@ namespace MIS
             FormHome.Home.SetFullscreenMode(false);
             CZH.pictureBox1.Visible = SessionManager.IsLoggedIn();
             CZH.label2.Visible = SessionManager.IsLoggedIn();
+            if (SessionManager.IsLoggedIn())
+            {
+                CZH.label2.Text = ((Gebruiker)SessionManager.GetCurrentUser()).voornaam;
+            }
         }
 
         public void NaarInloggen()

@@ -22,6 +22,14 @@ namespace MIS
         //Click event
         private void ZoekButton_Click(object sender, EventArgs e)
         {
+            Panel panelB = FormHome.Home.panelB;
+            //Als we in een profiel zitten
+            if (panelB.Controls[0] is ControlBekijkenprofiel)
+            {
+                panelB.Controls.Clear();
+                panelB.Controls.Add(FormHome.CZB);
+            }
+
             Valid = CheckValid();
             if (Valid == true)
             {
@@ -193,7 +201,6 @@ namespace MIS
                 }
             }
         }
-
         #endregion Header events
     }
 }

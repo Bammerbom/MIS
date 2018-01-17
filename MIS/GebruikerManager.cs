@@ -131,6 +131,56 @@ namespace MIS {
         }
 
         #region Utils
+        public static string DiertypesVanBool(bool[] diertypes)
+        {
+            List<string> dierenstrings = new List<string>();
+            if (diertypes[0]) dierenstrings.Add("Hond");
+            if (diertypes[1]) dierenstrings.Add("Kat");
+            if (diertypes[2]) dierenstrings.Add("Knaagdier");
+            if (diertypes[3]) dierenstrings.Add("Vogel");
+            if (diertypes[4]) dierenstrings.Add("Reptiel");
+            if (diertypes[5]) dierenstrings.Add("Amfibie");
+            if (diertypes[6]) dierenstrings.Add("Insect");
+            if (diertypes[7]) dierenstrings.Add("Vissen");
+            return string.Join(", ", dierenstrings);
+        }
+
+        public static bool[] DiertypesNaarBool(string diertypes)
+        {
+            bool[] rtrn = new bool[8];
+            foreach (string dier in diertypes.Split(", ".ToCharArray()))
+            {
+                switch (dier)
+                {
+                    case "Hond":
+                        rtrn[0] = true;
+                        break;
+                    case "Kat":
+                        rtrn[1] = true;
+                        break;
+                    case "Knaagdier":
+                        rtrn[2] = true;
+                        break;
+                    case "Vogel":
+                        rtrn[3] = true;
+                        break;
+                    case "Reptiel":
+                        rtrn[4] = true;
+                        break;
+                    case "Amfibie":
+                        rtrn[5] = true;
+                        break;
+                    case "Insect":
+                        rtrn[6] = true;
+                        break;
+                    case "Vissen":
+                        rtrn[7] = true;
+                        break;
+                }
+            }
+            return rtrn;
+        }
+
         private static Gebruiker GebruikerVanData(SQLiteDataReader reader)
         {
             return new Gebruiker

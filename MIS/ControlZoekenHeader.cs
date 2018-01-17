@@ -22,6 +22,14 @@ namespace MIS
         //Click event
         private void ZoekButton_Click(object sender, EventArgs e)
         {
+            Panel panelB = FormHome.Home.panelB;
+            //Als we in een profiel zitten
+            if (panelB.Controls[0] is ControlBekijkenprofiel)
+            {
+                panelB.Controls.Clear();
+                panelB.Controls.Add(FormHome.CZB);
+            }
+
             Valid = CheckValid();
             if (Valid == true)
             {
@@ -141,7 +149,15 @@ namespace MIS
             if(panelB.Controls[0] is ControlBekijkenprofiel) {
                 panelB.Controls.Clear();
                 panelB.Controls.Add(FormHome.CZB);
+            //Als we in het zoekscherm zitten
             }else if(panelB.Controls[0] is ControlZoekenBody) {
+                //Als de zoeklijst al leeg is, ga terug naar inloggen
+                if(FormHome.CZB.ResultaatList.Count == 0)
+                {
+                    FormHome.Home.NaarInloggen();
+                    return;
+                }
+                //Anders, clear de zoeklijst
                 FormHome.CZB.DisposeResultaat();
                 List<CheckBox> CBList = new List<CheckBox>()
                     { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox,
@@ -193,7 +209,6 @@ namespace MIS
                 }
             }
         }
-
         #endregion Header events
     }
 }

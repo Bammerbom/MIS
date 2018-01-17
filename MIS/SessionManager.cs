@@ -29,7 +29,7 @@ namespace MIS
         /// <summary>
         /// Zet de ingelogde gebruiker
         /// </summary>
-        public static void SetCurrentUser(int userid)
+        public static void SetCurrentUser(int? userid)
         {
             currentuser = userid;
         }

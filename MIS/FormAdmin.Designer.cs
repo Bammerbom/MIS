@@ -69,6 +69,7 @@
             this.AdminDatagrid.AllowUserToDeleteRows = false;
             this.AdminDatagrid.AllowUserToResizeColumns = false;
             this.AdminDatagrid.AllowUserToResizeRows = false;
+            this.AdminDatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.AdminDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdminDatagrid.Location = new System.Drawing.Point(13, 13);
             this.AdminDatagrid.Name = "AdminDatagrid";
@@ -104,6 +105,7 @@
             this.VraagprijsAdmin.Name = "VraagprijsAdmin";
             this.VraagprijsAdmin.Size = new System.Drawing.Size(100, 20);
             this.VraagprijsAdmin.TabIndex = 6;
+            this.VraagprijsAdmin.TextChanged += new System.EventHandler(this.VraagprijsAdmin_TextChanged);
             // 
             // label1
             // 

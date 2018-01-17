@@ -53,7 +53,7 @@ namespace MIS {
         public static int GebruikerToevoegen(Gebruiker gebruiker)
         {
             //Create insert command
-            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes, rating, email, password) " +
+            var cmd = new SQLiteCommand("INSERT INTO gebruikers (voornaam, achternaam, overmij, verified, admin, vraagprijs, oppassen, uitlaten, woonplaats, diertypes, email, password) " +
                 "VALUES (@voornaam, @achternaam, @overmij, @verified, @admin, @vraagprijs, @oppassen, @uitlaten, @woonplaats, @diertypes, @email, @password)", SqlTools.Connection);
             cmd = GebruikerNaarData(cmd, gebruiker);
             cmd.ExecuteNonQuery();

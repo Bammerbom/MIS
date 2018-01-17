@@ -24,18 +24,6 @@ namespace MIS
         {
             this.table = GetDataTable();
             AdminDatagrid.DataSource = table;
-            AdminDatagrid.Columns[0].Width = 30;
-            AdminDatagrid.Columns[1].Width = 105;
-            AdminDatagrid.Columns[2].Width = 105;
-            AdminDatagrid.Columns[3].Width = 110;
-            AdminDatagrid.Columns[4].Width = 60;
-            AdminDatagrid.Columns[5].Width = 60;
-            AdminDatagrid.Columns[6].Width = 65;
-            AdminDatagrid.Columns[7].Width = 70;
-            AdminDatagrid.Columns[8].Width = 70;
-            AdminDatagrid.Columns[9].Width = 180;
-            AdminDatagrid.Columns[10].Width = 124;
-            AdminDatagrid.Columns[11].Width = 120;
         }
 
         public DataTable GetDataTable()
@@ -148,7 +136,10 @@ namespace MIS
             {
                 MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
             }
-
+            else if (!EmailAdmin.Text.Contains("@"))
+            {
+                MessageBox.Show("Je hebt geen geldig emailadres gebruikt!");
+            }
             else
             {
 
@@ -208,6 +199,14 @@ namespace MIS
             foreach (DataRow row in GetDataTable().Rows)
             {
                 table.Rows.Add(row.ItemArray);
+            }
+        }
+
+        private void VraagprijsAdmin_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(VraagprijsAdmin.Text, " ^[0-9]"))
+            {
+                VraagprijsAdmin.Text = "";
             }
         }
     }

@@ -107,6 +107,7 @@
       <DependentUpon>FormMakenprofiel.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="ReviewManager.cs" />
+    <Compile Include="SessionManager.cs" />
     <Compile Include="SqlTools.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

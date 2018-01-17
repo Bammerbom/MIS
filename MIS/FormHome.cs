@@ -19,8 +19,22 @@ namespace MIS
         {
             InitializeComponent();
             Home = this;
-            panelH.Controls.Add(CZH);
-            panelB.Controls.Add(CZB);
+
+            SetFullscreenMode(true);
+            panelH.Controls.Add(new ControlLogin());
+        }
+
+        public void SetFullscreenMode(bool fullsceen)
+        {
+            if (fullsceen)
+            {
+                panelH.Size = new Size(985, 109 + 554);
+                panelB.Visible = false;
+            }else
+            {
+                panelH.Size = new Size(985, 109);
+                panelB.Visible = true;
+            }
         }
     }
 }

@@ -54,6 +54,12 @@
     <Compile Include="ControlBekijkenprofiel.Designer.cs">
       <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLogin.Designer.cs">
+      <DependentUpon>ControlLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlZoekenBody.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ControlBekijkenprofiel.resx">
       <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogin.resx">
+      <DependentUpon>ControlLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlZoekenBody.resx">
       <DependentUpon>ControlZoekenBody.cs</DependentUpon>

@@ -49,11 +49,7 @@ namespace MIS
 
             //Ga naar zoekscherm
             SessionManager.SetCurrentUser(gebruiker.userid);
-            FormHome.Home.panelH.Controls.Clear();
-            FormHome.Home.panelH.Controls.Add(FormHome.CZH);
-            FormHome.Home.panelB.Controls.Clear();
-            FormHome.Home.panelB.Controls.Add(FormHome.CZB);
-            FormHome.Home.SetFullscreenMode(false);
+            FormHome.Home.NaarZoeken();
         }
     }
 }

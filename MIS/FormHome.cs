@@ -36,5 +36,23 @@ namespace MIS
                 panelB.Visible = true;
             }
         }
+
+        public void NaarZoeken()
+        {
+            FormHome.Home.panelH.Controls.Clear();
+            FormHome.Home.panelH.Controls.Add(FormHome.CZH);
+            FormHome.Home.panelB.Controls.Clear();
+            FormHome.Home.panelB.Controls.Add(FormHome.CZB);
+            FormHome.Home.SetFullscreenMode(false);
+        }
+
+        public void NaarInloggen()
+        {
+            SessionManager.SetCurrentUser(null);
+            FormHome.Home.panelH.Controls.Clear();
+            FormHome.Home.panelH.Controls.Add(new ControlLogin());
+            FormHome.Home.panelB.Controls.Clear();
+            FormHome.Home.SetFullscreenMode(true);
+        }
     }
 }

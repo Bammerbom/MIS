@@ -141,7 +141,15 @@ namespace MIS
             if(panelB.Controls[0] is ControlBekijkenprofiel) {
                 panelB.Controls.Clear();
                 panelB.Controls.Add(FormHome.CZB);
+            //Als we in het zoekscherm zitten
             }else if(panelB.Controls[0] is ControlZoekenBody) {
+                //Als de zoeklijst al leeg is, ga terug naar inloggen
+                if(FormHome.CZB.ResultaatList.Count == 0)
+                {
+                    FormHome.Home.NaarInloggen();
+                    return;
+                }
+                //Anders, clear de zoeklijst
                 FormHome.CZB.DisposeResultaat();
                 List<CheckBox> CBList = new List<CheckBox>()
                     { HondCheckBox, KatCheckBox, KnaagdierCheckBox, VogelCheckBox, ReptielCheckBox, AmfibieCheckBox, InsectCheckBox, VisCheckBox,

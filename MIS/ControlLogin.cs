@@ -56,6 +56,7 @@ namespace MIS
         private void button1_Click(object sender, EventArgs e)
         {
             FormHome.Home.NaarZoeken();
+            SessionManager.SetCurrentUser(null);
         }
     }
 }

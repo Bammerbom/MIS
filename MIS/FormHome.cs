@@ -44,6 +44,8 @@ namespace MIS
             FormHome.Home.panelB.Controls.Clear();
             FormHome.Home.panelB.Controls.Add(FormHome.CZB);
             FormHome.Home.SetFullscreenMode(false);
+            CZH.pictureBox1.Visible = SessionManager.IsLoggedIn();
+            CZH.label2.Visible = SessionManager.IsLoggedIn();
         }
 
         public void NaarInloggen()

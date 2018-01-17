@@ -214,8 +214,7 @@ namespace MIS
                 }
             }
         }
-        #endregion Header events
 
-        
+        #endregion Header events
     }
 }

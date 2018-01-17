@@ -401,8 +401,8 @@
         public System.Windows.Forms.CheckBox AmfibieCheckBox;
         public System.Windows.Forms.CheckBox KatCheckBox;
         public System.Windows.Forms.PictureBox terugknop;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
     }
 }

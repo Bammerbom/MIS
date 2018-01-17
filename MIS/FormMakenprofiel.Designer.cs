@@ -55,55 +55,72 @@
             this.AmfibieCheckbox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.RatingTextbox = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.W8wLabel = new System.Windows.Forms.Label();
+            this.EmailTextbox = new System.Windows.Forms.TextBox();
+            this.WachtwoordTextbox = new System.Windows.Forms.TextBox();
+            this.VerderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // VoornaamLabel
             // 
             this.VoornaamLabel.AutoSize = true;
-            this.VoornaamLabel.Location = new System.Drawing.Point(37, 71);
+            this.VoornaamLabel.Location = new System.Drawing.Point(37, 149);
             this.VoornaamLabel.Name = "VoornaamLabel";
             this.VoornaamLabel.Size = new System.Drawing.Size(55, 13);
             this.VoornaamLabel.TabIndex = 0;
             this.VoornaamLabel.Text = "Voornaam";
+            this.VoornaamLabel.Visible = false;
+            this.VoornaamLabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // WoonplaatsLabel
             // 
             this.WoonplaatsLabel.AutoSize = true;
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 166);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 201);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(64, 13);
             this.WoonplaatsLabel.TabIndex = 3;
             this.WoonplaatsLabel.Text = "Woonplaats";
+            this.WoonplaatsLabel.Visible = false;
+            this.WoonplaatsLabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VoornaamTextbox
             // 
-            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 64);
+            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 146);
             this.VoornaamTextbox.Name = "VoornaamTextbox";
             this.VoornaamTextbox.Size = new System.Drawing.Size(100, 20);
-            this.VoornaamTextbox.TabIndex = 1;
+            this.VoornaamTextbox.TabIndex = 3;
+            this.VoornaamTextbox.Visible = false;
+            this.VoornaamTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // WoonplaatsTextbox
             // 
-            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 159);
+            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 198);
             this.WoonplaatsTextbox.Name = "WoonplaatsTextbox";
             this.WoonplaatsTextbox.Size = new System.Drawing.Size(100, 20);
-            this.WoonplaatsTextbox.TabIndex = 3;
+            this.WoonplaatsTextbox.TabIndex = 5;
+            this.WoonplaatsTextbox.Visible = false;
+            this.WoonplaatsTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // Achternaamlabel
             // 
             this.Achternaamlabel.AutoSize = true;
-            this.Achternaamlabel.Location = new System.Drawing.Point(35, 119);
+            this.Achternaamlabel.Location = new System.Drawing.Point(37, 175);
             this.Achternaamlabel.Name = "Achternaamlabel";
             this.Achternaamlabel.Size = new System.Drawing.Size(64, 13);
             this.Achternaamlabel.TabIndex = 10;
             this.Achternaamlabel.Text = "Achternaam";
+            this.Achternaamlabel.Visible = false;
+            this.Achternaamlabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // AchternaamTextbox
             // 
-            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 112);
+            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 172);
             this.AchternaamTextbox.Name = "AchternaamTextbox";
             this.AchternaamTextbox.Size = new System.Drawing.Size(100, 20);
-            this.AchternaamTextbox.TabIndex = 2;
+            this.AchternaamTextbox.TabIndex = 4;
+            this.AchternaamTextbox.Visible = false;
+            this.AchternaamTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // OverMijLabel
             // 
@@ -113,6 +130,8 @@
             this.OverMijLabel.Size = new System.Drawing.Size(45, 13);
             this.OverMijLabel.TabIndex = 15;
             this.OverMijLabel.Text = "Over mij";
+            this.OverMijLabel.Visible = false;
+            this.OverMijLabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // OverMijTextbox
             // 
@@ -120,7 +139,9 @@
             this.OverMijTextbox.Multiline = true;
             this.OverMijTextbox.Name = "OverMijTextbox";
             this.OverMijTextbox.Size = new System.Drawing.Size(467, 158);
-            this.OverMijTextbox.TabIndex = 5;
+            this.OverMijTextbox.TabIndex = 7;
+            this.OverMijTextbox.Visible = false;
+            this.OverMijTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // HondCheckbox
             // 
@@ -131,6 +152,8 @@
             this.HondCheckbox.TabIndex = 17;
             this.HondCheckbox.Text = "Hond";
             this.HondCheckbox.UseVisualStyleBackColor = true;
+            this.HondCheckbox.Visible = false;
+            this.HondCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label1
             // 
@@ -140,6 +163,8 @@
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ervaring met:";
+            this.label1.Visible = false;
+            this.label1.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // KnaagdierCheckbox
             // 
@@ -150,6 +175,8 @@
             this.KnaagdierCheckbox.TabIndex = 19;
             this.KnaagdierCheckbox.Text = "Knaagdier";
             this.KnaagdierCheckbox.UseVisualStyleBackColor = true;
+            this.KnaagdierCheckbox.Visible = false;
+            this.KnaagdierCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // ReptielCheckbox
             // 
@@ -160,6 +187,8 @@
             this.ReptielCheckbox.TabIndex = 20;
             this.ReptielCheckbox.Text = "Reptiel";
             this.ReptielCheckbox.UseVisualStyleBackColor = true;
+            this.ReptielCheckbox.Visible = false;
+            this.ReptielCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VogelCheckbox
             // 
@@ -170,6 +199,8 @@
             this.VogelCheckbox.TabIndex = 21;
             this.VogelCheckbox.Text = "Vogel";
             this.VogelCheckbox.UseVisualStyleBackColor = true;
+            this.VogelCheckbox.Visible = false;
+            this.VogelCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // InsectCheckbox
             // 
@@ -180,6 +211,8 @@
             this.InsectCheckbox.TabIndex = 22;
             this.InsectCheckbox.Text = "Insect";
             this.InsectCheckbox.UseVisualStyleBackColor = true;
+            this.InsectCheckbox.Visible = false;
+            this.InsectCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VissenCheckbox
             // 
@@ -190,6 +223,8 @@
             this.VissenCheckbox.TabIndex = 23;
             this.VissenCheckbox.Text = "Vissen";
             this.VissenCheckbox.UseVisualStyleBackColor = true;
+            this.VissenCheckbox.Visible = false;
+            this.VissenCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label2
             // 
@@ -199,6 +234,8 @@
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Bereid om:";
+            this.label2.Visible = false;
+            this.label2.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // OppasCheckbox
             // 
@@ -209,6 +246,8 @@
             this.OppasCheckbox.TabIndex = 25;
             this.OppasCheckbox.Text = "Op te passen";
             this.OppasCheckbox.UseVisualStyleBackColor = true;
+            this.OppasCheckbox.Visible = false;
+            this.OppasCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // UitlaatCheckbox
             // 
@@ -219,6 +258,8 @@
             this.UitlaatCheckbox.TabIndex = 26;
             this.UitlaatCheckbox.Text = "Uit te laten";
             this.UitlaatCheckbox.UseVisualStyleBackColor = true;
+            this.UitlaatCheckbox.Visible = false;
+            this.UitlaatCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // ProfielAanmakenButton
             // 
@@ -228,6 +269,7 @@
             this.ProfielAanmakenButton.TabIndex = 27;
             this.ProfielAanmakenButton.Text = "Profiel aanmaken";
             this.ProfielAanmakenButton.UseVisualStyleBackColor = true;
+            this.ProfielAanmakenButton.Visible = false;
             this.ProfielAanmakenButton.Click += new System.EventHandler(this.ProfielAanmakenButton_Click);
             // 
             // label3
@@ -238,6 +280,8 @@
             this.label3.Size = new System.Drawing.Size(238, 13);
             this.label3.TabIndex = 28;
             this.label3.Text = "Wil je gebruik maken van onze premium service?";
+            this.label3.Visible = false;
+            this.label3.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // PremiumCheckbox
             // 
@@ -248,24 +292,30 @@
             this.PremiumCheckbox.TabIndex = 29;
             this.PremiumCheckbox.Text = "Nee, ik wil geen gebruik maken van de voordelen van een premium gebruiker";
             this.PremiumCheckbox.UseVisualStyleBackColor = true;
+            this.PremiumCheckbox.Visible = false;
             this.PremiumCheckbox.CheckedChanged += new System.EventHandler(this.PremiumCheckbox_CheckedChanged);
+            this.PremiumCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 209);
+            this.label4.Location = new System.Drawing.Point(37, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "Vraagprijs per dag (€)";
+            this.label4.Visible = false;
+            this.label4.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VraagprijsTextbox
             // 
-            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 202);
+            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 224);
             this.VraagprijsTextbox.Name = "VraagprijsTextbox";
             this.VraagprijsTextbox.Size = new System.Drawing.Size(100, 20);
-            this.VraagprijsTextbox.TabIndex = 4;
+            this.VraagprijsTextbox.TabIndex = 6;
+            this.VraagprijsTextbox.Visible = false;
             this.VraagprijsTextbox.TextChanged += new System.EventHandler(this.VraagprijsTextbox_TextChanged);
+            this.VraagprijsTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             this.VraagprijsTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VraagprijsTextbox_KeyPress);
             // 
             // KatCheckbox
@@ -277,6 +327,8 @@
             this.KatCheckbox.TabIndex = 33;
             this.KatCheckbox.Text = "Kat";
             this.KatCheckbox.UseVisualStyleBackColor = true;
+            this.KatCheckbox.Visible = false;
+            this.KatCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // AmfibieCheckbox
             // 
@@ -287,6 +339,8 @@
             this.AmfibieCheckbox.TabIndex = 34;
             this.AmfibieCheckbox.Text = "Amfibie";
             this.AmfibieCheckbox.UseVisualStyleBackColor = true;
+            this.AmfibieCheckbox.Visible = false;
+            this.AmfibieCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label5
             // 
@@ -296,28 +350,80 @@
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 35;
             this.label5.Text = "Rating (1 t/m 5)";
+            this.label5.Visible = false;
+            this.label5.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // RatingTextbox
             // 
             this.RatingTextbox.Location = new System.Drawing.Point(482, 367);
             this.RatingTextbox.Name = "RatingTextbox";
             this.RatingTextbox.Size = new System.Drawing.Size(100, 20);
-            this.RatingTextbox.TabIndex = 36;
+            this.RatingTextbox.TabIndex = 8;
+            this.RatingTextbox.Visible = false;
+            this.RatingTextbox.TextChanged += new System.EventHandler(this.RatingTextbox_TextChanged);
+            this.RatingTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
-            // FormProfiel
+            // EmailLabel
+            // 
+            this.EmailLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Location = new System.Drawing.Point(383, 322);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(32, 13);
+            this.EmailLabel.TabIndex = 37;
+            this.EmailLabel.Text = "Email";
+            // 
+            // W8wLabel
+            // 
+            this.W8wLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.W8wLabel.AutoSize = true;
+            this.W8wLabel.Location = new System.Drawing.Point(383, 368);
+            this.W8wLabel.Name = "W8wLabel";
+            this.W8wLabel.Size = new System.Drawing.Size(68, 13);
+            this.W8wLabel.TabIndex = 38;
+            this.W8wLabel.Text = "Wachtwoord";
+            // 
+            // EmailTextbox
+            // 
+            this.EmailTextbox.Location = new System.Drawing.Point(454, 319);
+            this.EmailTextbox.Name = "EmailTextbox";
+            this.EmailTextbox.Size = new System.Drawing.Size(140, 20);
+            this.EmailTextbox.TabIndex = 1;
+            this.EmailTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // WachtwoordTextbox
+            // 
+            this.WachtwoordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WachtwoordTextbox.Location = new System.Drawing.Point(454, 364);
+            this.WachtwoordTextbox.Name = "WachtwoordTextbox";
+            this.WachtwoordTextbox.Size = new System.Drawing.Size(140, 20);
+            this.WachtwoordTextbox.TabIndex = 2;
+            // 
+            // VerderButton
+            // 
+            this.VerderButton.Location = new System.Drawing.Point(851, 626);
+            this.VerderButton.Name = "VerderButton";
+            this.VerderButton.Size = new System.Drawing.Size(75, 23);
+            this.VerderButton.TabIndex = 39;
+            this.VerderButton.Text = "Ga verder";
+            this.VerderButton.UseVisualStyleBackColor = true;
+            this.VerderButton.Click += new System.EventHandler(this.VerderButton_Click);
+            // 
+            // FormMakenprofiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.RatingTextbox);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.AmfibieCheckbox);
             this.Controls.Add(this.KatCheckbox);
             this.Controls.Add(this.VraagprijsTextbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.PremiumCheckbox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.ProfielAanmakenButton);
             this.Controls.Add(this.UitlaatCheckbox);
             this.Controls.Add(this.OppasCheckbox);
             this.Controls.Add(this.label2);
@@ -328,15 +434,25 @@
             this.Controls.Add(this.KnaagdierCheckbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HondCheckbox);
-            this.Controls.Add(this.OverMijTextbox);
-            this.Controls.Add(this.OverMijLabel);
             this.Controls.Add(this.AchternaamTextbox);
             this.Controls.Add(this.Achternaamlabel);
             this.Controls.Add(this.WoonplaatsTextbox);
             this.Controls.Add(this.VoornaamTextbox);
             this.Controls.Add(this.WoonplaatsLabel);
             this.Controls.Add(this.VoornaamLabel);
-            this.Name = "FormProfiel";
+            this.Controls.Add(this.RatingTextbox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.PremiumCheckbox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.OverMijTextbox);
+            this.Controls.Add(this.OverMijLabel);
+            this.Controls.Add(this.VerderButton);
+            this.Controls.Add(this.ProfielAanmakenButton);
+            this.Controls.Add(this.WachtwoordTextbox);
+            this.Controls.Add(this.EmailTextbox);
+            this.Controls.Add(this.W8wLabel);
+            this.Controls.Add(this.EmailLabel);
+            this.Name = "FormMakenprofiel";
             this.Text = "Profiel maken";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -372,5 +488,10 @@
         private System.Windows.Forms.CheckBox AmfibieCheckbox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox RatingTextbox;
+        private System.Windows.Forms.Label EmailLabel;
+        private System.Windows.Forms.Label W8wLabel;
+        private System.Windows.Forms.TextBox EmailTextbox;
+        private System.Windows.Forms.TextBox WachtwoordTextbox;
+        private System.Windows.Forms.Button VerderButton;
     }
 }

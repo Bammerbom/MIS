@@ -60,7 +60,7 @@ namespace MIS
                     }
                 }
                 if(diertypes != "") diertypes = diertypes.Substring(0, diertypes.Length - 2);
-                    
+
                 var gebruiker = new Gebruiker
                 {
                     voornaam = VoornaamTextbox.Text,
@@ -72,7 +72,9 @@ namespace MIS
                     diertypes = diertypes,
                     oppassen = OppasCheckbox.Checked,
                     uitlaten = UitlaatCheckbox.Checked,
-                    overmij = OverMijTextbox.Text,    
+                    overmij = OverMijTextbox.Text,
+                    email = EmailTextbox.Text,
+                    password = WachtwoordTextbox.Text,                   
                 };
                 GebruikerManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");
@@ -103,6 +105,42 @@ namespace MIS
             if (!char.IsControl(e.KeyChar) && !char.IsDigit (e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void RatingTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(RatingTextbox.Text, " ^[0-9]"))
+            {
+                RatingTextbox.Text = "";
+            }
+        }
+
+        private void VerderButton_Click(object sender, EventArgs e)
+        {
+            bool valid = true;
+            if (EmailTextbox.Text == "")
+            {
+                MessageBox.Show("Vul je emailadres in");
+                valid = false;
+            }
+            if (!EmailTextbox.Text.Contains("@"))
+            {
+                MessageBox.Show("Je hebt geen geldig emailadres gebruikt!");
+                valid = false;
+            }
+
+            if (valid)
+            {
+                foreach (Control C in Controls)
+                {
+                    if (C != WachtwoordTextbox || C != W8wLabel || C != EmailLabel || C != EmailTextbox) C.Visible = true;
+                }
+                WachtwoordTextbox.Visible = false;
+                W8wLabel.Visible = false;
+                EmailTextbox.Visible = false;
+                EmailLabel.Visible = false;
+                VerderButton.Visible = false;
             }
         }
     }

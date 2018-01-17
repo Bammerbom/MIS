@@ -94,8 +94,17 @@
     <Compile Include="ProfielfotoManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ControlVeranderProfiel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlVeranderProfiel.Designer.cs">
+      <DependentUpon>ControlVeranderProfiel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ControlBekijkenprofiel.resx">
       <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlVeranderProfiel.resx">
+      <DependentUpon>ControlVeranderProfiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlLogin.resx">
       <DependentUpon>ControlLogin.cs</DependentUpon>

@@ -52,5 +52,10 @@ namespace MIS
             SessionManager.SetCurrentUser(gebruiker.userid);
             FormHome.Home.NaarZoeken();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormHome.Home.NaarZoeken();
+        }
     }
 }

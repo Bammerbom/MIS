@@ -54,6 +54,12 @@
     <Compile Include="ControlBekijkenprofiel.Designer.cs">
       <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLogin.Designer.cs">
+      <DependentUpon>ControlLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlZoekenBody.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <EmbeddedResource Include="ControlBekijkenprofiel.resx">
       <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogin.resx">
+      <DependentUpon>ControlLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlZoekenBody.resx">
       <DependentUpon>ControlZoekenBody.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +116,7 @@
       <DependentUpon>FormMakenprofiel.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="ReviewManager.cs" />
+    <Compile Include="SessionManager.cs" />
     <Compile Include="SqlTools.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

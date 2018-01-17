@@ -19,8 +19,40 @@ namespace MIS
         {
             InitializeComponent();
             Home = this;
-            panelH.Controls.Add(CZH);
-            panelB.Controls.Add(CZB);
+
+            SetFullscreenMode(true);
+            panelH.Controls.Add(new ControlLogin());
+        }
+
+        public void SetFullscreenMode(bool fullsceen)
+        {
+            if (fullsceen)
+            {
+                panelH.Size = new Size(985, 109 + 554);
+                panelB.Visible = false;
+            }else
+            {
+                panelH.Size = new Size(985, 109);
+                panelB.Visible = true;
+            }
+        }
+
+        public void NaarZoeken()
+        {
+            FormHome.Home.panelH.Controls.Clear();
+            FormHome.Home.panelH.Controls.Add(FormHome.CZH);
+            FormHome.Home.panelB.Controls.Clear();
+            FormHome.Home.panelB.Controls.Add(FormHome.CZB);
+            FormHome.Home.SetFullscreenMode(false);
+        }
+
+        public void NaarInloggen()
+        {
+            SessionManager.SetCurrentUser(null);
+            FormHome.Home.panelH.Controls.Clear();
+            FormHome.Home.panelH.Controls.Add(new ControlLogin());
+            FormHome.Home.panelB.Controls.Clear();
+            FormHome.Home.SetFullscreenMode(true);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MIS
 {
     public partial class ControlZoekenBody : UserControl
     {
-        List<Control> ResultaatList = new List<Control>();
+        public List<Control> ResultaatList = new List<Control>();
         public static bool GeenResultaatbool;
         public ControlZoekenBody()
         {

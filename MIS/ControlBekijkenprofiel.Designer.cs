@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RnameLabel = new System.Windows.Forms.Label();
+            this.RSterPictureBox = new System.Windows.Forms.PictureBox();
+            this.RProfilePictureBox = new System.Windows.Forms.PictureBox();
+            this.RTitelLabel = new System.Windows.Forms.Label();
+            this.DiscardButton = new System.Windows.Forms.Button();
             this.PReviewButton = new System.Windows.Forms.Button();
             this.SchrijfhierLabel = new System.Windows.Forms.Label();
             this.ASterLabel = new System.Windows.Forms.Label();
-            this.RbodyLabel = new System.Windows.Forms.Label();
-            this.RtitelLabel = new System.Windows.Forms.Label();
+            this.BodyLabel = new System.Windows.Forms.Label();
+            this.TitelLabel = new System.Windows.Forms.Label();
             this.RtitelTextBox = new System.Windows.Forms.TextBox();
             this.RbodyTextBox = new System.Windows.Forms.TextBox();
             this.Ster5CheckBox = new System.Windows.Forms.CheckBox();
@@ -41,7 +46,7 @@
             this.Ster3CheckBox = new System.Windows.Forms.CheckBox();
             this.Ster2CheckBox = new System.Windows.Forms.CheckBox();
             this.Ster1CheckBox = new System.Windows.Forms.CheckBox();
-            this.ReviewbodyLabel = new System.Windows.Forms.Label();
+            this.RBodyLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Reviewlabel = new System.Windows.Forms.Label();
@@ -57,8 +62,10 @@
             this.Verified = new System.Windows.Forms.PictureBox();
             this.Naam = new System.Windows.Forms.Label();
             this.Profielfoto = new System.Windows.Forms.PictureBox();
-            this.DiscardButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RSterPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RProfilePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RatingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).BeginInit();
@@ -67,12 +74,17 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.RnameLabel);
+            this.panel1.Controls.Add(this.RSterPictureBox);
+            this.panel1.Controls.Add(this.RProfilePictureBox);
+            this.panel1.Controls.Add(this.RTitelLabel);
             this.panel1.Controls.Add(this.DiscardButton);
             this.panel1.Controls.Add(this.PReviewButton);
             this.panel1.Controls.Add(this.SchrijfhierLabel);
             this.panel1.Controls.Add(this.ASterLabel);
-            this.panel1.Controls.Add(this.RbodyLabel);
-            this.panel1.Controls.Add(this.RtitelLabel);
+            this.panel1.Controls.Add(this.BodyLabel);
+            this.panel1.Controls.Add(this.TitelLabel);
             this.panel1.Controls.Add(this.RtitelTextBox);
             this.panel1.Controls.Add(this.RbodyTextBox);
             this.panel1.Controls.Add(this.Ster5CheckBox);
@@ -80,7 +92,7 @@
             this.panel1.Controls.Add(this.Ster3CheckBox);
             this.panel1.Controls.Add(this.Ster2CheckBox);
             this.panel1.Controls.Add(this.Ster1CheckBox);
-            this.panel1.Controls.Add(this.ReviewbodyLabel);
+            this.panel1.Controls.Add(this.RBodyLabel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Reviewlabel);
@@ -100,6 +112,53 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(985, 554);
             this.panel1.TabIndex = 0;
+            // 
+            // RnameLabel
+            // 
+            this.RnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RnameLabel.Location = new System.Drawing.Point(268, 896);
+            this.RnameLabel.Name = "RnameLabel";
+            this.RnameLabel.Size = new System.Drawing.Size(157, 34);
+            this.RnameLabel.TabIndex = 90;
+            this.RnameLabel.Text = "Swen van der Wijngaard";
+            // 
+            // RSterPictureBox
+            // 
+            this.RSterPictureBox.Location = new System.Drawing.Point(267, 862);
+            this.RSterPictureBox.Name = "RSterPictureBox";
+            this.RSterPictureBox.Size = new System.Drawing.Size(157, 31);
+            this.RSterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RSterPictureBox.TabIndex = 88;
+            this.RSterPictureBox.TabStop = false;
+            // 
+            // RProfilePictureBox
+            // 
+            this.RProfilePictureBox.InitialImage = null;
+            this.RProfilePictureBox.Location = new System.Drawing.Point(172, 862);
+            this.RProfilePictureBox.Name = "RProfilePictureBox";
+            this.RProfilePictureBox.Size = new System.Drawing.Size(90, 90);
+            this.RProfilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RProfilePictureBox.TabIndex = 87;
+            this.RProfilePictureBox.TabStop = false;
+            // 
+            // RTitelLabel
+            // 
+            this.RTitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RTitelLabel.Location = new System.Drawing.Point(427, 862);
+            this.RTitelLabel.Name = "RTitelLabel";
+            this.RTitelLabel.Size = new System.Drawing.Size(374, 23);
+            this.RTitelLabel.TabIndex = 86;
+            // 
+            // DiscardButton
+            // 
+            this.DiscardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscardButton.Location = new System.Drawing.Point(172, 969);
+            this.DiscardButton.Name = "DiscardButton";
+            this.DiscardButton.Size = new System.Drawing.Size(90, 44);
+            this.DiscardButton.TabIndex = 85;
+            this.DiscardButton.Text = "Verwijder je Review";
+            this.DiscardButton.UseVisualStyleBackColor = true;
+            this.DiscardButton.Click += new System.EventHandler(this.DiscardButton_Click);
             // 
             // PReviewButton
             // 
@@ -132,25 +191,25 @@
             this.ASterLabel.TabIndex = 82;
             this.ASterLabel.Text = "Aantal Sterren";
             // 
-            // RbodyLabel
+            // BodyLabel
             // 
-            this.RbodyLabel.AutoSize = true;
-            this.RbodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbodyLabel.Location = new System.Drawing.Point(380, 656);
-            this.RbodyLabel.Name = "RbodyLabel";
-            this.RbodyLabel.Size = new System.Drawing.Size(51, 15);
-            this.RbodyLabel.TabIndex = 81;
-            this.RbodyLabel.Text = "Inhoud";
+            this.BodyLabel.AutoSize = true;
+            this.BodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyLabel.Location = new System.Drawing.Point(380, 656);
+            this.BodyLabel.Name = "BodyLabel";
+            this.BodyLabel.Size = new System.Drawing.Size(51, 15);
+            this.BodyLabel.TabIndex = 81;
+            this.BodyLabel.Text = "Inhoud";
             // 
-            // RtitelLabel
+            // TitelLabel
             // 
-            this.RtitelLabel.AutoSize = true;
-            this.RtitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RtitelLabel.Location = new System.Drawing.Point(380, 612);
-            this.RtitelLabel.Name = "RtitelLabel";
-            this.RtitelLabel.Size = new System.Drawing.Size(35, 15);
-            this.RtitelLabel.TabIndex = 80;
-            this.RtitelLabel.Text = "Titel";
+            this.TitelLabel.AutoSize = true;
+            this.TitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitelLabel.Location = new System.Drawing.Point(380, 612);
+            this.TitelLabel.Name = "TitelLabel";
+            this.TitelLabel.Size = new System.Drawing.Size(35, 15);
+            this.TitelLabel.TabIndex = 80;
+            this.TitelLabel.Text = "Titel";
             // 
             // RtitelTextBox
             // 
@@ -229,7 +288,7 @@
             this.Ster1CheckBox.AutoSize = true;
             this.Ster1CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Ster1CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ster1CheckBox.Location = new System.Drawing.Point(221, 674);
+            this.Ster1CheckBox.Location = new System.Drawing.Point(221, 673);
             this.Ster1CheckBox.Name = "Ster1CheckBox";
             this.Ster1CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Ster1CheckBox.Size = new System.Drawing.Size(65, 21);
@@ -238,14 +297,13 @@
             this.Ster1CheckBox.UseVisualStyleBackColor = true;
             this.Ster1CheckBox.CheckedChanged += new System.EventHandler(this.SterCheckBox_CheckedChanged);
             // 
-            // ReviewbodyLabel
+            // RBodyLabel
             // 
-            this.ReviewbodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReviewbodyLabel.Location = new System.Drawing.Point(40, 363);
-            this.ReviewbodyLabel.Name = "ReviewbodyLabel";
-            this.ReviewbodyLabel.Size = new System.Drawing.Size(374, 158);
-            this.ReviewbodyLabel.TabIndex = 72;
-            this.ReviewbodyLabel.Text = "*overmij*";
+            this.RBodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBodyLabel.Location = new System.Drawing.Point(427, 894);
+            this.RBodyLabel.Name = "RBodyLabel";
+            this.RBodyLabel.Size = new System.Drawing.Size(374, 158);
+            this.RBodyLabel.TabIndex = 72;
             // 
             // label3
             // 
@@ -395,16 +453,15 @@
             this.Profielfoto.TabIndex = 57;
             this.Profielfoto.TabStop = false;
             // 
-            // DiscardButton
+            // label4
             // 
-            this.DiscardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiscardButton.Location = new System.Drawing.Point(43, 523);
-            this.DiscardButton.Name = "DiscardButton";
-            this.DiscardButton.Size = new System.Drawing.Size(86, 44);
-            this.DiscardButton.TabIndex = 85;
-            this.DiscardButton.Text = "Verwijder je Review";
-            this.DiscardButton.UseVisualStyleBackColor = true;
-            this.DiscardButton.Click += new System.EventHandler(this.DiscardButton_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(169, 1054);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(632, 17);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "______________________________________________________________________________";
             // 
             // ControlBekijkenprofiel
             // 
@@ -417,6 +474,8 @@
             this.Load += new System.EventHandler(this.FormBekijkenprofiel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RSterPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RProfilePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RatingPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verified)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Profielfoto)).EndInit();
@@ -441,7 +500,7 @@
         private System.Windows.Forms.PictureBox Profielfoto;
         private System.Windows.Forms.Label Reviewlabel;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label ReviewbodyLabel;
+        private System.Windows.Forms.Label RBodyLabel;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.CheckBox Ster5CheckBox;
         public System.Windows.Forms.CheckBox Ster4CheckBox;
@@ -451,10 +510,15 @@
         private System.Windows.Forms.Button PReviewButton;
         private System.Windows.Forms.Label SchrijfhierLabel;
         private System.Windows.Forms.Label ASterLabel;
-        private System.Windows.Forms.Label RbodyLabel;
-        private System.Windows.Forms.Label RtitelLabel;
+        private System.Windows.Forms.Label BodyLabel;
+        private System.Windows.Forms.Label TitelLabel;
         private System.Windows.Forms.TextBox RtitelTextBox;
         private System.Windows.Forms.TextBox RbodyTextBox;
         private System.Windows.Forms.Button DiscardButton;
+        private System.Windows.Forms.Label RTitelLabel;
+        private System.Windows.Forms.Label RnameLabel;
+        private System.Windows.Forms.PictureBox RSterPictureBox;
+        private System.Windows.Forms.PictureBox RProfilePictureBox;
+        public System.Windows.Forms.Label label4;
     }
 }

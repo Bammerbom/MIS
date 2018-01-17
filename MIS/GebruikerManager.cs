@@ -71,7 +71,7 @@ namespace MIS {
         {
             //Create select command
             var cmd = new SQLiteCommand("SELECT * FROM gebruikers WHERE userid = @userid", SqlTools.Connection);
-            cmd.Parameters.Add("@userid", DbType.String).Value = userid;
+            cmd.Parameters.Add("@userid", DbType.Int32).Value = userid;
             var reader = cmd.ExecuteReader();
             reader.Read();
 

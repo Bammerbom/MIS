@@ -118,31 +118,35 @@ namespace MIS
 
         private void VerderButton_Click(object sender, EventArgs e)
         {
-            bool valid = true;
             if (EmailTextbox.Text == "")
             {
                 MessageBox.Show("Vul je emailadres in");
-                valid = false;
+                return;
             }
             if (!EmailTextbox.Text.Contains("@"))
             {
                 MessageBox.Show("Je hebt geen geldig emailadres gebruikt!");
-                valid = false;
+                return;
+            }
+            foreach (var gebruiker in GebruikerManager.AlleGebruikers())
+            {
+                if (EmailTextbox.Text.ToLower() == gebruiker.email.ToLower())
+                {
+                    MessageBox.Show("Je hebt een al bestaand emailadres opgegeven");
+                    return;
+                }
             }
 
-            if (valid)
+            foreach (Control C in Controls)
             {
-                foreach (Control C in Controls)
-                {
-                    if (C != WachtwoordTextbox || C != W8wLabel || C != EmailLabel || C != EmailTextbox) C.Visible = true;
-                }
-                WachtwoordTextbox.Visible = false;
-                W8wLabel.Visible = false;
-                EmailTextbox.Visible = false;
-                EmailLabel.Visible = false;
-                VerderButton.Visible = false;
+                if (C != WachtwoordTextbox || C != W8wLabel || C != EmailLabel || C != EmailTextbox) C.Visible = true;
             }
-        }
+            WachtwoordTextbox.Visible = false;
+            W8wLabel.Visible = false;
+            EmailTextbox.Visible = false;
+            EmailLabel.Visible = false;
+            VerderButton.Visible = false;
+        }        
     }
 }
  

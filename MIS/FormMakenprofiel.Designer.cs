@@ -65,7 +65,7 @@
             // VoornaamLabel
             // 
             this.VoornaamLabel.AutoSize = true;
-            this.VoornaamLabel.Location = new System.Drawing.Point(37, 149);
+            this.VoornaamLabel.Location = new System.Drawing.Point(37, 67);
             this.VoornaamLabel.Name = "VoornaamLabel";
             this.VoornaamLabel.Size = new System.Drawing.Size(55, 13);
             this.VoornaamLabel.TabIndex = 0;
@@ -76,7 +76,7 @@
             // WoonplaatsLabel
             // 
             this.WoonplaatsLabel.AutoSize = true;
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 201);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(37, 119);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(64, 13);
             this.WoonplaatsLabel.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             // VoornaamTextbox
             // 
-            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 146);
+            this.VoornaamTextbox.Location = new System.Drawing.Point(156, 64);
             this.VoornaamTextbox.Name = "VoornaamTextbox";
             this.VoornaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.VoornaamTextbox.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             // WoonplaatsTextbox
             // 
-            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 198);
+            this.WoonplaatsTextbox.Location = new System.Drawing.Point(156, 116);
             this.WoonplaatsTextbox.Name = "WoonplaatsTextbox";
             this.WoonplaatsTextbox.Size = new System.Drawing.Size(100, 20);
             this.WoonplaatsTextbox.TabIndex = 5;
@@ -105,7 +105,7 @@
             // Achternaamlabel
             // 
             this.Achternaamlabel.AutoSize = true;
-            this.Achternaamlabel.Location = new System.Drawing.Point(37, 175);
+            this.Achternaamlabel.Location = new System.Drawing.Point(37, 93);
             this.Achternaamlabel.Name = "Achternaamlabel";
             this.Achternaamlabel.Size = new System.Drawing.Size(64, 13);
             this.Achternaamlabel.TabIndex = 10;
@@ -115,7 +115,7 @@
             // 
             // AchternaamTextbox
             // 
-            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 172);
+            this.AchternaamTextbox.Location = new System.Drawing.Point(156, 90);
             this.AchternaamTextbox.Name = "AchternaamTextbox";
             this.AchternaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.AchternaamTextbox.TabIndex = 4;
@@ -299,7 +299,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 227);
+            this.label4.Location = new System.Drawing.Point(37, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 31;
@@ -309,7 +309,7 @@
             // 
             // VraagprijsTextbox
             // 
-            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 224);
+            this.VraagprijsTextbox.Location = new System.Drawing.Point(156, 142);
             this.VraagprijsTextbox.Name = "VraagprijsTextbox";
             this.VraagprijsTextbox.Size = new System.Drawing.Size(100, 20);
             this.VraagprijsTextbox.TabIndex = 6;
@@ -393,7 +393,6 @@
             this.EmailTextbox.Name = "EmailTextbox";
             this.EmailTextbox.Size = new System.Drawing.Size(140, 20);
             this.EmailTextbox.TabIndex = 1;
-            this.EmailTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // WachtwoordTextbox
             // 

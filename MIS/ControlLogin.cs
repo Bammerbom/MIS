@@ -28,7 +28,8 @@ namespace MIS
             bool found = false;
             foreach(Gebruiker gebr in GebruikerManager.AlleGebruikers())
             {
-                if (!(gebr.email == email)) continue;
+                //Niet hoofdletter gevoelig
+                if (!(gebr.email.ToLower() == email.ToLower())) continue;
                 gebruiker = gebr;
                 found = true;
             }

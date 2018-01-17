@@ -109,7 +109,6 @@
     <EmbeddedResource Include="ControlLogin.resx">
       <DependentUpon>ControlLogin.cs</DependentUpon>
     </EmbeddedResource>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlZoekenBody.resx">
       <DependentUpon>ControlZoekenBody.cs</DependentUpon>
     </EmbeddedResource>

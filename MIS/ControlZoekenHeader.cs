@@ -167,7 +167,12 @@ namespace MIS
                 PrijsTextBox.Text = "";
             }
         }
-
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FormHome.Home.SetFullscreenMode(true);
+            FormHome.Home.panelH.Controls.Clear();
+            FormHome.Home.panelH.Controls.Add(new ControlVeranderProfiel());
+        }
         /// <summary>
         /// zorgt ervoor dat oppas en uitlaat te gelijk gechecked zijn
         /// </summary>
@@ -210,5 +215,7 @@ namespace MIS
             }
         }
         #endregion Header events
+
+        
     }
 }

@@ -36,7 +36,7 @@ namespace MIS
             OvermijTextBox.Text = gebruiker.overmij;
             NaamTextBox.Text = gebruiker.voornaam;
                 AchternaamTextBox.Text = gebruiker.achternaam;
-            WachtwoordTextBox.Text = gebruiker.password;
+            WachtwoordTextBox.Text = "";
             EmailTextBox.Text = gebruiker.email;
 
         }
@@ -51,7 +51,10 @@ namespace MIS
             gebruiker.overmij = OvermijTextBox.Text;
             gebruiker.voornaam = NaamTextBox.Text;
             gebruiker.achternaam = AchternaamTextBox.Text;
-            gebruiker.password = WachtwoordTextBox.Text;
+            if (WachtwoordTextBox.Text != "")
+            {
+                gebruiker.password_hash = GebruikerManager.PasswordHash(WachtwoordTextBox.Text);
+            }
             gebruiker.email = EmailTextBox.Text;
             bool[] diertypes = new bool[8];
             diertypes[0] = HondCheckBox.Checked;

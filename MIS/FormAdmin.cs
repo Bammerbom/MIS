@@ -46,7 +46,7 @@ namespace MIS
             //Data toevoegen
             foreach (var gebruiker in GebruikerManager.AlleGebruikers())
             {
-                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.email, gebruiker.password);
+                table.Rows.Add(gebruiker.userid, gebruiker.voornaam, gebruiker.achternaam, gebruiker.woonplaats, gebruiker.verified, gebruiker.admin, gebruiker.vraagprijs, gebruiker.oppassen, gebruiker.uitlaten, gebruiker.diertypes, gebruiker.email, gebruiker.password_hash);
             }
 
             return table;
@@ -66,7 +66,7 @@ namespace MIS
             VerifiedAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[4].Value;
             AdminAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[5].Value;
             EmailAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[10].Value.ToString();
-            WachtwoordAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[11].Value.ToString();
+            WachtwoordAdmin.Text = ""; //TODO
 
 
             foreach (CheckBox cb in CBListAdmin) cb.Checked = false;
@@ -155,7 +155,10 @@ namespace MIS
                 gebruiker.admin = AdminAdmin.Checked;
                 gebruiker.verified = VerifiedAdmin.Checked;
                 gebruiker.email = EmailAdmin.Text;
-                gebruiker.password = WachtwoordAdmin.Text;
+                if (WachtwoordAdmin.Text != "")
+                {
+                    gebruiker.password_hash = GebruikerManager.PasswordHash(WachtwoordAdmin.Text);
+                }
 
                 List<string> dierenstrings = new List<string>();
                 if (HondCheckboxAdmin.Checked) dierenstrings.Add("Hond");

@@ -42,7 +42,7 @@ namespace MIS
             }
             
             //Check wachtwoord
-            if(gebruiker.password != password)
+            if(!GebruikerManager.PasswordCompare(gebruiker.password_hash, password))
             {
                 MessageBox.Show("Je wachtwoord is incorrect.");
                 return;

@@ -74,7 +74,7 @@ namespace MIS
                     uitlaten = UitlaatCheckbox.Checked,
                     overmij = OverMijTextbox.Text,
                     email = EmailTextbox.Text,
-                    password = WachtwoordTextbox.Text,                   
+                    password_hash = GebruikerManager.PasswordHash(WachtwoordTextbox.Text),                   
                 };
                 GebruikerManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");

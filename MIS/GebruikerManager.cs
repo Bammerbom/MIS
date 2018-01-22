@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using System.Security.Cryptography;
 
 namespace MIS {
     public class GebruikerManager {
@@ -130,6 +131,50 @@ namespace MIS {
             return gebruikers.ToArray();
         }
 
+        public static string PasswordHash(string password)
+        {
+            //CREDITS: https://stackoverflow.com/questions/4181198/how-to-hash-a-password/10402129#10402129
+
+            //Genereer een salt
+            byte[] salt;
+            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+
+            //Hash password + salt
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(20);
+
+            //Combineer password + salt
+            byte[] hashBytes = new byte[36];
+            Array.Copy(salt, 0, hashBytes, 0, 16);
+            Array.Copy(hash, 0, hashBytes, 16, 20);
+
+            //Naar string for la database
+            return Convert.ToBase64String(hashBytes);
+        }
+
+        public static bool PasswordCompare(string savedPasswordHash, string password)
+        {
+            //Als ww nog letterlijk in db staat, is het ook goed
+            if (savedPasswordHash == password) return true;
+
+            // Exctract bytes
+            byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
+
+            // Salt van hash
+            byte[] salt = new byte[16];
+            Array.Copy(hashBytes, 0, salt, 0, 16);
+
+            // Compute hash van wachtwoord
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(20);
+
+            // Compare hashes
+            for (int i = 0; i < 20; i++)
+                if (hashBytes[i + 16] != hash[i])
+                    return false;
+            return true;
+        }
+
         #region Utils
         public static string DiertypesVanBool(bool[] diertypes)
         {
@@ -197,7 +242,7 @@ namespace MIS {
                 woonplaats = (string)reader["woonplaats"],
                 diertypes = (string)reader["diertypes"],
                 email = (string)reader["email"],
-                password = (string)reader["password"],
+                password_hash = (string)reader["password"],
             };
         }
 
@@ -215,7 +260,7 @@ namespace MIS {
             cmd.Parameters.Add("@woonplaats", DbType.String).Value = gebruiker.woonplaats;
             cmd.Parameters.Add("@diertypes", DbType.String).Value = gebruiker.diertypes;
             cmd.Parameters.Add("@email", DbType.String).Value = gebruiker.email;
-            cmd.Parameters.Add("@password", DbType.String).Value = gebruiker.password;
+            cmd.Parameters.Add("@password", DbType.String).Value = gebruiker.password_hash;
             return cmd;
         }
         #endregion Utils
@@ -238,6 +283,6 @@ namespace MIS {
         public string woonplaats;
         public string diertypes;
         public string email;
-        public string password;
+        public string password_hash;
     }
 }

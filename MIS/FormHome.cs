@@ -46,6 +46,8 @@ namespace MIS
             FormHome.Home.SetFullscreenMode(false);
             CZH.pictureBoxProfiel.Visible = SessionManager.IsLoggedIn();
             CZH.label2.Visible = SessionManager.IsLoggedIn();
+            CZH.pictureBoxAdmin.Visible = false;
+            CZH.label4.Visible = false;
             if (SessionManager.IsLoggedIn())
             {
                 CZH.label2.Text = ((Gebruiker)SessionManager.GetCurrentUser()).voornaam;
@@ -55,8 +57,6 @@ namespace MIS
                 CZH.pictureBoxAdmin.Visible = ((Gebruiker)SessionManager.GetCurrentUser()).admin;
                 CZH.label4.Visible = ((Gebruiker)SessionManager.GetCurrentUser()).admin;
             }
-            CZH.pictureBoxAdmin.Visible = false;
-            CZH.label4.Visible = false;
         }
 
         public void NaarInloggen()

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.DiscardButton = new System.Windows.Forms.Button();
             this.PReviewButton = new System.Windows.Forms.Button();
             this.SchrijfhierLabel = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.Ster3CheckBox = new System.Windows.Forms.CheckBox();
             this.Ster2CheckBox = new System.Windows.Forms.CheckBox();
             this.Ster1CheckBox = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.OLijnLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Reviewlabel = new System.Windows.Forms.Label();
             this.RatingPictureBox = new System.Windows.Forms.PictureBox();
@@ -67,7 +67,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.ErrorLabel);
             this.panel1.Controls.Add(this.DiscardButton);
             this.panel1.Controls.Add(this.PReviewButton);
             this.panel1.Controls.Add(this.SchrijfhierLabel);
@@ -81,7 +81,7 @@
             this.panel1.Controls.Add(this.Ster3CheckBox);
             this.panel1.Controls.Add(this.Ster2CheckBox);
             this.panel1.Controls.Add(this.Ster1CheckBox);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.OLijnLabel);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Reviewlabel);
             this.panel1.Controls.Add(this.RatingPictureBox);
@@ -101,15 +101,13 @@
             this.panel1.Size = new System.Drawing.Size(985, 554);
             this.panel1.TabIndex = 0;
             // 
-            // label4
+            // ErrorLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(169, 1054);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(632, 17);
-            this.label4.TabIndex = 91;
-            this.label4.Text = "______________________________________________________________________________";
+            this.ErrorLabel.Location = new System.Drawing.Point(172, 818);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(629, 20);
+            this.ErrorLabel.TabIndex = 92;
+            this.ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DiscardButton
             // 
@@ -125,7 +123,7 @@
             // PReviewButton
             // 
             this.PReviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PReviewButton.Location = new System.Drawing.Point(220, 771);
+            this.PReviewButton.Location = new System.Drawing.Point(220, 746);
             this.PReviewButton.Name = "PReviewButton";
             this.PReviewButton.Size = new System.Drawing.Size(86, 44);
             this.PReviewButton.TabIndex = 84;
@@ -147,7 +145,7 @@
             // 
             this.ASterLabel.AutoSize = true;
             this.ASterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ASterLabel.Location = new System.Drawing.Point(218, 656);
+            this.ASterLabel.Location = new System.Drawing.Point(218, 631);
             this.ASterLabel.Name = "ASterLabel";
             this.ASterLabel.Size = new System.Drawing.Size(98, 15);
             this.ASterLabel.TabIndex = 82;
@@ -157,7 +155,7 @@
             // 
             this.BodyLabel.AutoSize = true;
             this.BodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyLabel.Location = new System.Drawing.Point(380, 656);
+            this.BodyLabel.Location = new System.Drawing.Point(380, 631);
             this.BodyLabel.Name = "BodyLabel";
             this.BodyLabel.Size = new System.Drawing.Size(51, 15);
             this.BodyLabel.TabIndex = 81;
@@ -167,7 +165,7 @@
             // 
             this.TitelLabel.AutoSize = true;
             this.TitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitelLabel.Location = new System.Drawing.Point(380, 612);
+            this.TitelLabel.Location = new System.Drawing.Point(380, 587);
             this.TitelLabel.Name = "TitelLabel";
             this.TitelLabel.Size = new System.Drawing.Size(35, 15);
             this.TitelLabel.TabIndex = 80;
@@ -175,7 +173,7 @@
             // 
             // RtitelTextBox
             // 
-            this.RtitelTextBox.Location = new System.Drawing.Point(383, 630);
+            this.RtitelTextBox.Location = new System.Drawing.Point(383, 605);
             this.RtitelTextBox.Multiline = true;
             this.RtitelTextBox.Name = "RtitelTextBox";
             this.RtitelTextBox.Size = new System.Drawing.Size(374, 23);
@@ -183,7 +181,7 @@
             // 
             // RbodyTextBox
             // 
-            this.RbodyTextBox.Location = new System.Drawing.Point(383, 674);
+            this.RbodyTextBox.Location = new System.Drawing.Point(383, 649);
             this.RbodyTextBox.Multiline = true;
             this.RbodyTextBox.Name = "RbodyTextBox";
             this.RbodyTextBox.Size = new System.Drawing.Size(374, 158);
@@ -194,7 +192,7 @@
             this.Ster5CheckBox.AutoSize = true;
             this.Ster5CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Ster5CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ster5CheckBox.Location = new System.Drawing.Point(221, 744);
+            this.Ster5CheckBox.Location = new System.Drawing.Point(221, 719);
             this.Ster5CheckBox.Name = "Ster5CheckBox";
             this.Ster5CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Ster5CheckBox.Size = new System.Drawing.Size(86, 21);
@@ -208,7 +206,7 @@
             this.Ster4CheckBox.AutoSize = true;
             this.Ster4CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Ster4CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ster4CheckBox.Location = new System.Drawing.Point(221, 726);
+            this.Ster4CheckBox.Location = new System.Drawing.Point(221, 701);
             this.Ster4CheckBox.Name = "Ster4CheckBox";
             this.Ster4CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Ster4CheckBox.Size = new System.Drawing.Size(86, 21);
@@ -222,7 +220,7 @@
             this.Ster3CheckBox.AutoSize = true;
             this.Ster3CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Ster3CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ster3CheckBox.Location = new System.Drawing.Point(221, 708);
+            this.Ster3CheckBox.Location = new System.Drawing.Point(221, 683);
             this.Ster3CheckBox.Name = "Ster3CheckBox";
             this.Ster3CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Ster3CheckBox.Size = new System.Drawing.Size(86, 21);
@@ -236,7 +234,7 @@
             this.Ster2CheckBox.AutoSize = true;
             this.Ster2CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Ster2CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ster2CheckBox.Location = new System.Drawing.Point(221, 690);
+            this.Ster2CheckBox.Location = new System.Drawing.Point(221, 665);
             this.Ster2CheckBox.Name = "Ster2CheckBox";
             this.Ster2CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Ster2CheckBox.Size = new System.Drawing.Size(86, 21);
@@ -250,7 +248,7 @@
             this.Ster1CheckBox.AutoSize = true;
             this.Ster1CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Ster1CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ster1CheckBox.Location = new System.Drawing.Point(221, 673);
+            this.Ster1CheckBox.Location = new System.Drawing.Point(221, 648);
             this.Ster1CheckBox.Name = "Ster1CheckBox";
             this.Ster1CheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Ster1CheckBox.Size = new System.Drawing.Size(65, 21);
@@ -259,15 +257,15 @@
             this.Ster1CheckBox.UseVisualStyleBackColor = true;
             this.Ster1CheckBox.CheckedChanged += new System.EventHandler(this.SterCheckBox_CheckedChanged);
             // 
-            // label3
+            // OLijnLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(169, 838);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(632, 17);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "______________________________________________________________________________";
+            this.OLijnLabel.AutoSize = true;
+            this.OLijnLabel.Location = new System.Drawing.Point(169, 838);
+            this.OLijnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OLijnLabel.Name = "OLijnLabel";
+            this.OLijnLabel.Size = new System.Drawing.Size(632, 17);
+            this.OLijnLabel.TabIndex = 71;
+            this.OLijnLabel.Text = "______________________________________________________________________________";
             // 
             // label2
             // 
@@ -442,7 +440,7 @@
         private System.Windows.Forms.PictureBox Profielfoto;
         private System.Windows.Forms.Label Reviewlabel;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label OLijnLabel;
         public System.Windows.Forms.CheckBox Ster5CheckBox;
         public System.Windows.Forms.CheckBox Ster4CheckBox;
         public System.Windows.Forms.CheckBox Ster3CheckBox;
@@ -456,6 +454,6 @@
         private System.Windows.Forms.TextBox RtitelTextBox;
         private System.Windows.Forms.TextBox RbodyTextBox;
         private System.Windows.Forms.Button DiscardButton;
-        public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ErrorLabel;
     }
 }

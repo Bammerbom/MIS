@@ -44,11 +44,13 @@ namespace MIS
             FormHome.Home.panelB.Controls.Clear();
             FormHome.Home.panelB.Controls.Add(FormHome.CZB);
             FormHome.Home.SetFullscreenMode(false);
-            CZH.pictureBox1.Visible = SessionManager.IsLoggedIn();
+            CZH.pictureBoxProfiel.Visible = SessionManager.IsLoggedIn();
             CZH.label2.Visible = SessionManager.IsLoggedIn();
             if (SessionManager.IsLoggedIn())
             {
                 CZH.label2.Text = ((Gebruiker)SessionManager.GetCurrentUser()).voornaam;
+                CZH.pictureBoxProfiel.Image = ProfielfotoManager.getProfielfoto(((Gebruiker)SessionManager.GetCurrentUser()).userid);
+                CZH.pictureBoxProfiel.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 

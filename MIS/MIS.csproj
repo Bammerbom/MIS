@@ -90,12 +90,6 @@
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMakenprofiel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMakenprofiel.Designer.cs">
-      <DependentUpon>FormMakenprofiel.cs</DependentUpon>
-    </Compile>
     <Compile Include="GebruikerManager.cs" />
     <Compile Include="ProfielfotoManager.cs" />
     <Compile Include="Program.cs" />
@@ -129,9 +123,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMakenprofiel.resx">
-      <DependentUpon>FormMakenprofiel.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="ReviewManager.cs" />
     <Compile Include="SessionManager.cs" />

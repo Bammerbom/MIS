@@ -112,6 +112,7 @@ namespace MIS
 
         private void VerderButton_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Test");
             if (EmailTextbox.Text == "")
             {
                 MessageBox.Show("Vul je emailadres in");

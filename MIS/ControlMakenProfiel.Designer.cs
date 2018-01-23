@@ -70,7 +70,6 @@
             this.VoornaamLabel.TabIndex = 0;
             this.VoornaamLabel.Text = "Voornaam";
             this.VoornaamLabel.Visible = false;
-            this.VoornaamLabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // WoonplaatsLabel
             // 
@@ -81,7 +80,6 @@
             this.WoonplaatsLabel.TabIndex = 3;
             this.WoonplaatsLabel.Text = "Woonplaats";
             this.WoonplaatsLabel.Visible = false;
-            this.WoonplaatsLabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VoornaamTextbox
             // 
@@ -90,7 +88,6 @@
             this.VoornaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.VoornaamTextbox.TabIndex = 3;
             this.VoornaamTextbox.Visible = false;
-            this.VoornaamTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // WoonplaatsTextbox
             // 
@@ -99,7 +96,6 @@
             this.WoonplaatsTextbox.Size = new System.Drawing.Size(100, 20);
             this.WoonplaatsTextbox.TabIndex = 5;
             this.WoonplaatsTextbox.Visible = false;
-            this.WoonplaatsTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // Achternaamlabel
             // 
@@ -110,7 +106,6 @@
             this.Achternaamlabel.TabIndex = 10;
             this.Achternaamlabel.Text = "Achternaam";
             this.Achternaamlabel.Visible = false;
-            this.Achternaamlabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // AchternaamTextbox
             // 
@@ -119,7 +114,6 @@
             this.AchternaamTextbox.Size = new System.Drawing.Size(100, 20);
             this.AchternaamTextbox.TabIndex = 4;
             this.AchternaamTextbox.Visible = false;
-            this.AchternaamTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // OverMijLabel
             // 
@@ -130,7 +124,6 @@
             this.OverMijLabel.TabIndex = 15;
             this.OverMijLabel.Text = "Over mij";
             this.OverMijLabel.Visible = false;
-            this.OverMijLabel.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // OverMijTextbox
             // 
@@ -140,7 +133,6 @@
             this.OverMijTextbox.Size = new System.Drawing.Size(467, 158);
             this.OverMijTextbox.TabIndex = 7;
             this.OverMijTextbox.Visible = false;
-            this.OverMijTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // HondCheckbox
             // 
@@ -152,7 +144,6 @@
             this.HondCheckbox.Text = "Hond";
             this.HondCheckbox.UseVisualStyleBackColor = true;
             this.HondCheckbox.Visible = false;
-            this.HondCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label1
             // 
@@ -163,7 +154,6 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Ervaring met:";
             this.label1.Visible = false;
-            this.label1.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // KnaagdierCheckbox
             // 
@@ -175,7 +165,6 @@
             this.KnaagdierCheckbox.Text = "Knaagdier";
             this.KnaagdierCheckbox.UseVisualStyleBackColor = true;
             this.KnaagdierCheckbox.Visible = false;
-            this.KnaagdierCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // ReptielCheckbox
             // 
@@ -187,7 +176,6 @@
             this.ReptielCheckbox.Text = "Reptiel";
             this.ReptielCheckbox.UseVisualStyleBackColor = true;
             this.ReptielCheckbox.Visible = false;
-            this.ReptielCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VogelCheckbox
             // 
@@ -199,7 +187,6 @@
             this.VogelCheckbox.Text = "Vogel";
             this.VogelCheckbox.UseVisualStyleBackColor = true;
             this.VogelCheckbox.Visible = false;
-            this.VogelCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // InsectCheckbox
             // 
@@ -211,7 +198,6 @@
             this.InsectCheckbox.Text = "Insect";
             this.InsectCheckbox.UseVisualStyleBackColor = true;
             this.InsectCheckbox.Visible = false;
-            this.InsectCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VissenCheckbox
             // 
@@ -223,7 +209,6 @@
             this.VissenCheckbox.Text = "Vissen";
             this.VissenCheckbox.UseVisualStyleBackColor = true;
             this.VissenCheckbox.Visible = false;
-            this.VissenCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label2
             // 
@@ -234,7 +219,6 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Bereid om:";
             this.label2.Visible = false;
-            this.label2.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // OppasCheckbox
             // 
@@ -246,7 +230,6 @@
             this.OppasCheckbox.Text = "Op te passen";
             this.OppasCheckbox.UseVisualStyleBackColor = true;
             this.OppasCheckbox.Visible = false;
-            this.OppasCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // UitlaatCheckbox
             // 
@@ -258,7 +241,6 @@
             this.UitlaatCheckbox.Text = "Uit te laten";
             this.UitlaatCheckbox.UseVisualStyleBackColor = true;
             this.UitlaatCheckbox.Visible = false;
-            this.UitlaatCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // ProfielAanmakenButton
             // 
@@ -280,7 +262,6 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Wil je gebruik maken van onze premium service?";
             this.label3.Visible = false;
-            this.label3.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // PremiumCheckbox
             // 
@@ -293,7 +274,6 @@
             this.PremiumCheckbox.UseVisualStyleBackColor = true;
             this.PremiumCheckbox.Visible = false;
             this.PremiumCheckbox.CheckedChanged += new System.EventHandler(this.PremiumCheckbox_CheckedChanged);
-            this.PremiumCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // label4
             // 
@@ -304,7 +284,6 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Vraagprijs per dag (€)";
             this.label4.Visible = false;
-            this.label4.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // VraagprijsTextbox
             // 
@@ -314,7 +293,6 @@
             this.VraagprijsTextbox.TabIndex = 6;
             this.VraagprijsTextbox.Visible = false;
             this.VraagprijsTextbox.TextChanged += new System.EventHandler(this.VraagprijsTextbox_TextChanged);
-            this.VraagprijsTextbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             this.VraagprijsTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VraagprijsTextbox_KeyPress);
             // 
             // KatCheckbox
@@ -327,7 +305,6 @@
             this.KatCheckbox.Text = "Kat";
             this.KatCheckbox.UseVisualStyleBackColor = true;
             this.KatCheckbox.Visible = false;
-            this.KatCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // AmfibieCheckbox
             // 
@@ -339,7 +316,6 @@
             this.AmfibieCheckbox.Text = "Amfibie";
             this.AmfibieCheckbox.UseVisualStyleBackColor = true;
             this.AmfibieCheckbox.Visible = false;
-            this.AmfibieCheckbox.VisibleChanged += new System.EventHandler(this.VerderButton_Click);
             // 
             // EmailLabel
             // 

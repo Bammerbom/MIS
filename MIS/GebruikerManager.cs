@@ -154,8 +154,8 @@ namespace MIS {
 
         public static bool PasswordCompare(string savedPasswordHash, string password)
         {
-            //Als ww nog letterlijk in db staat, is het ook goed
-            if (savedPasswordHash == password) return true;
+            //Als hash niet valid is, return false
+            if (savedPasswordHash.Length != 48) return false;
 
             // Exctract bytes
             byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);

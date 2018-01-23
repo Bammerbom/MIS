@@ -43,6 +43,17 @@ namespace MIS
             //Verkrijg reviewid
             return (int)SqlTools.Connection.LastInsertRowId;
         }
+
+        /// <summary>
+        /// verwijderd de gebruiker
+        /// </summary>
+        public static bool ReviewVerwijderen(int reviewid)
+        {
+            //Create delete command
+            var cmd = new SQLiteCommand("DELETE FROM reviews WHERE reviewid = @reviewid", SqlTools.Connection);
+            cmd.Parameters.Add("@reviewid", DbType.String).Value = reviewid;
+            return cmd.ExecuteNonQuery() > 0;
+        }
         
         /// <summary>
         /// vraagt alle reviews op met het reviewedid

@@ -118,6 +118,7 @@
             this.DiscardButton.TabIndex = 85;
             this.DiscardButton.Text = "Verwijder je Review";
             this.DiscardButton.UseVisualStyleBackColor = true;
+            this.DiscardButton.Visible = false;
             this.DiscardButton.Click += new System.EventHandler(this.DiscardButton_Click);
             // 
             // PReviewButton

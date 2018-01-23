@@ -24,7 +24,6 @@ namespace MIS
         private void FormBekijkenprofiel_Load(object sender, EventArgs e)
         {
             var gebruiker = GebruikerManager.GebruikerOpvragen(UserId);
-            var reviews = ReviewManager.ReviewsOppasser(UserId);
             Naam.Text = gebruiker.voornaam + " " + gebruiker.achternaam;
             this.Text = "Profiel van " + gebruiker.voornaam + " " + gebruiker.achternaam;
             Adres.Text = gebruiker.woonplaats;
@@ -63,7 +62,6 @@ namespace MIS
             }
             //reviews laden
             ReviewLoad();
-
         }
 
         private void ReviewLoad()
@@ -86,6 +84,13 @@ namespace MIS
                 }
                 return b.reviewid.CompareTo(a.reviewid);
             });
+            foreach (var Item in Lreviews)
+            {
+                if (LoginCheck() && Item.reviewerid == ((Gebruiker)SessionManager.GetCurrentUser()).userid)
+                {
+                    DiscardButton.Visible = true;
+                }
+            }
 
             int RVcount = 0;
             foreach (Review RV in Lreviews)
@@ -128,7 +133,16 @@ namespace MIS
 
         private void DiscardButton_Click(object sender, EventArgs e)
         {
+            var Lreviews = ReviewManager.ReviewsOppasser(UserId).ToList<Review>();
+            int reviewerid = ((Gebruiker)SessionManager.GetCurrentUser()).userid;
 
+            foreach (var Item in Lreviews)
+            {
+                if (Item.reviewerid != reviewerid) continue;
+                ReviewManager.ReviewVerwijderen(Item.reviewid);
+            }
+            DiscardButton.Visible = false;
+            ReviewLoad();
         }
 
         private bool CheckValid()

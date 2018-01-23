@@ -59,7 +59,27 @@ namespace MIS
 
         private void PReviewButton_Click(object sender, EventArgs e)
         {
-            if (CheckValid()) MessageBox.Show("True"); //plaats review
+            if (CheckValid())
+            {
+                List<CheckBox> CBList = new List<CheckBox>()
+                    {Ster1CheckBox, Ster2CheckBox, Ster3CheckBox, Ster4CheckBox, Ster5CheckBox};
+                int CBcount = 0;
+                Review NewReview = new Review();
+                NewReview.title = RtitelTextBox.Text;
+                NewReview.body = RbodyTextBox.Text;
+                NewReview.reviewedid = UserId;
+                NewReview.reviewerid = ((Gebruiker) SessionManager.GetCurrentUser()).userid;
+                foreach (var CB in CBList)
+                {
+                    CBcount++;
+                    if (CB.Checked)
+                    {
+                        NewReview.rating = CBcount;
+                        break;
+                    }
+                }
+                ReviewManager.ReviewToevoegen(NewReview);
+            }
             else MessageBox.Show("False"); // error
         }
 
@@ -117,56 +137,62 @@ namespace MIS
             // RnameLabel
             // 
             var RnameLabel = new Label();
-            this.RnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RnameLabel.Location = new System.Drawing.Point(268, 896 * BlokY);
-            this.RnameLabel.Name = "RnameLabel";
-            this.RnameLabel.Size = new System.Drawing.Size(157, 34);
-            this.RnameLabel.TabIndex = 90;
-            this.RnameLabel.Text = "Swen van der Wijngaard";
-            panel1.Controls.Add(this.RnameLabel);
+            RnameLabel.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            RnameLabel.Location = new Point(268, 896 * BlokY);
+            RnameLabel.Name = "RnameLabel";
+            RnameLabel.Size = new Size(157, 34);
+            RnameLabel.TabIndex = 90;
+            RnameLabel.Text = GebruikerManager.GebruikerOpvragen(review.reviewerid).voornaam;
+            panel1.Controls.Add(RnameLabel);
             // 
             // RSterPictureBox
             // 
+            Bitmap[] Ster = new Bitmap[6]
+                {Properties.Resources.ster0, Properties.Resources.ster1, Properties.Resources.ster2, Properties.Resources.ster3, Properties.Resources.ster4, Properties.Resources.ster5};
             var RSterPictureBox = new PictureBox();
-            this.RSterPictureBox.Location = new System.Drawing.Point(267, 862 * BlokY);
-            this.RSterPictureBox.Name = "RSterPictureBox";
-            this.RSterPictureBox.Size = new System.Drawing.Size(157, 31);
-            this.RSterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RSterPictureBox.TabIndex = 88;
-            this.RSterPictureBox.TabStop = false;
-            panel1.Controls.Add(this.RSterPictureBox);
+            RSterPictureBox.Location = new Point(267, 862 * BlokY);
+            RSterPictureBox.Name = "RSterPictureBox";
+            RSterPictureBox.Size = new Size(157, 31);
+            RSterPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            RSterPictureBox.TabIndex = 88;
+            RSterPictureBox.TabStop = false;
+            RSterPictureBox.Image = Ster[review.rating];
+            panel1.Controls.Add(RSterPictureBox);
             // 
             // RProfilePictureBox
             // 
             var RProfilePictureBox = new PictureBox();
-            this.RProfilePictureBox.InitialImage = null;
-            this.RProfilePictureBox.Location = new System.Drawing.Point(172, 862 * BlokY);
-            this.RProfilePictureBox.Name = "RProfilePictureBox";
-            this.RProfilePictureBox.Size = new System.Drawing.Size(90, 90);
-            this.RProfilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.RProfilePictureBox.TabIndex = 87;
-            this.RProfilePictureBox.TabStop = false;
-            panel1.Controls.Add(this.RProfilePictureBox);
+            RProfilePictureBox.InitialImage = null;
+            RProfilePictureBox.Location = new Point(172, 862 * BlokY);
+            RProfilePictureBox.Name = "RProfilePictureBox";
+            RProfilePictureBox.Size = new Size(90, 90);
+            RProfilePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            RProfilePictureBox.TabIndex = 87;
+            RProfilePictureBox.TabStop = false;
+            RProfilePictureBox.Image = ProfielfotoManager.getProfielfoto(review.reviewerid);
+            panel1.Controls.Add(RProfilePictureBox);
             // 
             // RTitelLabel
             // 
             var RTitelLabel = new Label();
-            this.RTitelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RTitelLabel.Location = new System.Drawing.Point(427, 862 * BlokY);
-            this.RTitelLabel.Name = "RTitelLabel";
-            this.RTitelLabel.Size = new System.Drawing.Size(374, 23);
-            this.RTitelLabel.TabIndex = 86;
-            panel1.Controls.Add(this.RTitelLabel);
+            RTitelLabel.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            RTitelLabel.Location = new Point(427, 862 * BlokY);
+            RTitelLabel.Name = "RTitelLabel";
+            RTitelLabel.Size = new Size(374, 23);
+            RTitelLabel.TabIndex = 86;
+            RTitelLabel.Text = review.title;
+            panel1.Controls.Add(RTitelLabel);
             // 
             // RBodyLabel
             // 
             var RBodyLabel = new Label();
-            this.RBodyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBodyLabel.Location = new System.Drawing.Point(427, 894 * BlokY);
-            this.RBodyLabel.Name = "RBodyLabel";
-            this.RBodyLabel.Size = new System.Drawing.Size(374, 158);
-            this.RBodyLabel.TabIndex = 72;
-            panel1.Controls.Add(this.RBodyLabel);
+            RBodyLabel.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            RBodyLabel.Location = new Point(427, 894 * BlokY);
+            RBodyLabel.Name = "RBodyLabel";
+            RBodyLabel.Size = new Size(374, 158);
+            RBodyLabel.TabIndex = 72;
+            RBodyLabel.Text = review.body;
+            panel1.Controls.Add(RBodyLabel);
         }
     }
 }

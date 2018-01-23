@@ -67,5 +67,13 @@ namespace MIS
             FormHome.Home.panelB.Controls.Clear();
             FormHome.Home.SetFullscreenMode(true);
         }
+
+        public void Naar(UserControl control, bool fullscreen = true)
+        {
+            SetFullscreenMode(fullscreen);
+            FormHome.Home.panelH.Controls.Clear();
+            FormHome.Home.panelH.Controls.Add(control);
+            FormHome.Home.panelB.Controls.Clear();
+        }
     }
 }

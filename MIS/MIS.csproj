@@ -60,6 +60,12 @@
     <Compile Include="ControlLogin.Designer.cs">
       <DependentUpon>ControlLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlMakenProfiel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMakenProfiel.Designer.cs">
+      <DependentUpon>ControlMakenProfiel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlZoekenBody.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="ControlBekijkenprofiel.resx">
       <DependentUpon>ControlBekijkenprofiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlMakenProfiel.resx">
+      <DependentUpon>ControlMakenProfiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlVeranderProfiel.resx">
       <DependentUpon>ControlVeranderProfiel.cs</DependentUpon>

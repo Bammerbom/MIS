@@ -58,5 +58,10 @@ namespace MIS
             FormHome.Home.NaarZoeken();
             SessionManager.SetCurrentUser(null);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormHome.Home.Naar(new ControlMakenProfiel());
+        }
     }
 }

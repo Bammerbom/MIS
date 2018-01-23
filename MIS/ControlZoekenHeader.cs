@@ -215,6 +215,13 @@ namespace MIS
             }
         }
 
+        private void pictureBoxAdmin_Click(object sender, EventArgs e)
+        {
+            FormAdmin admin = new FormAdmin();
+            admin.ShowDialog(); //ShowDialog locked alle andere forms zolang deze open is
+        }
+
         #endregion Header events
+
     }
 }

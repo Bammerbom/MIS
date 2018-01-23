@@ -53,8 +53,11 @@
             this.pictureBoxProfiel = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBoxAdmin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.terugknop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfiel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +115,7 @@
             // 
             this.WoonplaatsLabel.AutoSize = true;
             this.WoonplaatsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WoonplaatsLabel.Location = new System.Drawing.Point(201, 23);
+            this.WoonplaatsLabel.Location = new System.Drawing.Point(250, 23);
             this.WoonplaatsLabel.Name = "WoonplaatsLabel";
             this.WoonplaatsLabel.Size = new System.Drawing.Size(87, 17);
             this.WoonplaatsLabel.TabIndex = 44;
@@ -173,7 +176,7 @@
             // ZoektextBox
             // 
             this.ZoektextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoektextBox.Location = new System.Drawing.Point(294, 21);
+            this.ZoektextBox.Location = new System.Drawing.Point(343, 21);
             this.ZoektextBox.Name = "ZoektextBox";
             this.ZoektextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ZoektextBox.Size = new System.Drawing.Size(206, 23);
@@ -182,7 +185,7 @@
             // ZoekButton
             // 
             this.ZoekButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZoekButton.Location = new System.Drawing.Point(501, 21);
+            this.ZoekButton.Location = new System.Drawing.Point(550, 21);
             this.ZoekButton.Name = "ZoekButton";
             this.ZoekButton.Size = new System.Drawing.Size(75, 23);
             this.ZoekButton.TabIndex = 38;
@@ -194,7 +197,7 @@
             // 
             this.PrijsLabel.AutoSize = true;
             this.PrijsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrijsLabel.Location = new System.Drawing.Point(185, 63);
+            this.PrijsLabel.Location = new System.Drawing.Point(234, 63);
             this.PrijsLabel.Name = "PrijsLabel";
             this.PrijsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PrijsLabel.Size = new System.Drawing.Size(104, 17);
@@ -252,7 +255,7 @@
             // 
             // PrijsTextBox
             // 
-            this.PrijsTextBox.Location = new System.Drawing.Point(294, 61);
+            this.PrijsTextBox.Location = new System.Drawing.Point(343, 61);
             this.PrijsTextBox.Name = "PrijsTextBox";
             this.PrijsTextBox.Size = new System.Drawing.Size(100, 20);
             this.PrijsTextBox.TabIndex = 54;
@@ -326,10 +329,34 @@
             this.label3.TabIndex = 60;
             this.label3.Text = "Terug";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(166, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Admin";
+            // 
+            // pictureBoxAdmin
+            // 
+            this.pictureBoxAdmin.Image = global::MIS.Properties.Resources.admin;
+            this.pictureBoxAdmin.Location = new System.Drawing.Point(157, 13);
+            this.pictureBoxAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxAdmin.Name = "pictureBoxAdmin";
+            this.pictureBoxAdmin.Size = new System.Drawing.Size(52, 57);
+            this.pictureBoxAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAdmin.TabIndex = 61;
+            this.pictureBoxAdmin.TabStop = false;
+            this.pictureBoxAdmin.Click += new System.EventHandler(this.pictureBoxAdmin_Click);
+            // 
             // ControlZoekenHeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBoxAdmin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxProfiel);
@@ -358,6 +385,7 @@
             this.Size = new System.Drawing.Size(984, 661);
             ((System.ComponentModel.ISupportInitialize)(this.terugknop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfiel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdmin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +416,7 @@
         public System.Windows.Forms.PictureBox pictureBoxProfiel;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.PictureBox pictureBoxAdmin;
     }
 }

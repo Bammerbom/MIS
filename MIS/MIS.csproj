@@ -148,7 +148,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Resources\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\0.png" />
@@ -181,6 +181,7 @@
     <None Include="Resources\_nul.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\admin.png" />
     <Content Include="Resources\backbuttoncircle_79559.png" />
     <Content Include="Resources\profielfotos\foto1.jpg" />
     <Content Include="Resources\profielfotos\foto10.jpg" />

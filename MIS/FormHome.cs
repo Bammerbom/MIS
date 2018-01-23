@@ -51,7 +51,12 @@ namespace MIS
                 CZH.label2.Text = ((Gebruiker)SessionManager.GetCurrentUser()).voornaam;
                 CZH.pictureBoxProfiel.Image = ProfielfotoManager.getProfielfoto(((Gebruiker)SessionManager.GetCurrentUser()).userid);
                 CZH.pictureBoxProfiel.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                CZH.pictureBoxAdmin.Visible = ((Gebruiker)SessionManager.GetCurrentUser()).admin;
+                CZH.label4.Visible = ((Gebruiker)SessionManager.GetCurrentUser()).admin;
             }
+            CZH.pictureBoxAdmin.Visible = false;
+            CZH.label4.Visible = false;
         }
 
         public void NaarInloggen()

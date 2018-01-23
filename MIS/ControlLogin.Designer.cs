@@ -42,7 +42,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(251, 20);
-            this.tbPassword.TabIndex = 0;
+            this.tbPassword.TabIndex = 2;
             // 
             // tbEmail
             // 
@@ -74,7 +74,7 @@
             this.buttonInloggen.Location = new System.Drawing.Point(255, 359);
             this.buttonInloggen.Name = "buttonInloggen";
             this.buttonInloggen.Size = new System.Drawing.Size(75, 23);
-            this.buttonInloggen.TabIndex = 4;
+            this.buttonInloggen.TabIndex = 3;
             this.buttonInloggen.Text = "Inloggen";
             this.buttonInloggen.UseVisualStyleBackColor = true;
             this.buttonInloggen.Click += new System.EventHandler(this.buttonInloggen_Click);
@@ -84,7 +84,7 @@
             this.button1.Location = new System.Drawing.Point(354, 359);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 23);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Doorgaan zonder inloggen";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

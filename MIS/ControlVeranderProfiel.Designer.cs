@@ -63,9 +63,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(450, 54);
+            this.label1.Location = new System.Drawing.Point(338, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 44);
+            this.label1.Size = new System.Drawing.Size(252, 36);
             this.label1.TabIndex = 59;
             this.label1.Text = "Bewerk je profiel";
             // 
@@ -73,9 +74,10 @@
             // 
             this.OppassenUitlatenLabel.AutoSize = true;
             this.OppassenUitlatenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OppassenUitlatenLabel.Location = new System.Drawing.Point(132, 514);
+            this.OppassenUitlatenLabel.Location = new System.Drawing.Point(99, 418);
+            this.OppassenUitlatenLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OppassenUitlatenLabel.Name = "OppassenUitlatenLabel";
-            this.OppassenUitlatenLabel.Size = new System.Drawing.Size(120, 18);
+            this.OppassenUitlatenLabel.Size = new System.Drawing.Size(102, 15);
             this.OppassenUitlatenLabel.TabIndex = 74;
             this.OppassenUitlatenLabel.Text = "Kan passen op";
             // 
@@ -83,9 +85,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(130, 336);
+            this.label3.Location = new System.Drawing.Point(98, 273);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.Size = new System.Drawing.Size(82, 15);
             this.label3.TabIndex = 73;
             this.label3.Text = "Woonplaats";
             // 
@@ -93,9 +96,10 @@
             // 
             this.Dienstentitel.AutoSize = true;
             this.Dienstentitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dienstentitel.Location = new System.Drawing.Point(132, 394);
+            this.Dienstentitel.Location = new System.Drawing.Point(99, 320);
+            this.Dienstentitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Dienstentitel.Name = "Dienstentitel";
-            this.Dienstentitel.Size = new System.Drawing.Size(79, 18);
+            this.Dienstentitel.Size = new System.Drawing.Size(68, 15);
             this.Dienstentitel.TabIndex = 71;
             this.Dienstentitel.Text = "Diensten:";
             // 
@@ -103,51 +107,57 @@
             // 
             this.Overmij.AutoSize = true;
             this.Overmij.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Overmij.Location = new System.Drawing.Point(697, 151);
+            this.Overmij.Location = new System.Drawing.Point(523, 123);
+            this.Overmij.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Overmij.Name = "Overmij";
-            this.Overmij.Size = new System.Drawing.Size(71, 18);
+            this.Overmij.Size = new System.Drawing.Size(60, 15);
             this.Overmij.TabIndex = 70;
             this.Overmij.Text = "Over mij";
             // 
             // WoonplaatsTextBox
             // 
-            this.WoonplaatsTextBox.Location = new System.Drawing.Point(271, 336);
+            this.WoonplaatsTextBox.Location = new System.Drawing.Point(203, 273);
+            this.WoonplaatsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.WoonplaatsTextBox.Name = "WoonplaatsTextBox";
-            this.WoonplaatsTextBox.Size = new System.Drawing.Size(225, 22);
+            this.WoonplaatsTextBox.Size = new System.Drawing.Size(170, 20);
             this.WoonplaatsTextBox.TabIndex = 76;
             // 
             // OvermijTextBox
             // 
-            this.OvermijTextBox.Location = new System.Drawing.Point(806, 146);
+            this.OvermijTextBox.Location = new System.Drawing.Point(604, 119);
+            this.OvermijTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OvermijTextBox.Multiline = true;
             this.OvermijTextBox.Name = "OvermijTextBox";
-            this.OvermijTextBox.Size = new System.Drawing.Size(426, 266);
+            this.OvermijTextBox.Size = new System.Drawing.Size(320, 217);
             this.OvermijTextBox.TabIndex = 79;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(132, 434);
+            this.label2.Location = new System.Drawing.Point(99, 353);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.Size = new System.Drawing.Size(40, 15);
             this.label2.TabIndex = 80;
             this.label2.Text = "Prijs:";
             // 
             // PrijsTextBox
             // 
-            this.PrijsTextBox.Location = new System.Drawing.Point(271, 434);
+            this.PrijsTextBox.Location = new System.Drawing.Point(203, 353);
+            this.PrijsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PrijsTextBox.Name = "PrijsTextBox";
-            this.PrijsTextBox.Size = new System.Drawing.Size(64, 22);
+            this.PrijsTextBox.Size = new System.Drawing.Size(49, 20);
             this.PrijsTextBox.TabIndex = 81;
             // 
             // OpassenCheckBox
             // 
             this.OpassenCheckBox.AutoSize = true;
             this.OpassenCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpassenCheckBox.Location = new System.Drawing.Point(271, 387);
+            this.OpassenCheckBox.Location = new System.Drawing.Point(203, 314);
+            this.OpassenCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpassenCheckBox.Name = "OpassenCheckBox";
-            this.OpassenCheckBox.Size = new System.Drawing.Size(90, 22);
+            this.OpassenCheckBox.Size = new System.Drawing.Size(75, 19);
             this.OpassenCheckBox.TabIndex = 82;
             this.OpassenCheckBox.Text = "Opassen";
             this.OpassenCheckBox.UseVisualStyleBackColor = true;
@@ -156,18 +166,20 @@
             // 
             this.UitlatenCheckBox.AutoSize = true;
             this.UitlatenCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UitlatenCheckBox.Location = new System.Drawing.Point(413, 387);
+            this.UitlatenCheckBox.Location = new System.Drawing.Point(310, 314);
+            this.UitlatenCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UitlatenCheckBox.Name = "UitlatenCheckBox";
-            this.UitlatenCheckBox.Size = new System.Drawing.Size(79, 22);
+            this.UitlatenCheckBox.Size = new System.Drawing.Size(68, 19);
             this.UitlatenCheckBox.TabIndex = 83;
             this.UitlatenCheckBox.Text = "Uitlaten";
             this.UitlatenCheckBox.UseVisualStyleBackColor = true;
             // 
             // KlaarButton
             // 
-            this.KlaarButton.Location = new System.Drawing.Point(1109, 594);
+            this.KlaarButton.Location = new System.Drawing.Point(832, 483);
+            this.KlaarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KlaarButton.Name = "KlaarButton";
-            this.KlaarButton.Size = new System.Drawing.Size(129, 49);
+            this.KlaarButton.Size = new System.Drawing.Size(97, 40);
             this.KlaarButton.TabIndex = 84;
             this.KlaarButton.Text = "Klaar";
             this.KlaarButton.UseVisualStyleBackColor = true;
@@ -175,9 +187,10 @@
             // 
             // AnnulerenButton
             // 
-            this.AnnulerenButton.Location = new System.Drawing.Point(940, 594);
+            this.AnnulerenButton.Location = new System.Drawing.Point(705, 483);
+            this.AnnulerenButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AnnulerenButton.Name = "AnnulerenButton";
-            this.AnnulerenButton.Size = new System.Drawing.Size(129, 49);
+            this.AnnulerenButton.Size = new System.Drawing.Size(97, 40);
             this.AnnulerenButton.TabIndex = 85;
             this.AnnulerenButton.Text = "Annuleren";
             this.AnnulerenButton.UseVisualStyleBackColor = true;
@@ -187,11 +200,10 @@
             // 
             this.KatCheckBox.AutoSize = true;
             this.KatCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KatCheckBox.Location = new System.Drawing.Point(338, 534);
-            this.KatCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.KatCheckBox.Location = new System.Drawing.Point(254, 434);
             this.KatCheckBox.Name = "KatCheckBox";
             this.KatCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.KatCheckBox.Size = new System.Drawing.Size(56, 24);
+            this.KatCheckBox.Size = new System.Drawing.Size(48, 21);
             this.KatCheckBox.TabIndex = 93;
             this.KatCheckBox.Text = "Kat";
             this.KatCheckBox.UseVisualStyleBackColor = true;
@@ -200,11 +212,10 @@
             // 
             this.AmfibieCheckBox.AutoSize = true;
             this.AmfibieCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmfibieCheckBox.Location = new System.Drawing.Point(409, 534);
-            this.AmfibieCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.AmfibieCheckBox.Location = new System.Drawing.Point(307, 434);
             this.AmfibieCheckBox.Name = "AmfibieCheckBox";
             this.AmfibieCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.AmfibieCheckBox.Size = new System.Drawing.Size(87, 24);
+            this.AmfibieCheckBox.Size = new System.Drawing.Size(73, 21);
             this.AmfibieCheckBox.TabIndex = 92;
             this.AmfibieCheckBox.Text = "Amfibie";
             this.AmfibieCheckBox.UseVisualStyleBackColor = true;
@@ -214,11 +225,10 @@
             this.VisCheckBox.AutoSize = true;
             this.VisCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.VisCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisCheckBox.Location = new System.Drawing.Point(441, 577);
-            this.VisCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.VisCheckBox.Location = new System.Drawing.Point(331, 469);
             this.VisCheckBox.Name = "VisCheckBox";
             this.VisCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.VisCheckBox.Size = new System.Drawing.Size(55, 24);
+            this.VisCheckBox.Size = new System.Drawing.Size(46, 21);
             this.VisCheckBox.TabIndex = 91;
             this.VisCheckBox.Text = "Vis";
             this.VisCheckBox.UseVisualStyleBackColor = true;
@@ -228,11 +238,10 @@
             this.InsectCheckBox.AutoSize = true;
             this.InsectCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.InsectCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsectCheckBox.Location = new System.Drawing.Point(420, 556);
-            this.InsectCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.InsectCheckBox.Location = new System.Drawing.Point(315, 452);
             this.InsectCheckBox.Name = "InsectCheckBox";
             this.InsectCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.InsectCheckBox.Size = new System.Drawing.Size(76, 24);
+            this.InsectCheckBox.Size = new System.Drawing.Size(64, 21);
             this.InsectCheckBox.TabIndex = 90;
             this.InsectCheckBox.Text = "Insect";
             this.InsectCheckBox.UseVisualStyleBackColor = true;
@@ -241,11 +250,10 @@
             // 
             this.VogelCheckBox.AutoSize = true;
             this.VogelCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VogelCheckBox.Location = new System.Drawing.Point(321, 577);
-            this.VogelCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.VogelCheckBox.Location = new System.Drawing.Point(241, 469);
             this.VogelCheckBox.Name = "VogelCheckBox";
             this.VogelCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.VogelCheckBox.Size = new System.Drawing.Size(73, 24);
+            this.VogelCheckBox.Size = new System.Drawing.Size(63, 21);
             this.VogelCheckBox.TabIndex = 89;
             this.VogelCheckBox.Text = "Vogel";
             this.VogelCheckBox.UseVisualStyleBackColor = true;
@@ -254,11 +262,10 @@
             // 
             this.ReptielCheckBox.AutoSize = true;
             this.ReptielCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReptielCheckBox.Location = new System.Drawing.Point(413, 512);
-            this.ReptielCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ReptielCheckBox.Location = new System.Drawing.Point(310, 416);
             this.ReptielCheckBox.Name = "ReptielCheckBox";
             this.ReptielCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ReptielCheckBox.Size = new System.Drawing.Size(83, 24);
+            this.ReptielCheckBox.Size = new System.Drawing.Size(71, 21);
             this.ReptielCheckBox.TabIndex = 88;
             this.ReptielCheckBox.Text = "Reptiel";
             this.ReptielCheckBox.UseVisualStyleBackColor = true;
@@ -267,11 +274,10 @@
             // 
             this.KnaagdierCheckBox.AutoSize = true;
             this.KnaagdierCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KnaagdierCheckBox.Location = new System.Drawing.Point(288, 556);
-            this.KnaagdierCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.KnaagdierCheckBox.Location = new System.Drawing.Point(216, 452);
             this.KnaagdierCheckBox.Name = "KnaagdierCheckBox";
             this.KnaagdierCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.KnaagdierCheckBox.Size = new System.Drawing.Size(106, 24);
+            this.KnaagdierCheckBox.Size = new System.Drawing.Size(92, 21);
             this.KnaagdierCheckBox.TabIndex = 87;
             this.KnaagdierCheckBox.Text = "Knaagdier";
             this.KnaagdierCheckBox.UseVisualStyleBackColor = true;
@@ -280,11 +286,10 @@
             // 
             this.HondCheckBox.AutoSize = true;
             this.HondCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HondCheckBox.Location = new System.Drawing.Point(324, 512);
-            this.HondCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.HondCheckBox.Location = new System.Drawing.Point(243, 416);
             this.HondCheckBox.Name = "HondCheckBox";
             this.HondCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.HondCheckBox.Size = new System.Drawing.Size(71, 24);
+            this.HondCheckBox.Size = new System.Drawing.Size(61, 21);
             this.HondCheckBox.TabIndex = 86;
             this.HondCheckBox.Text = "Hond";
             this.HondCheckBox.UseVisualStyleBackColor = true;
@@ -293,26 +298,29 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(132, 153);
+            this.label4.Location = new System.Drawing.Point(99, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 18);
+            this.label4.Size = new System.Drawing.Size(45, 15);
             this.label4.TabIndex = 94;
             this.label4.Text = "Naam";
             // 
             // NaamTextBox
             // 
-            this.NaamTextBox.Location = new System.Drawing.Point(271, 151);
+            this.NaamTextBox.Location = new System.Drawing.Point(203, 123);
+            this.NaamTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NaamTextBox.Name = "NaamTextBox";
-            this.NaamTextBox.Size = new System.Drawing.Size(225, 22);
+            this.NaamTextBox.Size = new System.Drawing.Size(170, 20);
             this.NaamTextBox.TabIndex = 95;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 290);
+            this.label5.Location = new System.Drawing.Point(98, 236);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 18);
+            this.label5.Size = new System.Drawing.Size(85, 15);
             this.label5.TabIndex = 96;
             this.label5.Text = "Wachtwoord";
             // 
@@ -320,46 +328,52 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(130, 243);
+            this.label6.Location = new System.Drawing.Point(98, 197);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
+            this.label6.Size = new System.Drawing.Size(44, 15);
             this.label6.TabIndex = 97;
             this.label6.Text = "Email";
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(271, 240);
+            this.EmailTextBox.Location = new System.Drawing.Point(203, 195);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(225, 22);
+            this.EmailTextBox.Size = new System.Drawing.Size(170, 20);
             this.EmailTextBox.TabIndex = 98;
             // 
             // WachtwoordTextBox
             // 
-            this.WachtwoordTextBox.Location = new System.Drawing.Point(271, 290);
+            this.WachtwoordTextBox.Location = new System.Drawing.Point(203, 236);
+            this.WachtwoordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.WachtwoordTextBox.Name = "WachtwoordTextBox";
-            this.WachtwoordTextBox.Size = new System.Drawing.Size(225, 22);
+            this.WachtwoordTextBox.Size = new System.Drawing.Size(170, 20);
             this.WachtwoordTextBox.TabIndex = 99;
+            this.WachtwoordTextBox.TextChanged += new System.EventHandler(this.WachtwoordTextBox_TextChanged);
             // 
             // labelachternaam
             // 
             this.labelachternaam.AutoSize = true;
             this.labelachternaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelachternaam.Location = new System.Drawing.Point(130, 199);
+            this.labelachternaam.Location = new System.Drawing.Point(98, 162);
+            this.labelachternaam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelachternaam.Name = "labelachternaam";
-            this.labelachternaam.Size = new System.Drawing.Size(97, 18);
+            this.labelachternaam.Size = new System.Drawing.Size(83, 15);
             this.labelachternaam.TabIndex = 100;
             this.labelachternaam.Text = "Achternaam";
             // 
             // AchternaamTextBox
             // 
-            this.AchternaamTextBox.Location = new System.Drawing.Point(271, 198);
+            this.AchternaamTextBox.Location = new System.Drawing.Point(203, 161);
+            this.AchternaamTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AchternaamTextBox.Name = "AchternaamTextBox";
-            this.AchternaamTextBox.Size = new System.Drawing.Size(225, 22);
+            this.AchternaamTextBox.Size = new System.Drawing.Size(170, 20);
             this.AchternaamTextBox.TabIndex = 101;
             // 
             // ControlVeranderProfiel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.AchternaamTextBox);
             this.Controls.Add(this.labelachternaam);
@@ -390,8 +404,9 @@
             this.Controls.Add(this.Dienstentitel);
             this.Controls.Add(this.Overmij);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ControlVeranderProfiel";
-            this.Size = new System.Drawing.Size(1313, 682);
+            this.Size = new System.Drawing.Size(985, 554);
             this.Load += new System.EventHandler(this.ControlVeranderProfiel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

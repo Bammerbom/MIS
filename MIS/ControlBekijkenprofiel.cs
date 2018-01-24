@@ -79,6 +79,7 @@ namespace MIS
                 if (LoginCheck())
                 {
                     Gebruiker jezelf = (Gebruiker)SessionManager.GetCurrentUser();
+                    if (a.reviewerid == jezelf.userid && b.reviewerid == jezelf.userid) return b.reviewid.CompareTo(a.reviewid);
                     if (a.reviewerid == jezelf.userid) return -1;
                     if (b.reviewerid == jezelf.userid) return 1;
                 }

@@ -21,6 +21,11 @@ namespace MIS
             UserId = userid;
         }
 
+        /// <summary>
+        /// De Load die hij uitvoerd als je de form opent.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormBekijkenprofiel_Load(object sender, EventArgs e)
         {
             var gebruiker = GebruikerManager.GebruikerOpvragen(UserId);
@@ -52,7 +57,7 @@ namespace MIS
             if (!LoginCheck())
             {
                 List<Control> ReviewPItems = new List<Control>()
-                    {TitelLabel, BodyLabel, SchrijfhierLabel, OLijnLabel, ErrorLabel, ASterLabel, RtitelTextBox, RbodyTextBox,
+                    {TitelLabel, BodyLabel, SchrijfhierLabel, OLijnLabel, ASterLabel, RtitelTextBox, RbodyTextBox,
                     Ster1CheckBox, Ster2CheckBox, Ster3CheckBox, Ster4CheckBox, Ster5CheckBox, PReviewButton, DiscardButton};
 
                 foreach (var Item in ReviewPItems)
@@ -64,6 +69,9 @@ namespace MIS
             ReviewLoad();
         }
 
+        /// <summary>
+        /// laad de reviews, sorteerd ze en checked of het ingelogde account al een review heeft.
+        /// </summary>
         private void ReviewLoad()
         {
             foreach (var Item in LoadedReviews)
@@ -84,27 +92,46 @@ namespace MIS
                 }
                 return b.reviewid.CompareTo(a.reviewid);
             });
-            foreach (var Item in Lreviews)
-            {
-                if (LoginCheck() && Item.reviewerid == ((Gebruiker)SessionManager.GetCurrentUser()).userid)
-                {
-                    DiscardButton.Visible = true;
-                }
-            }
-
+            
             int RVcount = 0;
             foreach (Review RV in Lreviews)
             {
                 ReviewPlaatser(RV, RVcount);
                 RVcount++;
             }
+            if (OwnReview()) DiscardButton.Visible = true;
+
+            List<Control> ReviewPItems = new List<Control>()
+                    {TitelLabel, BodyLabel, SchrijfhierLabel, OLijnLabel, ASterLabel, RtitelTextBox, RbodyTextBox,
+                    Ster1CheckBox, Ster2CheckBox, Ster3CheckBox, Ster4CheckBox, Ster5CheckBox, PReviewButton, ErrorLabel};
+
+            bool ownreview = OwnReview();
+            foreach (var Item in ReviewPItems)
+            {
+                Item.Visible = !ownreview;
+            }
+
+            if (Lreviews.Count == 0)
+            {
+                ErrorLabel.Visible = true;
+                ErrorLabel.Text = "Er zijn geen reviews.";
+            }
         }
 
+        /// <summary>
+        /// Checked of iemand ingelogd is.
+        /// </summary>
+        /// <returns></returns>
         private bool LoginCheck()
         {
             return SessionManager.IsLoggedIn();
         }
 
+        /// <summary>
+        /// voegd een review toe aan de database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PReviewButton_Click(object sender, EventArgs e)
         {
             if (CheckValid())
@@ -131,6 +158,11 @@ namespace MIS
             }
         }
 
+        /// <summary>
+        /// verwijderd een review van de database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DiscardButton_Click(object sender, EventArgs e)
         {
             var Lreviews = ReviewManager.ReviewsOppasser(UserId).ToList<Review>();
@@ -140,11 +172,36 @@ namespace MIS
             {
                 if (Item.reviewerid != reviewerid) continue;
                 ReviewManager.ReviewVerwijderen(Item.reviewid);
+                break;
             }
             DiscardButton.Visible = false;
             ReviewLoad();
         }
 
+        /// <summary>
+        /// checked of er een review bestaat van de persoon die ingelogd is.
+        /// </summary>
+        /// <returns></returns>
+        public bool OwnReview()
+        {
+            if (!LoginCheck()) return false;
+            var Lreviews = ReviewManager.ReviewsOppasser(UserId).ToList<Review>();
+
+            foreach (Review RV in Lreviews)
+            {
+                if (RV.reviewerid == ((Gebruiker)SessionManager.GetCurrentUser()).userid)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// checked of de ingevulde parameters geldeg is om er een review van te maken en geeft errors wanneer dit niet zo is.
+        /// </summary>
+        /// <returns></returns>
         private bool CheckValid()
         {
             if (RtitelTextBox.Text == "")
@@ -152,9 +209,9 @@ namespace MIS
                 ErrorLabel.Text = "Je moet een titel invullen!";
                 return false;
             }
-            if (RtitelTextBox.Text.Count() > 20)
+            if (RtitelTextBox.Text.Count() > 25)
             {
-                ErrorLabel.Text = "Je mag niet meer dan 20 karakters in de titel gebruiken.";
+                ErrorLabel.Text = "Je mag niet meer dan 25 karakters in de titel gebruiken.";
                 return false;
             }
             if (RbodyTextBox.Text == "")
@@ -186,6 +243,11 @@ namespace MIS
             return true;
         }
 
+        /// <summary>
+        /// voorkomt dat je meer dan 1 ster kan selecteren.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox box = (CheckBox)sender;
@@ -202,7 +264,7 @@ namespace MIS
         }
 
         /// <summary>
-        /// Plaatst de review aan de hand van het positie nummer
+        /// Plaatst de review aan de hand van het positie nummer en andere parameters.
         /// </summary>
         /// <param name="review"></param>
         /// <param name="pos"></param>
@@ -210,12 +272,16 @@ namespace MIS
         {
             int BlokY = (pos * 220);
             int Y = 0;
-            if (LoginCheck()) Y = 800;
+            if (!OwnReview()) Y = 800;
+            //if (LoginCheck() )
             else Y = 525;
 
             // "FIX" een feature van windows forms waar posities relatief zijn tot de autoscroll positie
             // PS. Dit is bonkers irritant en we hebben hier minstens 1,5 uur naar gezocht
             Y = Y + panel1.AutoScrollPosition.Y;
+
+            int DBY = 694 + panel1.AutoScrollPosition.Y;
+            DiscardButton.Location = new Point(172, DBY);
 
             // 
             // RnameLabel
@@ -263,7 +329,7 @@ namespace MIS
             // 
             var RTitelLabel = new Label();
             RTitelLabel.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            RTitelLabel.Location = new Point(427, 66 + Y + BlokY);
+            RTitelLabel.Location = new Point(427, 64 + Y + BlokY);
             RTitelLabel.Name = "RTitelLabel";
             RTitelLabel.Size = new Size(374, 23);
             RTitelLabel.TabIndex = 86;

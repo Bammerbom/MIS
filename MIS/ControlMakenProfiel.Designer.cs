@@ -59,6 +59,7 @@
             this.EmailTextbox = new System.Windows.Forms.TextBox();
             this.WachtwoordTextbox = new System.Windows.Forms.TextBox();
             this.VerderButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // VoornaamLabel
@@ -368,10 +369,21 @@
             this.VerderButton.UseVisualStyleBackColor = true;
             this.VerderButton.Click += new System.EventHandler(this.VerderButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(31, 626);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Annuleren";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ControlMakenProfiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.AmfibieCheckbox);
             this.Controls.Add(this.KatCheckbox);
             this.Controls.Add(this.VraagprijsTextbox);
@@ -441,5 +453,6 @@
         private System.Windows.Forms.TextBox EmailTextbox;
         private System.Windows.Forms.TextBox WachtwoordTextbox;
         private System.Windows.Forms.Button VerderButton;
+        private System.Windows.Forms.Button button1;
     }
 }

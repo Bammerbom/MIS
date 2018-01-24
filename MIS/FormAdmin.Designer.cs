@@ -81,28 +81,28 @@
             // 
             // VoornaamAdmin
             // 
-            this.VoornaamAdmin.Location = new System.Drawing.Point(1272, 16);
+            this.VoornaamAdmin.Location = new System.Drawing.Point(1281, 15);
             this.VoornaamAdmin.Name = "VoornaamAdmin";
             this.VoornaamAdmin.Size = new System.Drawing.Size(100, 20);
             this.VoornaamAdmin.TabIndex = 3;
             // 
             // AchternaamAdmin
             // 
-            this.AchternaamAdmin.Location = new System.Drawing.Point(1271, 42);
+            this.AchternaamAdmin.Location = new System.Drawing.Point(1281, 42);
             this.AchternaamAdmin.Name = "AchternaamAdmin";
             this.AchternaamAdmin.Size = new System.Drawing.Size(100, 20);
             this.AchternaamAdmin.TabIndex = 4;
             // 
             // WoonplaatsAdmin
             // 
-            this.WoonplaatsAdmin.Location = new System.Drawing.Point(1272, 68);
+            this.WoonplaatsAdmin.Location = new System.Drawing.Point(1281, 68);
             this.WoonplaatsAdmin.Name = "WoonplaatsAdmin";
             this.WoonplaatsAdmin.Size = new System.Drawing.Size(100, 20);
             this.WoonplaatsAdmin.TabIndex = 5;
             // 
             // VraagprijsAdmin
             // 
-            this.VraagprijsAdmin.Location = new System.Drawing.Point(1272, 94);
+            this.VraagprijsAdmin.Location = new System.Drawing.Point(1281, 94);
             this.VraagprijsAdmin.Name = "VraagprijsAdmin";
             this.VraagprijsAdmin.Size = new System.Drawing.Size(100, 20);
             this.VraagprijsAdmin.TabIndex = 6;
@@ -111,40 +111,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1178, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1178, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 18);
+            this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Voornaam";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1178, 41);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1178, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 18);
+            this.label2.Size = new System.Drawing.Size(97, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Achternaam";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1178, 67);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1177, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.Size = new System.Drawing.Size(98, 18);
             this.label3.TabIndex = 9;
             this.label3.Text = "Woonplaats";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1178, 93);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1178, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 18);
+            this.label4.Size = new System.Drawing.Size(83, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Vraagprijs";
             // 
@@ -227,10 +227,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(1181, 233);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 18);
+            this.label8.Size = new System.Drawing.Size(79, 18);
             this.label8.TabIndex = 19;
             this.label8.Text = "Diertypes";
             // 
@@ -347,35 +347,35 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(1178, 450);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 18);
+            this.label10.Size = new System.Drawing.Size(50, 18);
             this.label10.TabIndex = 44;
             this.label10.Text = "Email";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1178, 476);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1177, 494);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 18);
+            this.label11.Size = new System.Drawing.Size(103, 18);
             this.label11.TabIndex = 45;
             this.label11.Text = "Wachtwoord";
             // 
             // EmailAdmin
             // 
-            this.EmailAdmin.Location = new System.Drawing.Point(1272, 451);
+            this.EmailAdmin.Location = new System.Drawing.Point(1181, 471);
             this.EmailAdmin.Name = "EmailAdmin";
-            this.EmailAdmin.Size = new System.Drawing.Size(100, 20);
+            this.EmailAdmin.Size = new System.Drawing.Size(114, 20);
             this.EmailAdmin.TabIndex = 46;
             // 
             // WachtwoordAdmin
             // 
-            this.WachtwoordAdmin.Location = new System.Drawing.Point(1272, 477);
+            this.WachtwoordAdmin.Location = new System.Drawing.Point(1178, 515);
             this.WachtwoordAdmin.Name = "WachtwoordAdmin";
-            this.WachtwoordAdmin.Size = new System.Drawing.Size(100, 20);
+            this.WachtwoordAdmin.Size = new System.Drawing.Size(117, 20);
             this.WachtwoordAdmin.TabIndex = 47;
             // 
             // FormAdmin

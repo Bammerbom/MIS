@@ -62,6 +62,7 @@
             this.Bevestiging = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // VoornaamLabel
@@ -255,9 +256,9 @@
             // ProfielAanmakenButton
             // 
             this.ProfielAanmakenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfielAanmakenButton.Location = new System.Drawing.Point(851, 626);
+            this.ProfielAanmakenButton.Location = new System.Drawing.Point(846, 626);
             this.ProfielAanmakenButton.Name = "ProfielAanmakenButton";
-            this.ProfielAanmakenButton.Size = new System.Drawing.Size(101, 23);
+            this.ProfielAanmakenButton.Size = new System.Drawing.Size(135, 23);
             this.ProfielAanmakenButton.TabIndex = 27;
             this.ProfielAanmakenButton.Text = "Profiel aanmaken";
             this.ProfielAanmakenButton.UseVisualStyleBackColor = true;
@@ -377,9 +378,9 @@
             // VerderButton
             // 
             this.VerderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerderButton.Location = new System.Drawing.Point(851, 626);
+            this.VerderButton.Location = new System.Drawing.Point(900, 626);
             this.VerderButton.Name = "VerderButton";
-            this.VerderButton.Size = new System.Drawing.Size(75, 23);
+            this.VerderButton.Size = new System.Drawing.Size(81, 23);
             this.VerderButton.TabIndex = 39;
             this.VerderButton.Text = "Ga verder";
             this.VerderButton.UseVisualStyleBackColor = true;
@@ -407,16 +408,27 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(31, 626);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(83, 23);
             this.button1.TabIndex = 40;
             this.button1.Text = "Annuleren";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(37, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 18);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Registreren";
+            // 
             // ControlMakenProfiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Bevestiging);
             this.Controls.Add(this.button1);
@@ -492,5 +504,6 @@
         private System.Windows.Forms.TextBox Bevestiging;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
     }
 }

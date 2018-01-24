@@ -76,5 +76,10 @@ namespace MIS
         {
             FormHome.Home.NaarZoeken();
         }
+
+        private void WachtwoordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            WachtwoordTextBox.PasswordChar = '*';
+        }
     }
 }

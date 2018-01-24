@@ -66,7 +66,8 @@ namespace MIS
             VerifiedAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[4].Value;
             AdminAdmin.Checked = (bool)AdminDatagrid.Rows[e.RowIndex].Cells[5].Value;
             EmailAdmin.Text = AdminDatagrid.Rows[e.RowIndex].Cells[10].Value.ToString();
-            WachtwoordAdmin.Text = ""; //TODO
+            WachtwoordAdmin.PasswordChar = '*';
+            
 
 
             foreach (CheckBox cb in CBListAdmin) cb.Checked = false;
@@ -211,6 +212,14 @@ namespace MIS
             {
                 VraagprijsAdmin.Text = "";
             }
+        }
+
+        private void AdminDatagrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 11 && e.Value != null)
+            {
+                e.Value = new String('*', e.Value.ToString().Length);
+            } 
         }
     }
 }

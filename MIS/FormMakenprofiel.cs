@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace MIS
 {
-    public partial class ControlMakenProfiel : UserControl
+    public partial class FormMakenprofiel : Form
     {
-        public ControlMakenProfiel()
+        public FormMakenprofiel()
         {
             InitializeComponent();
         }
-
         private void ProfielAanmakenButton_Click(object sender, EventArgs e)
         {
             if (!HondCheckbox.Checked && !KatCheckbox.Checked && !ReptielCheckbox.Checked && !AmfibieCheckbox.Checked && !VissenCheckbox.Checked && InsectCheckbox.Checked && !KnaagdierCheckbox.Checked && !VogelCheckbox.Checked)
@@ -39,7 +38,7 @@ namespace MIS
             {
                 MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
             }
-            else if (VraagprijsTextbox.Text == "" && double.TryParse(VraagprijsTextbox.Text, out var n))
+            else if(VraagprijsTextbox.Text == "" && double.TryParse(VraagprijsTextbox.Text, out var n))
             {
                 MessageBox.Show("Je hebt 1 of meerdere velden leeggelaten!");
             }
@@ -47,13 +46,9 @@ namespace MIS
             {
                 MessageBox.Show("Vertel nog wat over jezelf");
             }
-            else if(Convert.ToDouble(VraagprijsTextbox.Text) > 10000.0 || Convert.ToDouble(VraagprijsTextbox.Text) < 0.0)
-            {
-                MessageBox.Show("Je vraagprijs ligt niet tussen 0 en 10000 euro");
-            }
             else
             {
-
+                 
                 List<CheckBox> CBList = new List<CheckBox>()
                     { HondCheckbox, KatCheckbox, KnaagdierCheckbox, VogelCheckbox, ReptielCheckbox, AmfibieCheckbox, InsectCheckbox, VissenCheckbox};
                 string diertypes = "";
@@ -64,7 +59,7 @@ namespace MIS
                         diertypes += checkbox.Text + ", ";
                     }
                 }
-                if (diertypes != "") diertypes = diertypes.Substring(0, diertypes.Length - 2);
+                if(diertypes != "") diertypes = diertypes.Substring(0, diertypes.Length - 2);
 
                 var gebruiker = new Gebruiker
                 {
@@ -79,11 +74,10 @@ namespace MIS
                     uitlaten = UitlaatCheckbox.Checked,
                     overmij = OverMijTextbox.Text,
                     email = EmailTextbox.Text,
-                    password_hash = GebruikerManager.PasswordHash(WachtwoordTextbox.Text),
+                    password = WachtwoordTextbox.Text,                   
                 };
                 GebruikerManager.GebruikerToevoegen(gebruiker);
                 MessageBox.Show("De gebruiker is toegevoegd!");
-                FormHome.Home.NaarInloggen();
             }
         }
         private void PremiumCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -108,25 +102,22 @@ namespace MIS
 
         private void VraagprijsTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit (e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
         }
 
+        private void RatingTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(RatingTextbox.Text, " ^[0-9]"))
+            {
+                RatingTextbox.Text = "";
+            }
+        }
+
         private void VerderButton_Click(object sender, EventArgs e)
         {
-
-            if (WachtwoordTextbox.Text == Bevestiging.Text)
-            {
-                //niks
-            }
-            else
-            {
-                MessageBox.Show("Je ingevulde wachtwoorden komen niet met elkaar overeen");
-                return;
-            }            
-            Console.WriteLine("Test");
             if (EmailTextbox.Text == "")
             {
                 MessageBox.Show("Vul je emailadres in");
@@ -148,26 +139,19 @@ namespace MIS
 
             foreach (Control C in Controls)
             {
-                if (C != WachtwoordTextbox || C != W8wLabel || C != EmailLabel || C != EmailTextbox || C !=Bevestiging || C != label5) C.Visible = true;
+                if (C != WachtwoordTextbox || C != W8wLabel || C != EmailLabel || C != EmailTextbox) C.Visible = true;
             }
             WachtwoordTextbox.Visible = false;
             W8wLabel.Visible = false;
             EmailTextbox.Visible = false;
             EmailLabel.Visible = false;
             VerderButton.Visible = false;
-            Bevestiging.Visible = false;
-            label5.Visible = false;
         }
 
-        private void WachtwoordTextbox_TextChanged(object sender, EventArgs e)
+        private void W8wLabel_Click(object sender, EventArgs e)
         {
-            WachtwoordTextbox.PasswordChar = '*';
-            Bevestiging.PasswordChar = '*';
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormHome.Home.NaarInloggen();
         }
     }
 }
+ 

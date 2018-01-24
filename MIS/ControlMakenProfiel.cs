@@ -47,6 +47,10 @@ namespace MIS
             {
                 MessageBox.Show("Vertel nog wat over jezelf");
             }
+            else if(Convert.ToDouble(VraagprijsTextbox.Text) > 10000.0 || Convert.ToDouble(VraagprijsTextbox.Text) < 0.0)
+            {
+                MessageBox.Show("Je vraagprijs ligt niet tussen 0 en 10000 euro");
+            }
             else
             {
 
@@ -159,6 +163,11 @@ namespace MIS
         {
             WachtwoordTextbox.PasswordChar = '*';
             Bevestiging.PasswordChar = '*';
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormHome.Home.NaarInloggen();
         }
     }
 }

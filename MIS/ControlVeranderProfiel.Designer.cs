@@ -212,7 +212,7 @@
             // 
             this.AmfibieCheckBox.AutoSize = true;
             this.AmfibieCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AmfibieCheckBox.Location = new System.Drawing.Point(307, 434);
+            this.AmfibieCheckBox.Location = new System.Drawing.Point(308, 434);
             this.AmfibieCheckBox.Name = "AmfibieCheckBox";
             this.AmfibieCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.AmfibieCheckBox.Size = new System.Drawing.Size(73, 21);
@@ -225,7 +225,7 @@
             this.VisCheckBox.AutoSize = true;
             this.VisCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.VisCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisCheckBox.Location = new System.Drawing.Point(331, 469);
+            this.VisCheckBox.Location = new System.Drawing.Point(335, 469);
             this.VisCheckBox.Name = "VisCheckBox";
             this.VisCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.VisCheckBox.Size = new System.Drawing.Size(46, 21);
@@ -238,7 +238,7 @@
             this.InsectCheckBox.AutoSize = true;
             this.InsectCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.InsectCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsectCheckBox.Location = new System.Drawing.Point(315, 452);
+            this.InsectCheckBox.Location = new System.Drawing.Point(317, 452);
             this.InsectCheckBox.Name = "InsectCheckBox";
             this.InsectCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.InsectCheckBox.Size = new System.Drawing.Size(64, 21);
@@ -250,7 +250,7 @@
             // 
             this.VogelCheckBox.AutoSize = true;
             this.VogelCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VogelCheckBox.Location = new System.Drawing.Point(241, 469);
+            this.VogelCheckBox.Location = new System.Drawing.Point(239, 469);
             this.VogelCheckBox.Name = "VogelCheckBox";
             this.VogelCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.VogelCheckBox.Size = new System.Drawing.Size(63, 21);
@@ -274,7 +274,7 @@
             // 
             this.KnaagdierCheckBox.AutoSize = true;
             this.KnaagdierCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KnaagdierCheckBox.Location = new System.Drawing.Point(216, 452);
+            this.KnaagdierCheckBox.Location = new System.Drawing.Point(210, 452);
             this.KnaagdierCheckBox.Name = "KnaagdierCheckBox";
             this.KnaagdierCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.KnaagdierCheckBox.Size = new System.Drawing.Size(92, 21);
@@ -286,7 +286,7 @@
             // 
             this.HondCheckBox.AutoSize = true;
             this.HondCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HondCheckBox.Location = new System.Drawing.Point(243, 416);
+            this.HondCheckBox.Location = new System.Drawing.Point(241, 416);
             this.HondCheckBox.Name = "HondCheckBox";
             this.HondCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.HondCheckBox.Size = new System.Drawing.Size(61, 21);

@@ -416,7 +416,7 @@
             this.Controls.Add(this.VoornaamAdmin);
             this.Controls.Add(this.AdminDatagrid);
             this.Name = "FormAdmin";
-            this.Text = "FormAdmin";
+            this.Text = "Pet & Breakfast: Admin Pagina";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminDatagrid)).EndInit();
             this.ResumeLayout(false);

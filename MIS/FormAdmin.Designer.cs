@@ -76,7 +76,6 @@
             this.AdminDatagrid.ReadOnly = true;
             this.AdminDatagrid.Size = new System.Drawing.Size(1159, 736);
             this.AdminDatagrid.TabIndex = 0;
-            this.AdminDatagrid.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.AdminDatagrid_CellFormatting);
             this.AdminDatagrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AdminDatagrid_RowHeaderMouseClick_1);
             // 
             // VoornaamAdmin
@@ -190,7 +189,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1181, 183);
+            this.label6.Location = new System.Drawing.Point(1178, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 18);
             this.label6.TabIndex = 15;
@@ -228,7 +227,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1181, 233);
+            this.label8.Location = new System.Drawing.Point(1178, 237);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 18);
             this.label8.TabIndex = 19;
@@ -348,7 +347,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1178, 450);
+            this.label10.Location = new System.Drawing.Point(1175, 450);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 18);
             this.label10.TabIndex = 44;
@@ -366,7 +365,7 @@
             // 
             // EmailAdmin
             // 
-            this.EmailAdmin.Location = new System.Drawing.Point(1181, 471);
+            this.EmailAdmin.Location = new System.Drawing.Point(1178, 471);
             this.EmailAdmin.Name = "EmailAdmin";
             this.EmailAdmin.Size = new System.Drawing.Size(114, 20);
             this.EmailAdmin.TabIndex = 46;
@@ -377,6 +376,7 @@
             this.WachtwoordAdmin.Name = "WachtwoordAdmin";
             this.WachtwoordAdmin.Size = new System.Drawing.Size(117, 20);
             this.WachtwoordAdmin.TabIndex = 47;
+            this.WachtwoordAdmin.TextChanged += new System.EventHandler(this.WachtwoordAdmin_TextChanged);
             // 
             // FormAdmin
             // 

@@ -100,7 +100,7 @@ namespace MIS
                 ReviewPlaatser(RV, RVcount);
                 RVcount++;
             }
-            if (OwnReview()) DiscardButton.Visible = true;
+            if (SessionManager.IsLoggedIn() && OwnReview()) DiscardButton.Visible = true;
 
             List<Control> ReviewPItems = new List<Control>()
                     {TitelLabel, BodyLabel, SchrijfhierLabel, OLijnLabel, ASterLabel, RtitelTextBox, RbodyTextBox,
@@ -185,7 +185,8 @@ namespace MIS
         /// <returns></returns>
         public bool OwnReview()
         {
-            if (!LoginCheck()) return false;
+            //Als iemand niet is ingelogd, doe alsof hij een review heeft
+            if (!LoginCheck()) return true;
             var Lreviews = ReviewManager.ReviewsOppasser(UserId).ToList<Review>();
 
             foreach (Review RV in Lreviews)

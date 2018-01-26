@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.AdminDatagrid = new System.Windows.Forms.DataGridView();
             this.VoornaamAdmin = new System.Windows.Forms.TextBox();
             this.AchternaamAdmin = new System.Windows.Forms.TextBox();
@@ -415,6 +416,7 @@
             this.Controls.Add(this.AchternaamAdmin);
             this.Controls.Add(this.VoornaamAdmin);
             this.Controls.Add(this.AdminDatagrid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAdmin";
             this.Text = "Pet & Breakfast: Admin Pagina";
             this.Load += new System.EventHandler(this.FormAdmin_Load);

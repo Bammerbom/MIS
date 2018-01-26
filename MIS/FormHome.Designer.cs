@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.panelH = new System.Windows.Forms.Panel();
             this.panelB = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.panelB);
             this.Controls.Add(this.panelH);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHome";
             this.Text = "Pet & Breakfast";
             this.ResumeLayout(false);
